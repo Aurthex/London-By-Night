@@ -1,7 +1,8 @@
 /*
 Version Info:
-Version 1.3.0
+Version 1.4.2
 Created by GM Knowledge Rhino
+Modified by AurThEx
 
 Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/
 */
@@ -113,8 +114,9 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
 /* Dice input span graphics
  *----------------------------------------- */
 
-.sheet-yd + span {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/yellow/small.png'); /* Yellow - Proficiency Die */
+.sheet-yd+span {
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/yellow/small.png');
+    /* Yellow - Proficiency Die */
     background-position: left top;
     background-repeat: repeat-x;
     height: 20px;
@@ -122,8 +124,9 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
     float: left;
 }
 
-.sheet-gd + span {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/green/small.png'); /* Green - Ability Die */
+.sheet-gd+span {
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/green/small.png');
+    /* Green - Ability Die */
     background-position: left top;
     background-repeat: repeat-x;
     height: 20px;
@@ -131,8 +134,9 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
     float: left;
 }
 
-.sheet-pd + span {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/purple/small.png'); /* Purple - Difficulty Die */
+.sheet-pd+span {
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/purple/small.png');
+    /* Purple - Difficulty Die */
     background-position: left top;
     background-repeat: repeat-x;
     height: 20px;
@@ -140,100 +144,100 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
     float: left;
 }
 
-.sheet-gd[value="0"] + span {
+.sheet-gd[value="0"]+span {
     width: 0;
 }
 
-.sheet-gd[value="1"] + span {
+.sheet-gd[value="1"]+span {
     width: 17px
 }
 
-.sheet-gd[value="2"] + span {
+.sheet-gd[value="2"]+span {
     width: 34px
 }
 
-.sheet-gd[value="3"] + span {
+.sheet-gd[value="3"]+span {
     width: 51px
 }
 
-.sheet-gd[value="4"] + span {
+.sheet-gd[value="4"]+span {
     width: 68px
 }
 
-.sheet-gd[value="5"] + span {
+.sheet-gd[value="5"]+span {
     width: 85px
 }
 
-.sheet-gd[value="6"] + span {
+.sheet-gd[value="6"]+span {
     width: 102px
 }
 
-.sheet-gd[value="7"] + span {
+.sheet-gd[value="7"]+span {
     width: 124px
 }
 
-.sheet-yd[value="0"] + span {
+.sheet-yd[value="0"]+span {
     width: 0;
 }
 
-.sheet-yd[value="1"] + span {
+.sheet-yd[value="1"]+span {
     width: 17px
 }
 
-.sheet-yd[value="2"] + span {
+.sheet-yd[value="2"]+span {
     width: 34px
 }
 
-.sheet-yd[value="3"] + span {
+.sheet-yd[value="3"]+span {
     width: 51px
 }
 
-.sheet-yd[value="4"] + span {
+.sheet-yd[value="4"]+span {
     width: 68px
 }
 
-.sheet-yd[value="5"] + span {
+.sheet-yd[value="5"]+span {
     width: 85px
 }
 
-.sheet-yd[value="6"] + span {
+.sheet-yd[value="6"]+span {
     width: 102px
 }
 
-.sheet-yd[value="7"] + span {
+.sheet-yd[value="7"]+span {
     width: 124px
 }
 
 /*used for crit section*/
-.sheet-pd[value="0"] + span {
+.sheet-pd[value="0"]+span {
     width: 0;
 }
 
-.sheet-pd[value="1"] + span {
+.sheet-pd[value="1"]+span {
     width: 20px
 }
 
-.sheet-pd[value="2"] + span {
+.sheet-pd[value="2"]+span {
     width: 40px
 }
 
-.sheet-pd[value="3"] + span {
+.sheet-pd[value="3"]+span {
     width: 60px
 }
 
-.sheet-pd[value="4"] + span {
+.sheet-pd[value="4"]+span {
     width: 80px
 }
 
-.sheet-pd[value="5"] + span {
+.sheet-pd[value="5"]+span {
     width: 100px
 }
 
-.sheet-pd[value="6"] + span {
+.sheet-pd[value="6"]+span {
     width: 120px
 }
 
-.sheet-pd[value="7"] + span {
+.sheet-pd[value="7"]+span {
     width: 140px
 }
 
@@ -281,11 +285,11 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
     color: #fff;
 }
 
-.sheet-switch-input-on:checked ~ .sheet-switch-selection {
+.sheet-switch-input-on:checked~.sheet-switch-selection {
     left: 2px;
 }
 
-.sheet-switch-input-off:checked ~ .sheet-switch-selection {
+.sheet-switch-input-off:checked~.sheet-switch-selection {
     left: 60px;
 }
 
@@ -319,88 +323,88 @@ table .sheet-opt-content {
 }
 
 /* Old Vehicle Tabs */
-input.sheet-opt-vehicle:checked ~ table tr.sheet-opt-vehicle,
-input.sheet-opt-ship:checked ~ table tr.sheet-opt-ship,
-input.sheet-tab-v-details:checked ~ div.sheet-tab-v-details,
-input.sheet-tab-v-weapons:checked ~ div.sheet-tab-v-weapons,
-input.sheet-tab-older:checked ~ div.sheet-tab-older,
+input.sheet-opt-vehicle:checked~table tr.sheet-opt-vehicle,
+input.sheet-opt-ship:checked~table tr.sheet-opt-ship,
+input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
+input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
+input.sheet-tab-older:checked~div.sheet-tab-older,
 /* New Vehicle Tabs */
-input.sheet-tab-transport-space:checked ~ table tr.sheet-tab-transport-space,
-input.sheet-tab-transport-planetary:checked ~ table tr.sheet-tab-transport-planetary,
-input.sheet-tab-transport-beast:checked ~ table tr.sheet-tab-transport-beast,
-input.sheet-tab-transport-space-general:checked ~ table tr.sheet-tab-transport-space-general,
-input.sheet-tab-transport-space-critical:checked ~ table tr.sheet-tab-transport-space-critical,
-input.sheet-tab-transport-planetary-general:checked ~ table tr.sheet-tab-transport-planetary-general,
-input.sheet-tab-transport-planetary-critical:checked ~ table tr.sheet-tab-transport-planetary-critical,
-input.sheet-tab-transport-beast-general:checked ~ table tr.sheet-tab-transport-beast-general,
-input.sheet-tab-transport-beast-critical:checked ~ table tr.sheet-tab-transport-beast-critical,
+input.sheet-tab-transport-space:checked~table tr.sheet-tab-transport-space,
+input.sheet-tab-transport-planetary:checked~table tr.sheet-tab-transport-planetary,
+input.sheet-tab-transport-beast:checked~table tr.sheet-tab-transport-beast,
+input.sheet-tab-transport-space-general:checked~table tr.sheet-tab-transport-space-general,
+input.sheet-tab-transport-space-critical:checked~table tr.sheet-tab-transport-space-critical,
+input.sheet-tab-transport-planetary-general:checked~table tr.sheet-tab-transport-planetary-general,
+input.sheet-tab-transport-planetary-critical:checked~table tr.sheet-tab-transport-planetary-critical,
+input.sheet-tab-transport-beast-general:checked~table tr.sheet-tab-transport-beast-general,
+input.sheet-tab-transport-beast-critical:checked~table tr.sheet-tab-transport-beast-critical,
 /* Base of Operations Tabs */
-input.sheet-opt-rebel:checked ~ table tr td.sheet-opt-rebel,
-input.sheet-opt-business:checked ~ table tr td.sheet-opt-business,
-input.sheet-opt-homestead:checked ~ table tr td.sheet-opt-homestead,
+input.sheet-opt-rebel:checked~table tr td.sheet-opt-rebel,
+input.sheet-opt-business:checked~table tr td.sheet-opt-business,
+input.sheet-opt-homestead:checked~table tr td.sheet-opt-homestead,
 /* Companion Tabs */
-input.sheet-tab-companion-info:checked ~ table tr td.sheet-tab-companion-info,
-input.sheet-tab-companion-combat:checked ~ table tr td.sheet-tab-companion-combat,
-input.sheet-tab-companion-critical:checked ~ table tr td.sheet-tab-companion-critical,
-input.sheet-tab-companion-inventory:checked ~ table tr td.sheet-tab-companion-inventory,
+input.sheet-tab-companion-info:checked~table tr td.sheet-tab-companion-info,
+input.sheet-tab-companion-combat:checked~table tr td.sheet-tab-companion-combat,
+input.sheet-tab-companion-critical:checked~table tr td.sheet-tab-companion-critical,
+input.sheet-tab-companion-inventory:checked~table tr td.sheet-tab-companion-inventory,
 /* NPC Tabs */
-input.sheet-tab-npc-info:checked ~ table tr td.sheet-tab-npc-info,
-input.sheet-tab-npc-combat:checked ~ table tr td.sheet-tab-npc-combat,
-input.sheet-tab-npc-critical:checked ~ table tr td.sheet-tab-npc-critical,
-input.sheet-tab-npc-inventory:checked ~ table tr td.sheet-tab-npc-inventory,
+input.sheet-tab-npc-info:checked~table tr td.sheet-tab-npc-info,
+input.sheet-tab-npc-combat:checked~table tr td.sheet-tab-npc-combat,
+input.sheet-tab-npc-critical:checked~table tr td.sheet-tab-npc-critical,
+input.sheet-tab-npc-inventory:checked~table tr td.sheet-tab-npc-inventory,
 /* GM Tabs */
-input.sheet-tab-gm-combat:checked ~ table tr td.input.sheet-tab-gm-combat,
-input.sheet-tab-gm-settings:checked ~ table tr td.input.sheet-tab-gm-settings,
-input.sheet-tab-gm-weapons:checked ~ table tr td.sheet-tab-gm-weapons,
-input.sheet-tab-npc:checked ~ table tr td.sheet-tab-npc,
-input.sheet-tab-group-base-details:checked ~ table tr td.sheet-tab-group-base-details,
-input.sheet-tab-group-shared:checked ~ table tr td.sheet-tab-group-shared,
-input.sheet-tab-settinginfo:checked ~ table tr td.sheet-tab-settinginfo,
-input.sheet-tab-gm-adversaries:checked ~ table tr td.sheet-tab-gm-adversaries {
+input.sheet-tab-gm-combat:checked~table tr td.input.sheet-tab-gm-combat,
+input.sheet-tab-gm-settings:checked~table tr td.input.sheet-tab-gm-settings,
+input.sheet-tab-gm-weapons:checked~table tr td.sheet-tab-gm-weapons,
+input.sheet-tab-npc:checked~table tr td.sheet-tab-npc,
+input.sheet-tab-group-base-details:checked~table tr td.sheet-tab-group-base-details,
+input.sheet-tab-group-shared:checked~table tr td.sheet-tab-group-shared,
+input.sheet-tab-settinginfo:checked~table tr td.sheet-tab-settinginfo,
+input.sheet-tab-gm-adversaries:checked~table tr td.sheet-tab-gm-adversaries {
     display: table-row;
 }
 
 /* Old Vehicle Tabs */
-input.sheet-opt-vehicle:checked ~ table tr td.sheet-opt-vehicle,
-input.sheet-opt-ship:checked ~ table tr td.sheet-opt-ship,
-input.sheet-tab-v-details:checked ~ div.sheet-tab-v-details,
-input.sheet-tab-v-weapons:checked ~ div.sheet-tab-v-weapons,
-input.sheet-tab-older:checked ~ div.sheet-tab-older,
+input.sheet-opt-vehicle:checked~table tr td.sheet-opt-vehicle,
+input.sheet-opt-ship:checked~table tr td.sheet-opt-ship,
+input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
+input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
+input.sheet-tab-older:checked~div.sheet-tab-older,
 /* New Vehicle Tabs */
-input.sheet-tab-transport-space:checked ~ table tr.sheet-tab-transport-space,
-input.sheet-tab-transport-planetary:checked ~ table tr.sheet-tab-transport-planetary,
-input.sheet-tab-transport-beast:checked ~ table tr.sheet-tab-transport-beast,
-input.sheet-tab-transport-space-general:checked ~ table tr.sheet-tab-transport-space-general,
-input.sheet-tab-transport-space-critical:checked ~ table tr.sheet-tab-transport-space-critical,
-input.sheet-tab-transport-planetary-general:checked ~ table tr.sheet-tab-transport-planetary-general,
-input.sheet-tab-transport-planetary-critical:checked ~ table tr.sheet-tab-transport-planetary-critical,
-input.sheet-tab-transport-beast-general:checked ~ table tr.sheet-tab-transport-beast-general,
-input.sheet-tab-transport-beast-critical:checked ~ table tr.sheet-tab-transport-beast-critical,
+input.sheet-tab-transport-space:checked~table tr.sheet-tab-transport-space,
+input.sheet-tab-transport-planetary:checked~table tr.sheet-tab-transport-planetary,
+input.sheet-tab-transport-beast:checked~table tr.sheet-tab-transport-beast,
+input.sheet-tab-transport-space-general:checked~table tr.sheet-tab-transport-space-general,
+input.sheet-tab-transport-space-critical:checked~table tr.sheet-tab-transport-space-critical,
+input.sheet-tab-transport-planetary-general:checked~table tr.sheet-tab-transport-planetary-general,
+input.sheet-tab-transport-planetary-critical:checked~table tr.sheet-tab-transport-planetary-critical,
+input.sheet-tab-transport-beast-general:checked~table tr.sheet-tab-transport-beast-general,
+input.sheet-tab-transport-beast-critical:checked~table tr.sheet-tab-transport-beast-critical,
 /* Base of Operations Tabs */
-input.sheet-opt-rebel:checked ~ table tr td.sheet-opt-rebel,
-input.sheet-opt-business:checked ~ table tr td.sheet-opt-business,
-input.sheet-opt-homestead:checked ~ table tr td.sheet-opt-homestead,
+input.sheet-opt-rebel:checked~table tr td.sheet-opt-rebel,
+input.sheet-opt-business:checked~table tr td.sheet-opt-business,
+input.sheet-opt-homestead:checked~table tr td.sheet-opt-homestead,
 /* Companion Tabs */
-input.sheet-tab-companion-info:checked ~ table tr td.sheet-tab-companion-info,
-input.sheet-tab-companion-stp:checked ~ table tr td.sheet-tab-companion-stp,
-input.sheet-tab-companion-combat:checked ~ table tr td.sheet-tab-companion-combat,
-input.sheet-tab-companion-critical:checked ~ table tr td.sheet-tab-companion-critical,
-input.sheet-tab-companion-inventory:checked ~ table tr td.sheet-tab-companion-inventory,
+input.sheet-tab-companion-info:checked~table tr td.sheet-tab-companion-info,
+input.sheet-tab-companion-stp:checked~table tr td.sheet-tab-companion-stp,
+input.sheet-tab-companion-combat:checked~table tr td.sheet-tab-companion-combat,
+input.sheet-tab-companion-critical:checked~table tr td.sheet-tab-companion-critical,
+input.sheet-tab-companion-inventory:checked~table tr td.sheet-tab-companion-inventory,
 /* NPC Tabs */
-input.sheet-tab-npc-info:checked ~ table tr td.sheet-tab-npc-info,
-input.sheet-tab-npc-stp:checked ~ table tr td.sheet-tab-npc-stp,
-input.sheet-tab-npc-combat:checked ~ table tr td.sheet-tab-npc-combat,
-input.sheet-tab-npc-critical:checked ~ table tr td.sheet-tab-npc-critical,
-input.sheet-tab-npc-inventory:checked ~ table tr td.sheet-tab-npc-inventory,
+input.sheet-tab-npc-info:checked~table tr td.sheet-tab-npc-info,
+input.sheet-tab-npc-stp:checked~table tr td.sheet-tab-npc-stp,
+input.sheet-tab-npc-combat:checked~table tr td.sheet-tab-npc-combat,
+input.sheet-tab-npc-critical:checked~table tr td.sheet-tab-npc-critical,
+input.sheet-tab-npc-inventory:checked~table tr td.sheet-tab-npc-inventory,
 /* GM Tabs */
-input.sheet-tab-gm-combat:checked ~ table tr td.input.sheet-tab-gm-combat,
-input.sheet-tab-gm-settings:checked ~ table tr td.input.sheet-tab-gm-settings,
-input.sheet-tab-gm-weapons:checked ~ table tr td.sheet-tab-gm-weapons,
-input.sheet-tab-npc:checked ~ table tr td.sheet-tab-npc,
-input.sheet-tab-group-base-details:checked ~ table tr td.sheet-tab-group-base-details,
-input.sheet-tab-group-shared:checked ~ table tr td.sheet-tab-group-shared,
-input.sheet-tab-settinginfo:checked ~ table tr td.sheet-tab-settinginfo,
-input.sheet-tab-gm-adversaries:checked ~ table tr td.sheet-tab-gm-adversaries {
+input.sheet-tab-gm-combat:checked~table tr td.input.sheet-tab-gm-combat,
+input.sheet-tab-gm-settings:checked~table tr td.input.sheet-tab-gm-settings,
+input.sheet-tab-gm-weapons:checked~table tr td.sheet-tab-gm-weapons,
+input.sheet-tab-npc:checked~table tr td.sheet-tab-npc,
+input.sheet-tab-group-base-details:checked~table tr td.sheet-tab-group-base-details,
+input.sheet-tab-group-shared:checked~table tr td.sheet-tab-group-shared,
+input.sheet-tab-settinginfo:checked~table tr td.sheet-tab-settinginfo,
+input.sheet-tab-gm-adversaries:checked~table tr td.sheet-tab-gm-adversaries {
     display: table-cell;
 }
 
@@ -461,7 +465,7 @@ span.sheet-tab-new {
     width: 120px;
 }
 
-input.sheet-tab-new:checked + span {
+input.sheet-tab-new:checked+span {
     background: #51597f none repeat scroll 0 0;
     border-radius: 4px;
     font-weight: bold;
@@ -473,7 +477,7 @@ input.sheet-tab-new.sheet-tab-talents {
     width: 212px;
 }
 
-input.sheet-tab-new.sheet-tab-talents + span {
+input.sheet-tab-new.sheet-tab-talents+span {
     margin-left: -214px;
 }
 
@@ -491,59 +495,83 @@ div.sheet-separator {
 }
 
 /* Top Level Tabs */
-input.sheet-tab-character-sheet:checked ~ div.sheet-tab-character-sheet,
-input.sheet-tab-ship-sheet:checked ~ div.sheet-tab-ship-sheet,
-input.sheet-tab-base-sheet:checked ~ div.sheet-tab-base-sheet,
-input.sheet-tab-companion-sheet:checked ~ div.sheet-tab-companion-sheet,
-input.sheet-tab-npc-sheet:checked ~ div.sheet-tab-npc-sheet, /* NPC Short Sheet*/
-input.sheet-tab-gm-dice:checked ~ div.sheet-tab-gm-dice,
+input.sheet-tab-character-sheet:checked~div.sheet-tab-character-sheet,
+input.sheet-tab-ship-sheet:checked~div.sheet-tab-ship-sheet,
+input.sheet-tab-base-sheet:checked~div.sheet-tab-base-sheet,
+input.sheet-tab-companion-sheet:checked~div.sheet-tab-companion-sheet,
+input.sheet-tab-npc-sheet:checked~div.sheet-tab-npc-sheet,
+/* NPC Short Sheet*/
+input.sheet-tab-cheat-sheet:checked~div.sheet-tab-cheat-sheet,
+input.sheet-tab-spell-sheet:checked~div.sheet-tab-spell-sheet,
+input.sheet-tab-gm-dice:checked~div.sheet-tab-gm-dice,
 /* Character Sheet Tab SubTabs */
-input.sheet-tab-character:checked ~ div.sheet-tab-character,
-input.sheet-tab-skills:checked ~ div.sheet-tab-skills,
-input.sheet-tab-talents:checked ~ div.sheet-tab-talents,
-input.sheet-tab-weapons:checked ~ div.sheet-tab-weapons,
-input.sheet-tab-notes:checked ~ div.sheet-tab-notes,
-input.sheet-tab-critical:checked ~ div.sheet-tab-critical,
+input.sheet-tab-character:checked~div.sheet-tab-character,
+input.sheet-tab-skills:checked~div.sheet-tab-skills,
+input.sheet-tab-talents:checked~div.sheet-tab-talents,
+input.sheet-tab-weapons:checked~div.sheet-tab-weapons,
+input.sheet-tab-notes:checked~div.sheet-tab-notes,
+input.sheet-tab-critical:checked~div.sheet-tab-critical,
 /* Vehicle Sheet Tab SubTabs */
-input.sheet-tab-v-details:checked ~ div.sheet-tab-v-details,
-input.sheet-tab-v-weapons:checked ~ div.sheet-tab-v-weapons,
-input.sheet-tab-older:checked ~ div.sheet-tab-older,
-input.sheet-tab-transport-space:checked ~ div.sheet-tab-transport-space,
-input.sheet-tab-transport-planetary:checked ~ div.sheet-tab-transport-planetary,
-input.sheet-tab-transport-beast:checked ~ div.sheet-tab-transport-beast,
-input.sheet-tab-transport-space-general:checked ~ div.sheet-tab-transport-space-general,
-input.sheet-tab-transport-space-critical:checked ~ div.sheet-tab-transport-space-critical,
-input.sheet-tab-transport-planetary-general:checked ~ div.sheet-tab-transport-planetary-general,
-input.sheet-tab-transport-planetary-critical:checked ~ div.sheet-tab-transport-planetary-critical,
-input.sheet-tab-transport-beast-general:checked ~ div.sheet-tab-transport-beast-general,
-input.sheet-tab-transport-beast-critical:checked ~ div.sheet-tab-transport-beast-critical,
+input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
+input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
+input.sheet-tab-older:checked~div.sheet-tab-older,
+input.sheet-tab-transport-space:checked~div.sheet-tab-transport-space,
+input.sheet-tab-transport-planetary:checked~div.sheet-tab-transport-planetary,
+input.sheet-tab-transport-beast:checked~div.sheet-tab-transport-beast,
+input.sheet-tab-transport-space-general:checked~div.sheet-tab-transport-space-general,
+input.sheet-tab-transport-space-critical:checked~div.sheet-tab-transport-space-critical,
+input.sheet-tab-transport-planetary-general:checked~div.sheet-tab-transport-planetary-general,
+input.sheet-tab-transport-planetary-critical:checked~div.sheet-tab-transport-planetary-critical,
+input.sheet-tab-transport-beast-general:checked~div.sheet-tab-transport-beast-general,
+input.sheet-tab-transport-beast-critical:checked~div.sheet-tab-transport-beast-critical,
 /* Group Sheet Tab*/
-input.sheet-tab-base-details:checked ~ div.sheet-tab-base-details,
-input.sheet-tab-base-shared:checked ~ div.sheet-tab-base-shared,
+input.sheet-tab-base-details:checked~div.sheet-tab-base-details,
+input.sheet-tab-base-shared:checked~div.sheet-tab-base-shared,
 /* Group Sheet Tab SubTabs */
-input.sheet-tab-groupshared:checked ~ div.sheet-tab-groupshared,
+input.sheet-tab-groupshared:checked~div.sheet-tab-groupshared,
 /* Group Sheet Tab Radio Buttons */
-input.sheet-opt-rebel:checked ~ div.sheet-opt-rebel,
-input.sheet-opt-business:checked ~ div.sheet-opt-business,
-input.sheet-opt-homestead:checked ~ div.sheet-opt-homestead,
+input.sheet-opt-rebel:checked~div.sheet-opt-rebel,
+input.sheet-opt-business:checked~div.sheet-opt-business,
+input.sheet-opt-homestead:checked~div.sheet-opt-homestead,
 /* Companion Sub Tabs */
-input.sheet-tab-companion-info:checked ~ div.sheet-tab-companion-info,
-input.sheet-tab-companion-combat:checked ~ div.sheet-tab-companion-combat,
-input.sheet-tab-companion-critical:checked ~ div.sheet-tab-companion-critical,
-input.sheet-tab-companion-inventory:checked ~ div.sheet-tab-companion-inventory,
+input.sheet-tab-companion-info:checked~div.sheet-tab-companion-info,
+input.sheet-tab-companion-combat:checked~div.sheet-tab-companion-combat,
+input.sheet-tab-companion-critical:checked~div.sheet-tab-companion-critical,
+input.sheet-tab-companion-inventory:checked~div.sheet-tab-companion-inventory,
 /* Companion Sub Tabs */
-input.sheet-tab-npc-info:checked ~ div.sheet-tab-npc-info,
-input.sheet-tab-npc-combat:checked ~ div.sheet-tab-npc-combat,
-input.sheet-tab-npc-critical:checked ~ div.sheet-tab-npc-critical,
-input.sheet-tab-npc-inventory:checked ~ div.sheet-tab-npc-inventory,
+input.sheet-tab-npc-info:checked~div.sheet-tab-npc-info,
+input.sheet-tab-npc-combat:checked~div.sheet-tab-npc-combat,
+input.sheet-tab-npc-critical:checked~div.sheet-tab-npc-critical,
+input.sheet-tab-npc-inventory:checked~div.sheet-tab-npc-inventory,
+/* Cheat Sheet Tabs */
+input.sheet-tab-cheat1:checked~div.sheet-tab-cheat1,
+input.sheet-tab-cheat2:checked~div.sheet-tab-cheat2,
+input.sheet-tab-cheat3:checked~div.sheet-tab-cheat3,
+input.sheet-tab-cheat4:checked~div.sheet-tab-cheat4,
+input.sheet-tab-cheat5:checked~div.sheet-tab-cheat5,
+/* Spell Sheet Tabs */
+input.sheet-tab-spellgeneral-sheet:checked~div.sheet-tab-spellgeneral-sheet,
+input.sheet-tab-targetspell-sheet:checked~div.sheet-tab-targetspell-sheet,
+input.sheet-tab-areaspell-sheet:checked~div.sheet-tab-areaspell-sheet,
+input.sheet-tab-conjurespell-sheet:checked~div.sheet-tab-conjurespell-sheet,
+input.sheet-tab-counterspell-sheet:checked~div.sheet-tab-counterspell-sheet,
+input.sheet-tab-utilityspell-sheet:checked~div.sheet-tab-utilityspell-sheet,
+input.sheet-tab-crafting-sheet:checked~div.sheet-tab-crafting-sheet,
 /* gmdice Sheet Tab SubTabs */
-input.sheet-tab-gm-combat:checked ~ div.sheet-tab-gm-combat,
-input.sheet-tab-gm-settings:checked ~ div.sheet-tab-gm-settings,
-input.sheet-tab-gm-weapons:checked ~ div.sheet-tab-gm-weapons, /* Currently used for Group Mechanics sheet */
-input.sheet-tab-group-base-details:checked ~ div.sheet-tab-group-base-details, /* Group Base of Operations Copy*/
-input.sheet-tab-group-shared:checked ~ div.sheet-tab-group-shared, /* Group Shared Resources Copy*/
-input.sheet-tab-settinginfo:checked ~ div.sheet-tab-settinginfo, /* Game Setting Worksheet */
-input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Currently used for Campaign Details sheet */ {
+input.sheet-tab-gm-combat:checked~div.sheet-tab-gm-combat,
+input.sheet-tab-gm-settings:checked~div.sheet-tab-gm-settings,
+input.sheet-tab-gm-weapons:checked~div.sheet-tab-gm-weapons,
+/* Currently used for Group Mechanics sheet */
+input.sheet-tab-group-base-details:checked~div.sheet-tab-group-base-details,
+/* Group Base of Operations Copy*/
+input.sheet-tab-group-shared:checked~div.sheet-tab-group-shared,
+/* Group Shared Resources Copy*/
+input.sheet-tab-settinginfo:checked~div.sheet-tab-settinginfo,
+/* Game Setting Worksheet */
+input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
+
+/* Currently used for Campaign Details sheet */
+    {
     display: block;
 }
 
@@ -617,7 +645,8 @@ input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Current
 
 /* Roll Template Formatting */
 
-.sheet-rolltemplate-base table, .sheet-rolltemplate-suggestion table {
+.sheet-rolltemplate-base table,
+.sheet-rolltemplate-suggestion table {
     width: 100%;
     border: 1px solid;
     color: black;
@@ -625,7 +654,8 @@ input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Current
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.sheet-rolltemplate-base th, .sheet-rolltemplate-suggestion th {
+.sheet-rolltemplate-base th,
+.sheet-rolltemplate-suggestion th {
     border-radius: 3px;
     background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
     background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
@@ -639,12 +669,14 @@ input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Current
     font-size: 1.2em;
 }
 
-.sheet-rolltemplate-base .sheet-subheader, .sheet-rolltemplate-suggestion .sheet-subheader {
+.sheet-rolltemplate-base .sheet-subheader,
+.sheet-rolltemplate-suggestion .sheet-subheader {
     font-size: 0.8em;
     padding: 2px;
 }
 
-.sheet-rolltemplate-base .sheet-tcat-header, .sheet-rolltemplate-suggestion .sheet-tcat-header {
+.sheet-rolltemplate-base .sheet-tcat-header,
+.sheet-rolltemplate-suggestion .sheet-tcat-header {
     background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
     background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
     background-image: -o-linear-gradient(top, #485a6d, #2c3947);
@@ -657,7 +689,8 @@ input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Current
     font-size: 0.8em;
 }
 
-.sheet-rolltemplate-base td, .sheet-rolltemplate-suggestion td {
+.sheet-rolltemplate-base td,
+.sheet-rolltemplate-suggestion td {
     padding: 2px;
 }
 
@@ -665,22 +698,26 @@ input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Current
     width: 71px;
 }
 
-.sheet-rolltemplate-base .sheet-tcat, .sheet-rolltemplate-suggestion .sheet-tcat {
+.sheet-rolltemplate-base .sheet-tcat,
+.sheet-rolltemplate-suggestion .sheet-tcat {
     font-weight: bold;
     padding: 2px;
 }
 
-.sheet-rolltemplate-base .sheet-flavor, .sheet-rolltemplate-suggestion .sheet-flavor {
+.sheet-rolltemplate-base .sheet-flavor,
+.sheet-rolltemplate-suggestion .sheet-flavor {
     font-style: italic;
     padding: 2px;
 }
 
-.sheet-rolltemplate-base tr:nth-child(odd), .sheet-rolltemplate-suggestion tr:nth-child(odd) {
+.sheet-rolltemplate-base tr:nth-child(odd),
+.sheet-rolltemplate-suggestion tr:nth-child(odd) {
     background-color: rgba(217, 217, 214, 1);
     padding: 2px;
 }
 
-.sheet-rolltemplate-base tr:nth-child(even), .sheet-rolltemplate-suggestion tr:nth-child(even) {
+.sheet-rolltemplate-base tr:nth-child(even),
+.sheet-rolltemplate-suggestion tr:nth-child(even) {
     background-color: rgba(233, 233, 233, 1);
     padding: 2px;
 }
@@ -695,20 +732,20 @@ input.sheet-tab-gm-adversaries:checked ~ div.sheet-tab-gm-adversaries /* Current
     display: none;
 }
 
-input.sheet-player:checked ~ .sheet-player-sheet,
-input.sheet-gm:checked ~ .sheet-gm-sheet {
+input.sheet-player:checked~.sheet-player-sheet,
+input.sheet-gm:checked~.sheet-gm-sheet {
     display: inline-block;
 }
 
-input.sheet-player:checked ~ .sheet-player-dice {
+input.sheet-player:checked~.sheet-player-dice {
     display: block;
 }
 
-input.sheet-gm:checked ~ div.sheet-tab-content {
+input.sheet-gm:checked~div.sheet-tab-content {
     display: none;
 }
 
-input.sheet-gm:checked ~ div.sheet-tab-gm-dice {
+input.sheet-gm:checked~div.sheet-tab-gm-dice {
     display: block;
 }
 
@@ -765,7 +802,8 @@ input[type=number].sheet-characteristic {
 
 .charsheet table {
     width: 100%;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/grey.jpg'); /* Grey Background */
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/grey.jpg');
+    /* Grey Background */
     background-position: center center;
     background-repeat: repeat;
 }
@@ -778,7 +816,8 @@ input[type=number].sheet-characteristic {
 }
 
 .charsheet table tr th:last-child {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/white_space.png'); /* Blank white space */
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/white_space.png');
+    /* Blank white space */
     background-position: right bottom;
     background-repeat: no-repeat;
 }
@@ -822,7 +861,8 @@ input[type=number].sheet-characteristic {
 }
 
 .charsheet h3 {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/stretched_hexagon.png'), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/grey_title_lines.png'); /* Stretched hexagon, Grey Title lines*/
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/stretched_hexagon.png'), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/grey_title_lines.png');
+    /* Stretched hexagon, Grey Title lines*/
     background-position: center top, center 5px;
     background-repeat: no-repeat, repeat-x;
     line-height: 40px;
@@ -897,11 +937,9 @@ input[type=number].sheet-characteristic {
     border-bottom: none
 }
 
-.sheet-dice-pool td.sheet-light {
-}
+.sheet-dice-pool td.sheet-light {}
 
-.sheet-dice-pool td.sheet-dark {
-}
+.sheet-dice-pool td.sheet-dark {}
 
 .sheet-dice-pool td.sheet-light:nth-child(1) {
     border-left: 1px solid #999;
@@ -937,7 +975,8 @@ input[type=number].sheet-characteristic {
 /* ------------------------------------------------- Soak, Wounds... */
 
 .sheet-swsd {
-    background: url('https://github.com/Roll20/roll20-character-sheets/blob/master/Genesys-RPG/assets/background/border/character.png') center -2px no-repeat; /* Character Sheet Stat connecting sword title - Border */
+    background: url('https://github.com/Roll20/roll20-character-sheets/blob/master/Genesys-RPG/assets/background/border/character.png') center -2px no-repeat;
+    /* Character Sheet Stat connecting sword title - Border */
 }
 
 .sheet-swsd tr:hover td {
@@ -979,7 +1018,8 @@ input[type=number].sheet-characteristic {
 
 .sheet-swsd tr:nth-child(2) td:nth-child(1),
 .sheet-beast tr:first-child td:nth-child(5) {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png'); /*Single Digit - Border*/
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
     width: 99px;
@@ -1056,37 +1096,60 @@ label.sheet-label-current {
     width: 50px !important;
 }
 
-.sheet-destiny td:nth-child(1) {
+.sheet-destiny td:nth-child(12) {
     margin-left: auto;
     margin-right: auto;
-    width: 250px;
+    width: 200px;
     height: 66px;
     vertical-align: top;
 }
 
-.sheet-destiny td:nth-child(3) {
-    width: 99px;
+.sheet-destiny td:nth-child(2) {
+    width: 100px;
     height: 66px;
-    vertical-align: middle;
+    vertical-align: bottom;
+
+
 }
 
-.sheet-destiny td:nth-child(2),
-.sheet-destiny td:nth-child(4) {
+.sheet-destiny td:nth-child(1) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png'); /*Single Digit - Border*/
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
     width: 99px;
     height: 66px;
     vertical-align: top;
+    margin-left: auto;
+    position: absolute;
+    left: 20%;
+
+
+}
+
+.sheet-destiny td:nth-child(3) {
+    text-align: center;
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    /*Single Digit - Border*/
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 99px;
+    height: 66px;
+    vertical-align: top;
+    margin-right: auto;
+    position: absolute;
+    right: 20%;
 }
 
 .sheet-destiny {
     background-image: none;
+    text-align: center;
 }
 
 .sheet-destiny tr td {
     border: none;
+    text-align: center;
 }
 
 .sheet-destiny tr:hover td {
@@ -1118,7 +1181,8 @@ label.sheet-label-current {
 .sheet-characteristics td:nth-child(11),
 .sheet-characteristics td:nth-child(13) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png'); /* Single Digit - Border */
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    /* Single Digit - Border */
     background-position: center top;
     background-repeat: no-repeat;
     width: 99px;
@@ -1176,7 +1240,8 @@ label.sheet-label-current {
 }
 
 .sheet-crit-dice-bg {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/4.png'); /* Four Boxes - Dice Border */
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/4.png');
+    /* Four Boxes - Dice Border */
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -1200,7 +1265,7 @@ label.sheet-label-current {
     display: none;
 }
 
-.sheet-checkbox-criton:checked + .sheet-critical {
+.sheet-checkbox-criton:checked+.sheet-critical {
     display: block;
 }
 
@@ -1234,11 +1299,16 @@ button.sheet-btn-roll-crit[type=roll] {
     font-size: 16px;
     line-height: 30px;
     border: none;
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(red, white); /* For Safari */
-    background: -o-linear-gradient(red, white); /* For Opera */
-    background: -moz-linear-gradient(red, white); /* For Firefox */
-    background: linear-gradient(red, white); /* Standard syntax (must be last) */
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, white);
+    /* For Safari */
+    background: -o-linear-gradient(red, white);
+    /* For Opera */
+    background: -moz-linear-gradient(red, white);
+    /* For Firefox */
+    background: linear-gradient(red, white);
+    /* Standard syntax (must be last) */
     -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
 }
@@ -1273,7 +1343,8 @@ button.sheet-btn-roll-crit[type=roll]:active {
 .sheet-init td:nth-child(5),
 .sheet-skills td:nth-child(4) {
     width: 124px;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/7.png'); /* Seven Boxes - Dice Border */
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/7.png');
+    /* Seven Boxes - Dice Border */
     background-repeat: no-repeat;
     background-position: 3px center;
 }
@@ -1286,6 +1357,7 @@ button.sheet-btn-roll-crit[type=roll]:active {
 .sheet-custome-skills td:nth-child(1) {
     width: 270px;
 }
+
 .sheet-custome-skills td:nth-child(2),
 .sheet-custome-skills th:nth-child(2) {
     width: 100px;
@@ -1311,7 +1383,8 @@ button.sheet-btn-roll-crit[type=roll]:active {
 
 .sheet-custome-skills td:nth-child(5) {
     width: 124px;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/7.png'); /* Seven Boxes - Dice Border */
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/7.png');
+    /* Seven Boxes - Dice Border */
     background-repeat: no-repeat;
     background-position: 4px center;
 }
@@ -1501,7 +1574,7 @@ th .sheet-help-content {
     cursor: help;
 }
 
-.sheet-icon:hover ~ .sheet-help-content {
+.sheet-icon:hover~.sheet-help-content {
     display: block;
     z-index: 10
 }
@@ -1564,7 +1637,8 @@ th .sheet-help-content {
 .sheet-weapons td:nth-child(6),
 .sheet-weapons td:nth-child(8) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png'); /*Single Digit - Border*/
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
     width: 99px;
@@ -1573,7 +1647,8 @@ th .sheet-help-content {
 }
 
 .sheet-weapons {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/title_double_line.png') center 45px repeat-x; /* Title Double Line */
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/title_double_line.png') center 45px repeat-x;
+    /* Title Double Line */
 }
 
 .sheet-weapons tr td {
@@ -1633,7 +1708,7 @@ label.sheet-view-attachments {
     display: none;
 }
 
-input.sheet-view-attachments:checked ~ .sheet-attachments {
+input.sheet-view-attachments:checked~.sheet-attachments {
     display: table;
 }
 
@@ -1644,7 +1719,8 @@ input.sheet-view-attachments:checked ~ .sheet-attachments {
 /* ---------------------------------------------------------- Ship */
 
 .sheet-ship {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/vehicle.png') center center no-repeat; /* Vehicle Sheet Stat connecting sword title - Border */
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/vehicle.png') center center no-repeat;
+    /* Vehicle Sheet Stat connecting sword title - Border */
     background-color: transparent;
 }
 
@@ -1658,7 +1734,8 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-ship-defense {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/star_four_zones.png') center center no-repeat; /* Starship Four Zones - Border */
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/star_four_zones.png') center center no-repeat;
+    /* Starship Four Zones - Border */
     width: 302px;
     height: 236px;
     text-align: center;
@@ -1666,7 +1743,8 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-planetary-vehicle-defense {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/speed_four_zones.png') center center no-repeat; /* Speeder Four Zones - Border */
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/speed_four_zones.png') center center no-repeat;
+    /* Speeder Four Zones - Border */
     width: 302px;
     height: 236px;
     text-align: center;
@@ -1674,21 +1752,23 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-ship-char-thre-bg {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/threshold_current.png');
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/threshold-current.png');
     background-position: center 0px;
     background-repeat: no-repeat;
     vertical-align: top;
-    width: 33%; /*153px;*/
+    width: 33%;
+    /*153px;*/
     height: 87px;
     text-align: center;
 }
 
 .sheet-ship-char-thre-bg-speed {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/threshold_current.png');
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/threshold-current.png');
     background-position: center 25px;
     background-repeat: no-repeat;
     vertical-align: top;
-    width: 33%; /*153px;*/
+    width: 33%;
+    /*153px;*/
     height: 87px;
     text-align: center;
     padding-top: 28px;
@@ -1696,7 +1776,8 @@ table.sheet-ship tr:hover td {
 
 .sheet-ship-char-bg {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png'); /*Single Digit - Border*/
+    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    /*Single Digit - Border*/
     background-position: center 37px;
     background-repeat: no-repeat;
     width: 99px;
@@ -1819,7 +1900,8 @@ span.sheet-fireArcForeImg,
 span.sheet-fireArcStarboardImg,
 span.sheet-fireArcAftImg,
 span.sheet-fireArcPortImg {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/fire_arc.png') left bottom no-repeat; /* Starship Weapon Firing Arcs */
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/fire_arc.png') left bottom no-repeat;
+    /* Starship Weapon Firing Arcs */
     display: block;
     width: 32px;
     height: 32px;
@@ -1842,19 +1924,19 @@ span.sheet-fireArcPortImg {
     background-position: -96px bottom
 }
 
-.sheet-fireArcFore:checked ~ span.sheet-fireArcForeImg {
+.sheet-fireArcFore:checked~span.sheet-fireArcForeImg {
     background-position: 0px top
 }
 
-.sheet-fireArcStarboard:checked ~ span.sheet-fireArcStarboardImg {
+.sheet-fireArcStarboard:checked~span.sheet-fireArcStarboardImg {
     background-position: -32px top
 }
 
-.sheet-fireArcAft:checked ~ span.sheet-fireArcAftImg {
+.sheet-fireArcAft:checked~span.sheet-fireArcAftImg {
     background-position: -64px top
 }
 
-.sheet-fireArcPort:checked ~ span.sheet-fireArcPortImg {
+.sheet-fireArcPort:checked~span.sheet-fireArcPortImg {
     background-position: -96px top
 }
 
@@ -1914,12 +1996,12 @@ input[type="checkbox"].sheet-toggle {
 }
 
 /* Fake checkbox */
-input[type="checkbox"].sheet-toggle + span::before {
+input[type="checkbox"].sheet-toggle+span::before {
     content: "?";
     margin-left: .5em;
 }
 
-input[type="checkbox"].sheet-toggle:checked + span::before {
+input[type="checkbox"].sheet-toggle:checked+span::before {
     margin-right: 4px;
     line-height: 14px;
     text-align: center;
@@ -1932,169 +2014,172 @@ input[type="checkbox"].sheet-toggle:checked + span::before {
 }
 
 /* Header section */
-input.sheet-header-section-toggle:checked ~ div.sheet-header-section,
-input.sheet-top-section-toggle:checked ~ div.sheet-top-section,
-input.sheet-stats-section-toggle:checked ~ div.sheet-stats-section,
-input.sheet-destiny-section-toggle:checked ~ div.sheet-destiny-section,
-input.sheet-dice-section-toggle:checked ~ div.sheet-dice-section,
-input.sheet-motivations-section-toggle:checked ~ div.sheet-motivations-section,
-input.sheet-obligation-section-toggle:checked ~ div.sheet-obligation-section,
-input.sheet-assignment-section-toggle:checked ~ div.sheet-assignment-section,
-input.sheet-setting-section-toggle:checked ~ div.sheet-setting-section,
-input.sheet-settingworksheet-section:checked ~ div.sheet-settingworksheet-section,
-input.sheet-duties-section-toggle:checked ~ div.sheet-duties-section,
-input.sheet-morality-section-toggle:checked ~ div.sheet-morality-section,
-input.sheet-details-section-toggle:checked ~ div.sheet-details-section,
-input.sheet-npc-section-toggle:checked ~ div.sheet-npc-section,
-input.sheet-upgrades-section-toggle:checked ~ div.sheet-upgrades-section,
-input.sheet-contacts-section-toggle:checked ~ div.sheet-contacts-section,
-input.sheet-tasks-section-toggle:checked ~ div.sheet-tasks-section,
-input.sheet-resources-section-toggle:checked ~ div.sheet-resources-section,
-input.sheet-possessions-section-toggle:checked ~ div.sheet-possessions-section,
-input.sheet-roles-section-toggle:checked ~ div.sheet-roles-section,
-input.sheet-attachments-section-toggle:checked ~ div.sheet-attachments-section,
-input.sheet-cargo-section-toggle:checked ~ div.sheet-cargo-section,
-input.sheet-passengers-section-toggle:checked ~ div.sheet-passengers-section,
-input.sheet-main-section-toggle:checked ~ div.sheet-main-section,
-input.sheet-mechanics-section-toggle:checked ~ div.sheet-mechanics-section,
-input.sheet-quickinfo-section-toggle:checked ~ div.sheet-quickinfo-section,
-input.sheet-weapon-section-toggle:checked ~ div.sheet-weapon-section,
-input.sheet-characteristic-section-toggle:checked ~ div.sheet-characteristic-section,
-input.sheet-skills-section-toggle:checked ~ div.sheet-skills-section,
-input.sheet-talents-section-toggle:checked ~ div.sheet-talents-section,
-input.sheet-force-section-toggle:checked ~ div.sheet-force-section,
-input.sheet-signature-section-toggle:checked ~ div.sheet-signature-section,
-input.sheet-combatskills-section-toggle:checked ~ div.sheet-combatskills-section,
-input.sheet-armor-section-toggle:checked ~ div.sheet-armor-section,
-input.sheet-cybernetics-section-toggle:checked ~ div.sheet-cybernetics-section,
-input.sheet-tools-section-toggle:checked ~ div.sheet-tools-section,
-input.sheet-other-gear-section-toggle:checked ~ div.sheet-other-gear-section,
-input.sheet-initiative-section-toggle:checked ~ div.sheet-initiative-section,
-input.sheet-stats-toggle-small:checked ~ div.sheet-stats-toggle-small,
-input.sheet-equipment-section-toggle:checked ~ div.sheet-equipment-section,
-input.sheet-character-toggle-small:checked ~ div.sheet-character-toggle-small,
-input.sheet-game-mechanics-toggle-small:checked ~ div.sheet-game-mechanics-toggle-small,
-input.sheet-career-toggle-small:checked ~ div.sheet-career-toggle-small,
-input.sheet-description-toggle-small:checked ~ div.sheet-description-toggle-small,
-input.sheet-motivation-toggle-small:checked ~ div.sheet-motivation-toggle-small,
-input.sheet-obligation-toggle-small:checked ~ div.sheet-obligation-toggle-small,
-input.sheet-duty-toggle-small:checked ~ div.sheet-duty-toggle-small,
-input.sheet-morality-toggle-small:checked ~ div.sheet-morality-toggle-small,
-input.sheet-armor-toggle-small:checked ~ div.sheet-armor-toggle-small,
-input.sheet-cybernetics-toggle-small:checked ~ div.sheet-cybernetics-toggle-small,
-input.sheet-tools-toggle-small:checked ~ div.sheet-tools-toggle-small,
-input.sheet-other-gear-toggle-small:checked ~ div.sheet-other-gear-toggle-small,
-input.sheet-initiative-toggle-small:checked ~ div.sheet-initiative-toggle-small,
-input.sheet-info-toggle-small:checked ~ div.sheet-info-toggle-small,
-input.sheet-weapons-toggle-small:checked ~ div.sheet-weapons-toggle-small,
-input.sheet-characteristic-toggle-small:checked ~ div.sheet-characteristic-toggle-small,
-input.sheet-skills-toggle-small:checked ~ div.sheet-skills-toggle-small,
-input.sheet-talents-toggle-small:checked ~ div.sheet-talents-toggle-small,
-input.sheet-equipment-toggle-small:checked ~ div.sheet-equipment-toggle-small,
-input.sheet-force-toggle-small:checked ~ div.sheet-force-toggle-small,
-input.sheet-toggle.sheet-initiative-toggle-small:checked ~ div.sheet-initiative-toggle-small,
+input.sheet-header-section-toggle:checked~div.sheet-header-section,
+input.sheet-top-section-toggle:checked~div.sheet-top-section,
+input.sheet-stats-section-toggle:checked~div.sheet-stats-section,
+input.sheet-destiny-section-toggle:checked~div.sheet-destiny-section,
+input.sheet-dice-section-toggle:checked~div.sheet-dice-section,
+input.sheet-motivations-section-toggle:checked~div.sheet-motivations-section,
+input.sheet-obligation-section-toggle:checked~div.sheet-obligation-section,
+input.sheet-assignment-section-toggle:checked~div.sheet-assignment-section,
+input.sheet-setting-section-toggle:checked~div.sheet-setting-section,
+input.sheet-settingworksheet-section:checked~div.sheet-settingworksheet-section,
+input.sheet-duties-section-toggle:checked~div.sheet-duties-section,
+input.sheet-morality-section-toggle:checked~div.sheet-morality-section,
+input.sheet-details-section-toggle:checked~div.sheet-details-section,
+input.sheet-npc-section-toggle:checked~div.sheet-npc-section,
+input.sheet-upgrades-section-toggle:checked~div.sheet-upgrades-section,
+input.sheet-contacts-section-toggle:checked~div.sheet-contacts-section,
+input.sheet-tasks-section-toggle:checked~div.sheet-tasks-section,
+input.sheet-resources-section-toggle:checked~div.sheet-resources-section,
+input.sheet-possessions-section-toggle:checked~div.sheet-possessions-section,
+input.sheet-roles-section-toggle:checked~div.sheet-roles-section,
+input.sheet-attachments-section-toggle:checked~div.sheet-attachments-section,
+input.sheet-cargo-section-toggle:checked~div.sheet-cargo-section,
+input.sheet-passengers-section-toggle:checked~div.sheet-passengers-section,
+input.sheet-main-section-toggle:checked~div.sheet-main-section,
+input.sheet-mechanics-section-toggle:checked~div.sheet-mechanics-section,
+input.sheet-quickinfo-section-toggle:checked~div.sheet-quickinfo-section,
+input.sheet-weapon-section-toggle:checked~div.sheet-weapon-section,
+input.sheet-characteristic-section-toggle:checked~div.sheet-characteristic-section,
+input.sheet-skills-section-toggle:checked~div.sheet-skills-section,
+input.sheet-talents-section-toggle:checked~div.sheet-talents-section,
+input.sheet-force-section-toggle:checked~div.sheet-force-section,
+input.sheet-signature-section-toggle:checked~div.sheet-signature-section,
+input.sheet-combatskills-section-toggle:checked~div.sheet-combatskills-section,
+input.sheet-armor-section-toggle:checked~div.sheet-armor-section,
+input.sheet-cybernetics-section-toggle:checked~div.sheet-cybernetics-section,
+input.sheet-tools-section-toggle:checked~div.sheet-tools-section,
+input.sheet-other-gear-section-toggle:checked~div.sheet-other-gear-section,
+input.sheet-initiative-section-toggle:checked~div.sheet-initiative-section,
+input.sheet-stats-toggle-small:checked~div.sheet-stats-toggle-small,
+input.sheet-equipment-section-toggle:checked~div.sheet-equipment-section,
+input.sheet-character-toggle-small:checked~div.sheet-character-toggle-small,
+input.sheet-game-mechanics-toggle-small:checked~div.sheet-game-mechanics-toggle-small,
+input.sheet-career-toggle-small:checked~div.sheet-career-toggle-small,
+input.sheet-description-toggle-small:checked~div.sheet-description-toggle-small,
+input.sheet-motivation-toggle-small:checked~div.sheet-motivation-toggle-small,
+input.sheet-obligation-toggle-small:checked~div.sheet-obligation-toggle-small,
+input.sheet-duty-toggle-small:checked~div.sheet-duty-toggle-small,
+input.sheet-morality-toggle-small:checked~div.sheet-morality-toggle-small,
+input.sheet-armor-toggle-small:checked~div.sheet-armor-toggle-small,
+input.sheet-cybernetics-toggle-small:checked~div.sheet-cybernetics-toggle-small,
+input.sheet-tools-toggle-small:checked~div.sheet-tools-toggle-small,
+input.sheet-other-gear-toggle-small:checked~div.sheet-other-gear-toggle-small,
+input.sheet-initiative-toggle-small:checked~div.sheet-initiative-toggle-small,
+input.sheet-info-toggle-small:checked~div.sheet-info-toggle-small,
+input.sheet-weapons-toggle-small:checked~div.sheet-weapons-toggle-small,
+input.sheet-characteristic-toggle-small:checked~div.sheet-characteristic-toggle-small,
+input.sheet-skills-toggle-small:checked~div.sheet-skills-toggle-small,
+input.sheet-talents-toggle-small:checked~div.sheet-talents-toggle-small,
+input.sheet-equipment-toggle-small:checked~div.sheet-equipment-toggle-small,
+input.sheet-force-toggle-small:checked~div.sheet-force-toggle-small,
+input.sheet-toggle.sheet-initiative-toggle-small:checked~div.sheet-initiative-toggle-small,
 /* Repeating Section Toggles */
-input.sheet-assignment-toggle:checked ~ div.sheet-assignment,
-input.sheet-mission-toggle:checked ~ div.sheet-mission,
-input.sheet-geninfo-toggle:checked ~ div.sheet-geninfo,
-input.sheet-location-toggle:checked ~ div.sheet-location,
-input.sheet-rewards-toggle:checked ~ div.sheet-rewards,
-input.sheet-details-toggle:checked ~ div.sheet-details,
-input.sheet-list-toggle:checked ~ div.sheet-list,
-input.sheet-weapon-toggle:checked ~ div.sheet-weapon,
+input.sheet-assignment-toggle:checked~div.sheet-assignment,
+input.sheet-mission-toggle:checked~div.sheet-mission,
+input.sheet-geninfo-toggle:checked~div.sheet-geninfo,
+input.sheet-location-toggle:checked~div.sheet-location,
+input.sheet-rewards-toggle:checked~div.sheet-rewards,
+input.sheet-details-toggle:checked~div.sheet-details,
+input.sheet-list-toggle:checked~div.sheet-list,
+input.sheet-weapon-toggle:checked~div.sheet-weapon,
 /* footer */
-input.sheet-footer-toggle:checked ~ div.sheet-footer {
+input.sheet-footer-toggle:checked~div.sheet-footer {
     display: block;
 }
 
 /* Header section */
-input.sheet-header-section-toggle ~ div.sheet-header-section,
-input.sheet-top-section-toggle ~ div.sheet-top-section,
+input.sheet-header-section-toggle~div.sheet-header-section,
+input.sheet-top-section-toggle~div.sheet-top-section,
 
-input.sheet-destiny-section-toggle ~ div.sheet-destiny-section,
-input.sheet-dice-section-toggle ~ div.sheet-dice-section,
-input.sheet-motivations-section-toggle ~ div.sheet-motivations-section,
-input.sheet-obligation-section-toggle ~ div.sheet-obligation-section,
-input.sheet-assignment-section-toggle ~ div.sheet-assignment-section,
-input.sheet-duties-section-toggle ~ div.sheet-duties-section,
-input.sheet-morality-section-toggle ~ div.sheet-morality-section,
+input.sheet-destiny-section-toggle~div.sheet-destiny-section,
+input.sheet-dice-section-toggle~div.sheet-dice-section,
+input.sheet-motivations-section-toggle~div.sheet-motivations-section,
+input.sheet-obligation-section-toggle~div.sheet-obligation-section,
+input.sheet-assignment-section-toggle~div.sheet-assignment-section,
+input.sheet-duties-section-toggle~div.sheet-duties-section,
+input.sheet-morality-section-toggle~div.sheet-morality-section,
 
-input.sheet-details-section-toggle ~ div.sheet-details-section,
-input.sheet-npc-section-toggle ~ div.sheet-npc-section,
-input.sheet-upgrades-section-toggle ~ div.sheet-upgrades-section,
-input.sheet-contacts-section-toggle ~ div.sheet-contacts-section,
-input.sheet-tasks-section-toggle ~ div.sheet-tasks-section,
-input.sheet-resources-section-toggle ~ div.sheet-resources-section,
-input.sheet-possessions-section-toggle ~ div.sheet-possessions-section,
+input.sheet-details-section-toggle~div.sheet-details-section,
+input.sheet-npc-section-toggle~div.sheet-npc-section,
+input.sheet-upgrades-section-toggle~div.sheet-upgrades-section,
+input.sheet-contacts-section-toggle~div.sheet-contacts-section,
+input.sheet-tasks-section-toggle~div.sheet-tasks-section,
+input.sheet-resources-section-toggle~div.sheet-resources-section,
+input.sheet-possessions-section-toggle~div.sheet-possessions-section,
 
-input.sheet-roles-section-toggle ~ div.sheet-roles-section,
-input.sheet-attachments-section-toggle ~ div.sheet-attachments-section,
-input.sheet-cargo-section-toggle ~ div.sheet-cargo-section,
-input.sheet-passengers-section-toggle ~ div.sheet-passengers-section,
+input.sheet-roles-section-toggle~div.sheet-roles-section,
+input.sheet-attachments-section-toggle~div.sheet-attachments-section,
+input.sheet-cargo-section-toggle~div.sheet-cargo-section,
+input.sheet-passengers-section-toggle~div.sheet-passengers-section,
 
-input.sheet-main-section-toggle ~ div.sheet-main-section,
-input.sheet-mechanics-section-toggle ~ div.sheet-mechanics-section,
+input.sheet-main-section-toggle~div.sheet-main-section,
+input.sheet-mechanics-section-toggle~div.sheet-mechanics-section,
 
-input.sheet-quickinfo-section-toggle ~ div.sheet-quickinfo-section,
-input.sheet-weapon-section-toggle ~ div.sheet-weapon-section,
-input.sheet-characteristic-section-toggle ~ div.sheet-characteristic-section,
-input.sheet-skills-section-toggle ~ div.sheet-skills-section,
-input.sheet-talents-section-toggle ~ div.sheet-talents-section,
-input.sheet-force-section-toggle ~ div.sheet-force-section,
-input.sheet-signature-section-toggle ~ div.sheet-signature-section,
-input.sheet-combatskills-section-toggle ~ div.sheet-combatskills-section,
+input.sheet-quickinfo-section-toggle~div.sheet-quickinfo-section,
+input.sheet-weapon-section-toggle~div.sheet-weapon-section,
+input.sheet-characteristic-section-toggle~div.sheet-characteristic-section,
+input.sheet-skills-section-toggle~div.sheet-skills-section,
+input.sheet-talents-section-toggle~div.sheet-talents-section,
+input.sheet-force-section-toggle~div.sheet-force-section,
+input.sheet-signature-section-toggle~div.sheet-signature-section,
+input.sheet-combatskills-section-toggle~div.sheet-combatskills-section,
 
-input.sheet-armor-section-toggle ~ div.sheet-armor-section,
-input.sheet-cybernetics-section-toggle ~ div.sheet-cybernetics-section,
-input.sheet-tools-section-toggle ~ div.sheet-tools-section,
-input.sheet-other-gear-section-toggle ~ div.sheet-other-gear-section,
-input.sheet-initiative-section-toggle ~ div.sheet-initiative-section,
+input.sheet-armor-section-toggle~div.sheet-armor-section,
+input.sheet-cybernetics-section-toggle~div.sheet-cybernetics-section,
+input.sheet-tools-section-toggle~div.sheet-tools-section,
+input.sheet-other-gear-section-toggle~div.sheet-other-gear-section,
+input.sheet-initiative-section-toggle~div.sheet-initiative-section,
 
-input.sheet-equipment-section-toggle ~ div.sheet-equipment-section,
+input.sheet-equipment-section-toggle~div.sheet-equipment-section,
 
-input.sheet-stats-toggle-small ~ div.sheet-stats-toggle-small,
+input.sheet-stats-toggle-small~div.sheet-stats-toggle-small,
 
-input.sheet-character-toggle-small ~ div.sheet-character-toggle-small,
-input.sheet-game-mechanics-toggle-small ~ div.sheet-game-mechanics-toggle-small,
+input.sheet-character-toggle-small~div.sheet-character-toggle-small,
+input.sheet-game-mechanics-toggle-small~div.sheet-game-mechanics-toggle-small,
 
-input.sheet-career-toggle-small ~ div.sheet-career-toggle-small,
-input.sheet-description-toggle-small ~ div.sheet-description-toggle-small,
-input.sheet-motivation-toggle-small ~ div.sheet-motivation-toggle-small,
+input.sheet-career-toggle-small~div.sheet-career-toggle-small,
+input.sheet-description-toggle-small~div.sheet-description-toggle-small,
+input.sheet-motivation-toggle-small~div.sheet-motivation-toggle-small,
 
-input.sheet-obligation-toggle-small ~ div.sheet-obligation-toggle-small,
-input.sheet-duty-toggle-small ~ div.sheet-duty-toggle-small,
-input.sheet-morality-toggle-small ~ div.sheet-morality-toggle-small,
+input.sheet-obligation-toggle-small~div.sheet-obligation-toggle-small,
+input.sheet-duty-toggle-small~div.sheet-duty-toggle-small,
+input.sheet-morality-toggle-small~div.sheet-morality-toggle-small,
 
-input.sheet-armor-toggle-small ~ div.sheet-armor-toggle-small,
-input.sheet-cybernetics-toggle-small ~ div.sheet-cybernetics-toggle-small,
-input.sheet-tools-toggle-small ~ div.sheet-tools-toggle-small,
-input.sheet-other-gear-toggle-small ~ div.sheet-other-gear-toggle-small,
+input.sheet-armor-toggle-small~div.sheet-armor-toggle-small,
+input.sheet-cybernetics-toggle-small~div.sheet-cybernetics-toggle-small,
+input.sheet-tools-toggle-small~div.sheet-tools-toggle-small,
+input.sheet-other-gear-toggle-small~div.sheet-other-gear-toggle-small,
 
-input.sheet-initiative-toggle-small ~ div.sheet-initiative-toggle-small,
-input.sheet-info-toggle-small ~ div.sheet-info-toggle-small,
-input.sheet-weapons-toggle-small ~ div.sheet-weapons-toggle-small,
-input.sheet-characteristic-toggle-small ~ div.sheet-characteristic-toggle-small,
-input.sheet-skills-toggle-small ~ div.sheet-skills-toggle-small,
-input.sheet-talents-toggle-small ~ div.sheet-talents-toggle-small,
-input.sheet-equipment-toggle-small ~ div.sheet-equipment-toggle-small,
-input.sheet-force-toggle-small ~ div.sheet-force-toggle-small,
+input.sheet-initiative-toggle-small~div.sheet-initiative-toggle-small,
+input.sheet-info-toggle-small~div.sheet-info-toggle-small,
+input.sheet-weapons-toggle-small~div.sheet-weapons-toggle-small,
+input.sheet-characteristic-toggle-small~div.sheet-characteristic-toggle-small,
+input.sheet-skills-toggle-small~div.sheet-skills-toggle-small,
+input.sheet-talents-toggle-small~div.sheet-talents-toggle-small,
+input.sheet-equipment-toggle-small~div.sheet-equipment-toggle-small,
+input.sheet-force-toggle-small~div.sheet-force-toggle-small,
 
 /* Repeating Section Toggles */
-input.sheet-assignment-toggle ~ div.sheet-assignment,
-input.sheet-mission-toggle ~ div.sheet-mission,
-input.sheet-geninfo-toggle ~ div.sheet-geninfo,
-input.sheet-location-toggle ~ div.sheet-location,
-input.sheet-rewards-toggle ~ div.sheet-rewards,
-input.sheet-details-toggle ~ div.sheet-details,
-input.sheet-list-toggle ~ div.sheet-list,
-input.sheet-weapon-toggle ~ div.sheet-weapon,
+input.sheet-assignment-toggle~div.sheet-assignment,
+input.sheet-mission-toggle~div.sheet-mission,
+input.sheet-geninfo-toggle~div.sheet-geninfo,
+input.sheet-location-toggle~div.sheet-location,
+input.sheet-rewards-toggle~div.sheet-rewards,
+input.sheet-details-toggle~div.sheet-details,
+input.sheet-list-toggle~div.sheet-list,
+input.sheet-weapon-toggle~div.sheet-weapon,
 
 /* footer */
-input.sheet-footer-toggle ~ div.sheet-footer {
+input.sheet-footer-toggle~div.sheet-footer {
     display: none;
 }
 
-.repcontrol_add, .repcontrol_edit, .repcontrol_del, .repcontrol_move {
+.repcontrol_add,
+.repcontrol_edit,
+.repcontrol_del,
+.repcontrol_move {
     background: #444;
     color: #f3f3f3;
 }
@@ -2110,31 +2195,31 @@ input.sheet-settings-checkbox {
     position: absolute;
     top: 0px;
     right: 4px;
-    
+
     cursor: pointer;
     z-index: 1;
     opacity: 0;
 }
 
-input.sheet-settings-checkbox + span::before {
+input.sheet-settings-checkbox+span::before {
     content: "y";
     font-family: pictos;
-    
+
     text-align: center;
     display: inline-block;
-    
+
     background: transparent;
-    
+
     width: 17px;
     height: 17px;
     font-size: 15px;
     color: darkgrey;
-    
+
     position: absolute;
     right: 4px;
 }
 
-input.sheet-settings-checkbox:checked + span::before{
+input.sheet-settings-checkbox:checked+span::before {
     color: black;
 }
 
@@ -2142,17 +2227,17 @@ div.sheet-settings {
     display: none;
 }
 
-input.sheet-settings-checkbox:checked ~ div.sheet-settings{
+input.sheet-settings-checkbox:checked~div.sheet-settings {
     display: block;
     position: absolute;
     top: 15px;
     right: 10px;
-    
+
     background-color: #f1f1f1;
     border: solid 1px #a8a8a8;
     border-bottom-color: black;
     text-align: center;
-    
+
     padding: 2px;
 }
 
@@ -2164,51 +2249,51 @@ input.sheet-settings-checkbox:checked ~ div.sheet-settings{
     white-space: nowrap;
 }
 
-input.sheet-hideskills:not(:checked) ~ * .sheet-hideskills {
+input.sheet-hideskills:not(:checked)~* .sheet-hideskills {
     display: none;
 }
 
-input.sheet-hide-alchemy:checked ~ * .sheet-hide-alchemy,
-input.sheet-hide-arcana:checked ~ * .sheet-hide-arcana,
-input.sheet-hide-astrogation:checked ~ * .sheet-hide-astrogation,
-input.sheet-hide-athletics:checked ~ * .sheet-hide-athletics,
-input.sheet-hide-brawl:checked ~ * .sheet-hide-brawl,
-input.sheet-hide-charm:checked ~ * .sheet-hide-charm,
-input.sheet-hide-coercion:checked ~ * .sheet-hide-coercion,
-input.sheet-hide-computers:checked ~ * .sheet-hide-computers,
-input.sheet-hide-cool:checked ~ * .sheet-hide-cool,
-input.sheet-hide-coordination:checked ~ * .sheet-hide-coordination,
-input.sheet-hide-deception:checked ~ * .sheet-hide-deception,
-input.sheet-hide-discipline:checked ~ * .sheet-hide-discipline,
-input.sheet-hide-divine:checked ~ * .sheet-hide-divine,
-input.sheet-hide-driving:checked ~ * .sheet-hide-driving,
-input.sheet-hide-gunnery:checked ~ * .sheet-hide-gunnery,
-input.sheet-hide-knowledge:checked ~ * .sheet-hide-knowledge,
-input.sheet-hide-leadership:checked ~ * .sheet-hide-leadership,
-input.sheet-hide-mechanics:checked ~ * .sheet-hide-mechanics,
-input.sheet-hide-medicine:checked ~ * .sheet-hide-medicine,
-input.sheet-hide-melee:checked ~ * .sheet-hide-melee,
-input.sheet-hide-meleeheavy:checked ~ * .sheet-hide-meleeheavy,
-input.sheet-hide-meleelight:checked ~ * .sheet-hide-meleelight,
-input.sheet-hide-negotiation:checked ~ * .sheet-hide-negotiation,
-input.sheet-hide-operating:checked ~ * .sheet-hide-operating,
-input.sheet-hide-perception:checked ~ * .sheet-hide-perception,
-input.sheet-hide-piloting:checked ~ * .sheet-hide-piloting,
-input.sheet-hide-primal:checked ~ * .sheet-hide-primal,
-input.sheet-hide-ranged:checked ~ * .sheet-hide-ranged,
-input.sheet-hide-rangedheavy:checked ~ * .sheet-hide-rangedheavy,
-input.sheet-hide-rangedlight:checked ~ * .sheet-hide-rangedlight,
-input.sheet-hide-resilience:checked ~ * .sheet-hide-resilience,
-input.sheet-hide-riding:checked ~ * .sheet-hide-riding,
-input.sheet-hide-skulduggery:checked ~ * .sheet-hide-skulduggery,
-input.sheet-hide-stealth:checked ~ * .sheet-hide-stealth,
-input.sheet-hide-streetwise:checked ~ * .sheet-hide-streetwise,
-input.sheet-hide-survival:checked ~ * .sheet-hide-survival,
-input.sheet-hide-vigilance:checked ~ * .sheet-hide-vigilance {
+input.sheet-hide-alchemy:checked~* .sheet-hide-alchemy,
+input.sheet-hide-arcana:checked~* .sheet-hide-arcana,
+input.sheet-hide-astrogation:checked~* .sheet-hide-astrogation,
+input.sheet-hide-athletics:checked~* .sheet-hide-athletics,
+input.sheet-hide-brawl:checked~* .sheet-hide-brawl,
+input.sheet-hide-charm:checked~* .sheet-hide-charm,
+input.sheet-hide-coercion:checked~* .sheet-hide-coercion,
+input.sheet-hide-computers:checked~* .sheet-hide-computers,
+input.sheet-hide-cool:checked~* .sheet-hide-cool,
+input.sheet-hide-coordination:checked~* .sheet-hide-coordination,
+input.sheet-hide-deception:checked~* .sheet-hide-deception,
+input.sheet-hide-discipline:checked~* .sheet-hide-discipline,
+input.sheet-hide-divine:checked~* .sheet-hide-divine,
+input.sheet-hide-driving:checked~* .sheet-hide-driving,
+input.sheet-hide-gunnery:checked~* .sheet-hide-gunnery,
+input.sheet-hide-knowledge:checked~* .sheet-hide-knowledge,
+input.sheet-hide-leadership:checked~* .sheet-hide-leadership,
+input.sheet-hide-mechanics:checked~* .sheet-hide-mechanics,
+input.sheet-hide-medicine:checked~* .sheet-hide-medicine,
+input.sheet-hide-melee:checked~* .sheet-hide-melee,
+input.sheet-hide-meleeheavy:checked~* .sheet-hide-meleeheavy,
+input.sheet-hide-meleelight:checked~* .sheet-hide-meleelight,
+input.sheet-hide-negotiation:checked~* .sheet-hide-negotiation,
+input.sheet-hide-operating:checked~* .sheet-hide-operating,
+input.sheet-hide-perception:checked~* .sheet-hide-perception,
+input.sheet-hide-piloting:checked~* .sheet-hide-piloting,
+input.sheet-hide-primal:checked~* .sheet-hide-primal,
+input.sheet-hide-ranged:checked~* .sheet-hide-ranged,
+input.sheet-hide-rangedheavy:checked~* .sheet-hide-rangedheavy,
+input.sheet-hide-rangedlight:checked~* .sheet-hide-rangedlight,
+input.sheet-hide-resilience:checked~* .sheet-hide-resilience,
+input.sheet-hide-riding:checked~* .sheet-hide-riding,
+input.sheet-hide-skulduggery:checked~* .sheet-hide-skulduggery,
+input.sheet-hide-stealth:checked~* .sheet-hide-stealth,
+input.sheet-hide-streetwise:checked~* .sheet-hide-streetwise,
+input.sheet-hide-survival:checked~* .sheet-hide-survival,
+input.sheet-hide-vigilance:checked~* .sheet-hide-vigilance {
     display: none;
 }
 
 
-input.sheet-hideskills:checked ~ * .sheet-hide-skill-row {
+input.sheet-hideskills:checked~* .sheet-hide-skill-row {
     display: table-row;
 }
