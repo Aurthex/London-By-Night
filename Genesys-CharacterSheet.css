@@ -4,15 +4,22 @@ Version 1.4.2
 Created by GM Knowledge Rhino
 Modified by AurThEx
 
-Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/
+Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/
 */
 
 .sheet-clear {
     clear: both
 }
 
+/* "whitespace" that text goes in? */
 .sheet-divider {
     border-top: 1px solid #e3e3e3
+}
+
+/* Patching Dark Mode */
+.charsheet {
+    background-color: white;
+    color: black;
 }
 
 /* GRID
@@ -115,7 +122,7 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
  *----------------------------------------- */
 
 .sheet-yd+span {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/yellow/small.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/yellow/small.png');
     /* Yellow - Proficiency Die */
     background-position: left top;
     background-repeat: repeat-x;
@@ -125,7 +132,7 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
 }
 
 .sheet-gd+span {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/green/small.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/green/small.png');
     /* Green - Ability Die */
     background-position: left top;
     background-repeat: repeat-x;
@@ -135,7 +142,7 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
 }
 
 .sheet-pd+span {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/purple/small.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/purple/small.png');
     /* Purple - Difficulty Die */
     background-position: left top;
     background-repeat: repeat-x;
@@ -248,7 +255,8 @@ Asset root: https://raw.githubusercontent.com/Roll20/roll20-character-sheets/mas
     margin: 0px auto;
     height: 27px;
     width: 120px;
-    background: rgba(0, 0, 0, 0.40);
+    background: rgba(200, 0, 0, 0.40);
+    /* background: rgba(0, 0, 0, 0.40); */
     border-radius: 3px;
     -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
@@ -816,7 +824,7 @@ input[type=number].sheet-characteristic {
 }
 
 .charsheet table tr th:last-child {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/white_space.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/white_space.png');
     /* Blank white space */
     background-position: right bottom;
     background-repeat: no-repeat;
@@ -829,7 +837,8 @@ input[type=number].sheet-characteristic {
 }
 
 .charsheet table tr:hover td {
-    background-color: #f1f1f1;
+    /*background-color: #f1f1f1;*/
+    /*background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/grey.jpg');*/
 }
 
 .sheet-bg-gray label {
@@ -840,8 +849,8 @@ input[type=number].sheet-characteristic {
 .sheet-bg-gray:hover td,
 .charsheet .sheet-sub-header,
 .charsheet .sheet-sub-header:hover {
-    background: #D3D3D3;
-    color: #eee;
+    /*background: #D3D3D3;
+    color: #eee;*/
 }
 
 .sheet-bg-blue label {
@@ -852,8 +861,8 @@ input[type=number].sheet-characteristic {
 .sheet-bg-blue:hover td,
 .charsheet .sheet-sub-header,
 .charsheet .sheet-sub-header:hover {
-    background: #78728f;
-    color: #fff;
+    /*background: #78728f;
+    color: #fff;*/
 }
 
 .charsheet table tr td.sheet-div-right {
@@ -861,7 +870,7 @@ input[type=number].sheet-characteristic {
 }
 
 .charsheet h3 {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/stretched_hexagon.png'), url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/grey_title_lines.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/stretched_hexagon.png'), url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/grey_title_lines.png');
     /* Stretched hexagon, Grey Title lines*/
     background-position: center top, center 5px;
     background-repeat: no-repeat, repeat-x;
@@ -1002,7 +1011,7 @@ input[type=number].sheet-characteristic {
 .sheet-swsd td:nth-child(3),
 .sheet-swsd td:nth-child(4),
 .sheet-swsd td:nth-child(5) {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/threshold_current.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold_current.png');
     background-position: center top;
     background-repeat: no-repeat;
     width: 153px;
@@ -1018,7 +1027,7 @@ input[type=number].sheet-characteristic {
 
 .sheet-swsd tr:nth-child(2) td:nth-child(1),
 .sheet-beast tr:first-child td:nth-child(5) {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
@@ -1114,7 +1123,7 @@ label.sheet-label-current {
 
 .sheet-destiny td:nth-child(1) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
@@ -1130,7 +1139,7 @@ label.sheet-label-current {
 
 .sheet-destiny td:nth-child(3) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
@@ -1181,7 +1190,7 @@ label.sheet-label-current {
 .sheet-characteristics td:nth-child(11),
 .sheet-characteristics td:nth-child(13) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /* Single Digit - Border */
     background-position: center top;
     background-repeat: no-repeat;
@@ -1234,13 +1243,13 @@ label.sheet-label-current {
 .sheet-roll-critical,
 .sheet-roll-critical tr td,
 .sheet-roll-critical tr:hover td {
-    background-color: #444;
+    /*background-color: #444;*/
     border: none;
     color: #ccc
 }
 
 .sheet-crit-dice-bg {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/4.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/4.png');
     /* Four Boxes - Dice Border */
     background-position: center center;
     background-repeat: no-repeat;
@@ -1343,7 +1352,7 @@ button.sheet-btn-roll-crit[type=roll]:active {
 .sheet-init td:nth-child(5),
 .sheet-skills td:nth-child(4) {
     width: 124px;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/7.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/7.png');
     /* Seven Boxes - Dice Border */
     background-repeat: no-repeat;
     background-position: 3px center;
@@ -1383,7 +1392,7 @@ button.sheet-btn-roll-crit[type=roll]:active {
 
 .sheet-custome-skills td:nth-child(5) {
     width: 124px;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/dice_border/7.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/7.png');
     /* Seven Boxes - Dice Border */
     background-repeat: no-repeat;
     background-position: 4px center;
@@ -1400,56 +1409,56 @@ button.sheet-btn-roll-crit[type=roll]:active {
 
 /* Success - Symbol */
 .sheet-icon-S {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/symbols/success.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/symbols/success.png') center center no-repeat;
 }
 
 /* Failure - Symbol */
 .sheet-icon-F {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/symbols/failure.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/symbols/failure.png') center center no-repeat;
 }
 
 /* Advantage - Symbol */
 .sheet-icon-A {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/advantage.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/advantage.png') center center no-repeat;
 }
 
 /* Triumph - Symbol */
 .sheet-icon-Tri {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/triumph.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/triumph.png') center center no-repeat;
 }
 
 /* Threat - Symbol */
 .sheet-icon-T {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/threat.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/threat.png') center center no-repeat;
 }
 
 /* Despair - Symbol */
 .sheet-icon-Des {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/despair.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/despair.png') center center no-repeat;
 }
 
 .sheet-icon-B {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/blue/blank.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/blue/blank.png') center center no-repeat;
 }
 
 .sheet-icon-G {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/green/blank.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/green/blank.png') center center no-repeat;
 }
 
 .sheet-icon-Y {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/yellow/blank.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/yellow/blank.png') center center no-repeat;
 }
 
 .sheet-icon-P {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/purple/blank.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/purple/blank.png') center center no-repeat;
 }
 
 .sheet-icon-R {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/red/blank.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/red/blank.png') center center no-repeat;
 }
 
 .sheet-icon-BLK {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/dice/black/blank.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/black/blank.png') center center no-repeat;
 }
 
 .sheet-icon-S,
@@ -1618,7 +1627,7 @@ th .sheet-help-content {
 }
 
 .sheet-talent:hover {
-    background: #f1f1f1;
+    /*background: #f1f1f1;*/
 }
 
 [name=attr_talentname] {
@@ -1637,7 +1646,7 @@ th .sheet-help-content {
 .sheet-weapons td:nth-child(6),
 .sheet-weapons td:nth-child(8) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
@@ -1647,7 +1656,7 @@ th .sheet-help-content {
 }
 
 .sheet-weapons {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/title_double_line.png') center 45px repeat-x;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/title_double_line.png') center 45px repeat-x;
     /* Title Double Line */
 }
 
@@ -1656,7 +1665,7 @@ th .sheet-help-content {
 }
 
 .sheet-weapons tr:hover td {
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 .sheet-weapons label {
@@ -1719,7 +1728,7 @@ input.sheet-view-attachments:checked~.sheet-attachments {
 /* ---------------------------------------------------------- Ship */
 
 .sheet-ship {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/vehicle.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/vehicle.png') center center no-repeat;
     /* Vehicle Sheet Stat connecting sword title - Border */
     background-color: transparent;
 }
@@ -1730,11 +1739,11 @@ table.sheet-ship tr td {
 }
 
 table.sheet-ship tr:hover td {
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 .sheet-ship-defense {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/star_four_zones.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/ship/star_four_zones.png') center center no-repeat;
     /* Starship Four Zones - Border */
     width: 302px;
     height: 236px;
@@ -1743,7 +1752,7 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-planetary-vehicle-defense {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/speed_four_zones.png') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/ship/speed_four_zones.png') center center no-repeat;
     /* Speeder Four Zones - Border */
     width: 302px;
     height: 236px;
@@ -1752,7 +1761,7 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-ship-char-thre-bg {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/threshold-current.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold-current.png');
     background-position: center 0px;
     background-repeat: no-repeat;
     vertical-align: top;
@@ -1763,7 +1772,7 @@ table.sheet-ship tr:hover td {
 }
 
 .sheet-ship-char-thre-bg-speed {
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/threshold-current.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold-current.png');
     background-position: center 25px;
     background-repeat: no-repeat;
     vertical-align: top;
@@ -1776,7 +1785,7 @@ table.sheet-ship tr:hover td {
 
 .sheet-ship-char-bg {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/border/single_digit.png');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
     background-position: center 37px;
     background-repeat: no-repeat;
@@ -1900,7 +1909,7 @@ span.sheet-fireArcForeImg,
 span.sheet-fireArcStarboardImg,
 span.sheet-fireArcAftImg,
 span.sheet-fireArcPortImg {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Genesys-RPG/assets/background/ship/fire_arc.png') left bottom no-repeat;
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/ship/fire_arc.png') left bottom no-repeat;
     /* Starship Weapon Firing Arcs */
     display: block;
     width: 32px;
