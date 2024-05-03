@@ -7,91 +7,152 @@ Modified by AurThEx
 Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/
 */
 
-.sheet-clear {
+/* Patching Dark Mode */
+
+:root {
+    /*brights*/
+    --default-bright: #05560a;
+    /*darks*/
+    --default-dark: #00a895;
+}
+
+
+body.sheet-darkmode .charsheet {
+    background-color: rgb(71, 33, 33);
+    background-image: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
+}
+
+/* BRIGHT MODE CONFIG */
+.charsheet,
+.charsheet button,
+.charsheet input,
+.charsheet optgroup,
+.charsheet select,
+.charsheet textarea,
+.charsheet label,
+.charsheet table {
+    color: var(--default-bright) !important;
+}
+
+.charsheet {
+    background-color: rgb(71, 33, 33);
+    background-image: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright.jpg");
+}
+
+.charsheet table {
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg');
+}
+
+/* DARK MODE CONFIG */
+body.sheet-darkmode,
+body.sheet-darkmode button,
+body.sheet-darkmode input,
+body.sheet-darkmode optgroup,
+body.sheet-darkmode select,
+body.sheet-darkmode textarea,
+body.sheet-darkmode .charsheet,
+body.sheet-darkmode label,
+body.sheet-darkmode table {
+    color: var(--default-dark) !important;
+}
+
+.body.sheet-darkmode table {
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright.jpg');
+}
+
+body.sheet-darkmode .btn,
+body.sheet-darkmode .btn.btn-default {
+    color: #3b2b9a;
+    text-shadow: rgba(24, 26, 27, .75) 0px 1px 1px;
+    background-color: #1e2021;
+    background-image: linear-gradient(#181a1b, #26292b);
+    border-color: #3e4446 #3e4446 #43494c;
+    box-shadow: rgba(24, 26, 27, .2) 0px 1px 0px inset, rgba(0, 0, 0, .05) 0px 1px 2px
+}
+
+/* sheet clear stuff*/
+
+.charsheet .sheet-clear {
     clear: both
 }
 
 /* "whitespace" that text goes in? */
-.sheet-divider {
+.charsheet .sheet-divider {
     border-top: 1px solid #e3e3e3
 }
 
-/* Patching Dark Mode */
-.charsheet {
-    background-color: white;
-    color: black;
-}
+
 
 /* GRID
  * ----------------------------------------------------------------- */
 
-.sheet-row {
+.charsheet .sheet-row {
     padding: 1% 0%;
     clear: both
 }
 
-.sheet-column {
+.charsheet .sheet-column {
     margin: 0 1%;
     float: left;
 }
 
-.sheet-column .sheet-column {
+.charsheet .sheet-column .sheet-column {
     margin: 0 0%;
     float: left;
 }
 
-.sheet-row .sheet-column:last-child {
+.charsheet .sheet-row .sheet-column:last-child {
     float: right
 }
 
-.sheet-small-1 {
+.charsheet .sheet-small-1 {
     width: 6.3%
 }
 
-.sheet-small-2 {
+.charsheet .sheet-small-2 {
     width: 14.6%
 }
 
-.sheet-small-3 {
+.charsheet .sheet-small-3 {
     width: 23%
 }
 
 /* 25% */
-.sheet-small-4 {
+.charsheet .sheet-small-4 {
     width: 31.3%
 }
 
-.sheet-small-5 {
+.charsheet .sheet-small-5 {
     width: 39.6%
 }
 
-.sheet-small-6 {
+.charsheet .sheet-small-6 {
     width: 48%
 }
 
 /* 50% */
-.sheet-small-7 {
+.charsheet .sheet-small-7 {
     width: 56.3%
 }
 
-.sheet-small-8 {
+.charsheet .sheet-small-8 {
     width: 64.6%
 }
 
-.sheet-small-9 {
+.charsheet .sheet-small-9 {
     width: 73%
 }
 
 /* 75% */
-.sheet-small-10 {
+.charsheet .sheet-small-10 {
     width: 81.3%
 }
 
-.sheet-small-11 {
+.charsheet .sheet-small-11 {
     width: 91.6%
 }
 
-.sheet-small-12 {
+.charsheet .sheet-small-12 {
     width: 98%
 }
 
@@ -99,20 +160,20 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
 
 /* Dice input reset
  *-------------------------------------- */
-.sheet-dice-pool [type=roll] {
+.charsheet .sheet-dice-pool [type=roll] {
     padding: 2px 4px !important;
     margin: 0 !important;
     font-size: 28px !important;
     line-height: 28px !important;
 }
 
-.sheet-dice-pool [name='roll_ResetDicePool'],
-.sheet-dice-pool [name='roll_ResetGMDicePool'] {
+.charsheet .sheet-dice-pool [name='roll_ResetDicePool'],
+.charsheet .sheet-dice-pool [name='roll_ResetGMDicePool'] {
     padding-bottom: 3px !important
 }
 
-.sheet-dice-pool [name='roll_ResetDicePool']:before,
-.sheet-dice-pool [name='roll_ResetGMDicePool']:before {
+.charsheet .sheet-dice-pool [name='roll_ResetDicePool']:before,
+.charsheet .sheet-dice-pool [name='roll_ResetGMDicePool']:before {
     font-family: "Pictos" !important;
     content: "r" !important;
 }
@@ -121,7 +182,7 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
 /* Dice input span graphics
  *----------------------------------------- */
 
-.sheet-yd+span {
+.charsheet .sheet-yd+span {
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/yellow/small.png');
     /* Yellow - Proficiency Die */
     background-position: left top;
@@ -131,7 +192,7 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
     float: left;
 }
 
-.sheet-gd+span {
+.charsheet .sheet-gd+span {
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/green/small.png');
     /* Green - Ability Die */
     background-position: left top;
@@ -141,7 +202,7 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
     float: left;
 }
 
-.sheet-pd+span {
+.charsheet .sheet-pd+span {
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/purple/small.png');
     /* Purple - Difficulty Die */
     background-position: left top;
@@ -151,106 +212,106 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
     float: left;
 }
 
-.sheet-gd[value="0"]+span {
+.charsheet .sheet-gd[value="0"]+span {
     width: 0;
 }
 
-.sheet-gd[value="1"]+span {
+.charsheet .sheet-gd[value="1"]+span {
     width: 17px
 }
 
-.sheet-gd[value="2"]+span {
+.charsheet .sheet-gd[value="2"]+span {
     width: 34px
 }
 
-.sheet-gd[value="3"]+span {
+.charsheet .sheet-gd[value="3"]+span {
     width: 51px
 }
 
-.sheet-gd[value="4"]+span {
+.charsheet .sheet-gd[value="4"]+span {
     width: 68px
 }
 
-.sheet-gd[value="5"]+span {
+.charsheet .sheet-gd[value="5"]+span {
     width: 85px
 }
 
-.sheet-gd[value="6"]+span {
+.charsheet .sheet-gd[value="6"]+span {
     width: 102px
 }
 
-.sheet-gd[value="7"]+span {
+.charsheet .sheet-gd[value="7"]+span {
     width: 124px
 }
 
-.sheet-yd[value="0"]+span {
+.charsheet .sheet-yd[value="0"]+span {
     width: 0;
 }
 
-.sheet-yd[value="1"]+span {
+.charsheet .sheet-yd[value="1"]+span {
     width: 17px
 }
 
-.sheet-yd[value="2"]+span {
+.charsheet .sheet-yd[value="2"]+span {
     width: 34px
 }
 
-.sheet-yd[value="3"]+span {
+.charsheet .sheet-yd[value="3"]+span {
     width: 51px
 }
 
-.sheet-yd[value="4"]+span {
+.charsheet .sheet-yd[value="4"]+span {
     width: 68px
 }
 
-.sheet-yd[value="5"]+span {
+.charsheet .sheet-yd[value="5"]+span {
     width: 85px
 }
 
-.sheet-yd[value="6"]+span {
+.charsheet .sheet-yd[value="6"]+span {
     width: 102px
 }
 
-.sheet-yd[value="7"]+span {
+.charsheet .sheet-yd[value="7"]+span {
     width: 124px
 }
 
 /*used for crit section*/
-.sheet-pd[value="0"]+span {
+.charsheet .sheet-pd[value="0"]+span {
     width: 0;
 }
 
-.sheet-pd[value="1"]+span {
+.charsheet .sheet-pd[value="1"]+span {
     width: 20px
 }
 
-.sheet-pd[value="2"]+span {
+.charsheet .sheet-pd[value="2"]+span {
     width: 40px
 }
 
-.sheet-pd[value="3"]+span {
+.charsheet .sheet-pd[value="3"]+span {
     width: 60px
 }
 
-.sheet-pd[value="4"]+span {
+.charsheet .sheet-pd[value="4"]+span {
     width: 80px
 }
 
-.sheet-pd[value="5"]+span {
+.charsheet .sheet-pd[value="5"]+span {
     width: 100px
 }
 
-.sheet-pd[value="6"]+span {
+.charsheet .sheet-pd[value="6"]+span {
     width: 120px
 }
 
-.sheet-pd[value="7"]+span {
+.charsheet .sheet-pd[value="7"]+span {
     width: 140px
 }
 
 /* Switch
  * ------------------------------------ */
-.sheet-switch {
+.charsheet .sheet-switch {
     position: relative;
     margin: 0px auto;
     height: 27px;
@@ -262,7 +323,7 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
 }
 
-.sheet-switch [type=radio] {
+.charsheet .sheet-switch [type=radio] {
     width: 60px;
     height: 27px;
     float: left;
@@ -276,7 +337,7 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
     z-index: 2;
 }
 
-.sheet-switch [type=radio]::before {
+.charsheet .sheet-switch [type=radio]::before {
     content: attr(title);
     display: block;
     width: 60px;
@@ -285,23 +346,23 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
     text-align: center;
 }
 
-.sheet-switch [type=radio]:checked,
-.sheet-switch [type=radio]:active,
-.sheet-switch [type=radio]:focus {
+.charsheet .sheet-switch [type=radio]:checked,
+.charsheet .sheet-switch [type=radio]:active,
+.charsheet .sheet-switch [type=radio]:focus {
     font-weight: normal;
     background: transparent;
     color: #fff;
 }
 
-.sheet-switch-input-on:checked~.sheet-switch-selection {
+.charsheet .sheet-switch-input-on:checked~.charsheet .sheet-switch-selection {
     left: 2px;
 }
 
-.sheet-switch-input-off:checked~.sheet-switch-selection {
+.charsheet .sheet-switch-input-off:checked~.charsheet .sheet-switch-selection {
     left: 60px;
 }
 
-.sheet-switch-selection {
+.charsheet .sheet-switch-selection {
     display: block;
     position: absolute;
     z-index: 1;
@@ -326,97 +387,97 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
 /* Form Options
  * ------------------------------------ */
 
-table .sheet-opt-content {
+.charsheet table .sheet-opt-content {
     display: none;
 }
 
 /* Old Vehicle Tabs */
-input.sheet-opt-vehicle:checked~table tr.sheet-opt-vehicle,
-input.sheet-opt-ship:checked~table tr.sheet-opt-ship,
-input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
-input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
-input.sheet-tab-older:checked~div.sheet-tab-older,
+.charsheet input.sheet-opt-vehicle:checked~table tr.sheet-opt-vehicle,
+.charsheet input.sheet-opt-ship:checked~table tr.sheet-opt-ship,
+.charsheet input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
+.charsheet input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
+.charsheet input.sheet-tab-older:checked~div.sheet-tab-older,
 /* New Vehicle Tabs */
-input.sheet-tab-transport-space:checked~table tr.sheet-tab-transport-space,
-input.sheet-tab-transport-planetary:checked~table tr.sheet-tab-transport-planetary,
-input.sheet-tab-transport-beast:checked~table tr.sheet-tab-transport-beast,
-input.sheet-tab-transport-space-general:checked~table tr.sheet-tab-transport-space-general,
-input.sheet-tab-transport-space-critical:checked~table tr.sheet-tab-transport-space-critical,
-input.sheet-tab-transport-planetary-general:checked~table tr.sheet-tab-transport-planetary-general,
-input.sheet-tab-transport-planetary-critical:checked~table tr.sheet-tab-transport-planetary-critical,
-input.sheet-tab-transport-beast-general:checked~table tr.sheet-tab-transport-beast-general,
-input.sheet-tab-transport-beast-critical:checked~table tr.sheet-tab-transport-beast-critical,
+.charsheet input.sheet-tab-transport-space:checked~table tr.sheet-tab-transport-space,
+.charsheet input.sheet-tab-transport-planetary:checked~table tr.sheet-tab-transport-planetary,
+.charsheet input.sheet-tab-transport-beast:checked~table tr.sheet-tab-transport-beast,
+.charsheet input.sheet-tab-transport-space-general:checked~table tr.sheet-tab-transport-space-general,
+.charsheet input.sheet-tab-transport-space-critical:checked~table tr.sheet-tab-transport-space-critical,
+.charsheet input.sheet-tab-transport-planetary-general:checked~table tr.sheet-tab-transport-planetary-general,
+.charsheet input.sheet-tab-transport-planetary-critical:checked~table tr.sheet-tab-transport-planetary-critical,
+.charsheet input.sheet-tab-transport-beast-general:checked~table tr.sheet-tab-transport-beast-general,
+.charsheet input.sheet-tab-transport-beast-critical:checked~table tr.sheet-tab-transport-beast-critical,
 /* Base of Operations Tabs */
-input.sheet-opt-rebel:checked~table tr td.sheet-opt-rebel,
-input.sheet-opt-business:checked~table tr td.sheet-opt-business,
-input.sheet-opt-homestead:checked~table tr td.sheet-opt-homestead,
+.charsheet input.sheet-opt-rebel:checked~table tr td.sheet-opt-rebel,
+.charsheet input.sheet-opt-business:checked~table tr td.sheet-opt-business,
+.charsheet input.sheet-opt-homestead:checked~table tr td.sheet-opt-homestead,
 /* Companion Tabs */
-input.sheet-tab-companion-info:checked~table tr td.sheet-tab-companion-info,
-input.sheet-tab-companion-combat:checked~table tr td.sheet-tab-companion-combat,
-input.sheet-tab-companion-critical:checked~table tr td.sheet-tab-companion-critical,
-input.sheet-tab-companion-inventory:checked~table tr td.sheet-tab-companion-inventory,
+.charsheet input.sheet-tab-companion-info:checked~table tr td.sheet-tab-companion-info,
+.charsheet input.sheet-tab-companion-combat:checked~table tr td.sheet-tab-companion-combat,
+.charsheet input.sheet-tab-companion-critical:checked~table tr td.sheet-tab-companion-critical,
+.charsheet input.sheet-tab-companion-inventory:checked~table tr td.sheet-tab-companion-inventory,
 /* NPC Tabs */
-input.sheet-tab-npc-info:checked~table tr td.sheet-tab-npc-info,
-input.sheet-tab-npc-combat:checked~table tr td.sheet-tab-npc-combat,
-input.sheet-tab-npc-critical:checked~table tr td.sheet-tab-npc-critical,
-input.sheet-tab-npc-inventory:checked~table tr td.sheet-tab-npc-inventory,
+.charsheet input.sheet-tab-npc-info:checked~table tr td.sheet-tab-npc-info,
+.charsheet input.sheet-tab-npc-combat:checked~table tr td.sheet-tab-npc-combat,
+.charsheet input.sheet-tab-npc-critical:checked~table tr td.sheet-tab-npc-critical,
+.charsheet input.sheet-tab-npc-inventory:checked~table tr td.sheet-tab-npc-inventory,
 /* GM Tabs */
-input.sheet-tab-gm-combat:checked~table tr td.input.sheet-tab-gm-combat,
-input.sheet-tab-gm-settings:checked~table tr td.input.sheet-tab-gm-settings,
-input.sheet-tab-gm-weapons:checked~table tr td.sheet-tab-gm-weapons,
-input.sheet-tab-npc:checked~table tr td.sheet-tab-npc,
-input.sheet-tab-group-base-details:checked~table tr td.sheet-tab-group-base-details,
-input.sheet-tab-group-shared:checked~table tr td.sheet-tab-group-shared,
-input.sheet-tab-settinginfo:checked~table tr td.sheet-tab-settinginfo,
-input.sheet-tab-gm-adversaries:checked~table tr td.sheet-tab-gm-adversaries {
+.charsheet input.sheet-tab-gm-combat:checked~table tr td.input.sheet-tab-gm-combat,
+.charsheet input.sheet-tab-gm-settings:checked~table tr td.input.sheet-tab-gm-settings,
+.charsheet input.sheet-tab-gm-weapons:checked~table tr td.sheet-tab-gm-weapons,
+.charsheet input.sheet-tab-npc:checked~table tr td.sheet-tab-npc,
+.charsheet input.sheet-tab-group-base-details:checked~table tr td.sheet-tab-group-base-details,
+.charsheet input.sheet-tab-group-shared:checked~table tr td.sheet-tab-group-shared,
+.charsheet input.sheet-tab-settinginfo:checked~table tr td.sheet-tab-settinginfo,
+.charsheet input.sheet-tab-gm-adversaries:checked~table tr td.sheet-tab-gm-adversaries {
     display: table-row;
 }
 
 /* Old Vehicle Tabs */
-input.sheet-opt-vehicle:checked~table tr td.sheet-opt-vehicle,
-input.sheet-opt-ship:checked~table tr td.sheet-opt-ship,
-input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
-input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
-input.sheet-tab-older:checked~div.sheet-tab-older,
+.charsheet input.sheet-opt-vehicle:checked~table tr td.sheet-opt-vehicle,
+.charsheet input.sheet-opt-ship:checked~table tr td.sheet-opt-ship,
+.charsheet input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
+.charsheet input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
+.charsheet input.sheet-tab-older:checked~div.sheet-tab-older,
 /* New Vehicle Tabs */
-input.sheet-tab-transport-space:checked~table tr.sheet-tab-transport-space,
-input.sheet-tab-transport-planetary:checked~table tr.sheet-tab-transport-planetary,
-input.sheet-tab-transport-beast:checked~table tr.sheet-tab-transport-beast,
-input.sheet-tab-transport-space-general:checked~table tr.sheet-tab-transport-space-general,
-input.sheet-tab-transport-space-critical:checked~table tr.sheet-tab-transport-space-critical,
-input.sheet-tab-transport-planetary-general:checked~table tr.sheet-tab-transport-planetary-general,
-input.sheet-tab-transport-planetary-critical:checked~table tr.sheet-tab-transport-planetary-critical,
-input.sheet-tab-transport-beast-general:checked~table tr.sheet-tab-transport-beast-general,
-input.sheet-tab-transport-beast-critical:checked~table tr.sheet-tab-transport-beast-critical,
+.charsheet input.sheet-tab-transport-space:checked~table tr.sheet-tab-transport-space,
+.charsheet input.sheet-tab-transport-planetary:checked~table tr.sheet-tab-transport-planetary,
+.charsheet input.sheet-tab-transport-beast:checked~table tr.sheet-tab-transport-beast,
+.charsheet input.sheet-tab-transport-space-general:checked~table tr.sheet-tab-transport-space-general,
+.charsheet input.sheet-tab-transport-space-critical:checked~table tr.sheet-tab-transport-space-critical,
+.charsheet input.sheet-tab-transport-planetary-general:checked~table tr.sheet-tab-transport-planetary-general,
+.charsheet input.sheet-tab-transport-planetary-critical:checked~table tr.sheet-tab-transport-planetary-critical,
+.charsheet input.sheet-tab-transport-beast-general:checked~table tr.sheet-tab-transport-beast-general,
+.charsheet input.sheet-tab-transport-beast-critical:checked~table tr.sheet-tab-transport-beast-critical,
 /* Base of Operations Tabs */
-input.sheet-opt-rebel:checked~table tr td.sheet-opt-rebel,
-input.sheet-opt-business:checked~table tr td.sheet-opt-business,
-input.sheet-opt-homestead:checked~table tr td.sheet-opt-homestead,
+.charsheet input.sheet-opt-rebel:checked~table tr td.sheet-opt-rebel,
+.charsheet input.sheet-opt-business:checked~table tr td.sheet-opt-business,
+.charsheet input.sheet-opt-homestead:checked~table tr td.sheet-opt-homestead,
 /* Companion Tabs */
-input.sheet-tab-companion-info:checked~table tr td.sheet-tab-companion-info,
-input.sheet-tab-companion-stp:checked~table tr td.sheet-tab-companion-stp,
-input.sheet-tab-companion-combat:checked~table tr td.sheet-tab-companion-combat,
-input.sheet-tab-companion-critical:checked~table tr td.sheet-tab-companion-critical,
-input.sheet-tab-companion-inventory:checked~table tr td.sheet-tab-companion-inventory,
+.charsheet input.sheet-tab-companion-info:checked~table tr td.sheet-tab-companion-info,
+.charsheet input.sheet-tab-companion-stp:checked~table tr td.sheet-tab-companion-stp,
+.charsheet input.sheet-tab-companion-combat:checked~table tr td.sheet-tab-companion-combat,
+.charsheet input.sheet-tab-companion-critical:checked~table tr td.sheet-tab-companion-critical,
+.charsheet input.sheet-tab-companion-inventory:checked~table tr td.sheet-tab-companion-inventory,
 /* NPC Tabs */
-input.sheet-tab-npc-info:checked~table tr td.sheet-tab-npc-info,
-input.sheet-tab-npc-stp:checked~table tr td.sheet-tab-npc-stp,
-input.sheet-tab-npc-combat:checked~table tr td.sheet-tab-npc-combat,
-input.sheet-tab-npc-critical:checked~table tr td.sheet-tab-npc-critical,
-input.sheet-tab-npc-inventory:checked~table tr td.sheet-tab-npc-inventory,
+.charsheet input.sheet-tab-npc-info:checked~table tr td.sheet-tab-npc-info,
+.charsheet input.sheet-tab-npc-stp:checked~table tr td.sheet-tab-npc-stp,
+.charsheet input.sheet-tab-npc-combat:checked~table tr td.sheet-tab-npc-combat,
+.charsheet input.sheet-tab-npc-critical:checked~table tr td.sheet-tab-npc-critical,
+.charsheet input.sheet-tab-npc-inventory:checked~table tr td.sheet-tab-npc-inventory,
 /* GM Tabs */
-input.sheet-tab-gm-combat:checked~table tr td.input.sheet-tab-gm-combat,
-input.sheet-tab-gm-settings:checked~table tr td.input.sheet-tab-gm-settings,
-input.sheet-tab-gm-weapons:checked~table tr td.sheet-tab-gm-weapons,
-input.sheet-tab-npc:checked~table tr td.sheet-tab-npc,
-input.sheet-tab-group-base-details:checked~table tr td.sheet-tab-group-base-details,
-input.sheet-tab-group-shared:checked~table tr td.sheet-tab-group-shared,
-input.sheet-tab-settinginfo:checked~table tr td.sheet-tab-settinginfo,
-input.sheet-tab-gm-adversaries:checked~table tr td.sheet-tab-gm-adversaries {
+.charsheet input.sheet-tab-gm-combat:checked~table tr td.input.sheet-tab-gm-combat,
+.charsheet input.sheet-tab-gm-settings:checked~table tr td.input.sheet-tab-gm-settings,
+.charsheet input.sheet-tab-gm-weapons:checked~table tr td.sheet-tab-gm-weapons,
+.charsheet input.sheet-tab-npc:checked~table tr td.sheet-tab-npc,
+.charsheet input.sheet-tab-group-base-details:checked~table tr td.sheet-tab-group-base-details,
+.charsheet input.sheet-tab-group-shared:checked~table tr td.sheet-tab-group-shared,
+.charsheet input.sheet-tab-settinginfo:checked~table tr td.sheet-tab-settinginfo,
+.charsheet input.sheet-tab-gm-adversaries:checked~table tr td.sheet-tab-gm-adversaries {
     display: table-cell;
 }
 
-input.sheet-opt {
+.charsheet input.sheet-opt {
     height: 30px;
     margin-right: 120px;
     border: none;
@@ -426,7 +487,7 @@ input.sheet-opt {
     z-index: 1;
 }
 
-input.sheet-opt::after {
+.charsheet input.sheet-opt::after {
     content: attr(title);
     text-align: left;
     display: block;
@@ -437,18 +498,18 @@ input.sheet-opt::after {
     font-size: 16px;
 }
 
-input.sheet-opt-vehicle {
+.charsheet input.sheet-opt-vehicle {
     margin-left: 10px;
 }
 
-input.sheet-opt:active,
-input.sheet-op:focus {
+.charsheet input.sheet-opt:active,
+.charsheet input.sheet-op:focus {
     outline: none;
 }
 
 /* START TAB CODE */
 
-input.sheet-tab-new {
+.charsheet input.sheet-tab-new {
     cursor: pointer;
     height: 20px;
     opacity: 0;
@@ -457,7 +518,7 @@ input.sheet-tab-new {
     z-index: 9999;
 }
 
-span.sheet-tab-new {
+.charsheet span.sheet-tab-new {
     border: 1px solid #51597f;
     background-color: white;
     border-radius: 4px;
@@ -473,7 +534,7 @@ span.sheet-tab-new {
     width: 120px;
 }
 
-input.sheet-tab-new:checked+span {
+.charsheet input.sheet-tab-new:checked+span {
     background: #51597f none repeat scroll 0 0;
     border-radius: 4px;
     font-weight: bold;
@@ -481,102 +542,102 @@ input.sheet-tab-new:checked+span {
     /*color: #692927;*/
 }
 
-input.sheet-tab-new.sheet-tab-talents {
+.charsheet input.sheet-tab-new.sheet-tab-talents {
     width: 212px;
 }
 
-input.sheet-tab-new.sheet-tab-talents+span {
+.charsheet input.sheet-tab-new.sheet-tab-talents+span {
     margin-left: -214px;
 }
 
 /* END TAB CODE */
 
-div.sheet-tab-content {
+.charsheet div.sheet-tab-content {
     display: none;
     border-top: 1px solid #444;
     margin-top: 2px;
 }
 
-div.sheet-separator {
+.charsheet div.sheet-separator {
     border-top: 1px solid #444;
     margin-top: 5px;
 }
 
 /* Top Level Tabs */
-input.sheet-tab-character-sheet:checked~div.sheet-tab-character-sheet,
-input.sheet-tab-ship-sheet:checked~div.sheet-tab-ship-sheet,
-input.sheet-tab-base-sheet:checked~div.sheet-tab-base-sheet,
-input.sheet-tab-companion-sheet:checked~div.sheet-tab-companion-sheet,
-input.sheet-tab-npc-sheet:checked~div.sheet-tab-npc-sheet,
+.charsheet input.sheet-tab-character-sheet:checked~div.sheet-tab-character-sheet,
+.charsheet input.sheet-tab-ship-sheet:checked~div.sheet-tab-ship-sheet,
+.charsheet input.sheet-tab-base-sheet:checked~div.sheet-tab-base-sheet,
+.charsheet input.sheet-tab-companion-sheet:checked~div.sheet-tab-companion-sheet,
+.charsheet input.sheet-tab-npc-sheet:checked~div.sheet-tab-npc-sheet,
 /* NPC Short Sheet*/
-input.sheet-tab-cheat-sheet:checked~div.sheet-tab-cheat-sheet,
-input.sheet-tab-spell-sheet:checked~div.sheet-tab-spell-sheet,
-input.sheet-tab-gm-dice:checked~div.sheet-tab-gm-dice,
+.charsheet input.sheet-tab-cheat-sheet:checked~div.sheet-tab-cheat-sheet,
+.charsheet input.sheet-tab-spell-sheet:checked~div.sheet-tab-spell-sheet,
+.charsheet input.sheet-tab-gm-dice:checked~div.sheet-tab-gm-dice,
 /* Character Sheet Tab SubTabs */
-input.sheet-tab-character:checked~div.sheet-tab-character,
-input.sheet-tab-skills:checked~div.sheet-tab-skills,
-input.sheet-tab-talents:checked~div.sheet-tab-talents,
-input.sheet-tab-weapons:checked~div.sheet-tab-weapons,
-input.sheet-tab-notes:checked~div.sheet-tab-notes,
-input.sheet-tab-critical:checked~div.sheet-tab-critical,
+.charsheet input.sheet-tab-character:checked~div.sheet-tab-character,
+.charsheet input.sheet-tab-skills:checked~div.sheet-tab-skills,
+.charsheet input.sheet-tab-talents:checked~div.sheet-tab-talents,
+.charsheet input.sheet-tab-weapons:checked~div.sheet-tab-weapons,
+.charsheet input.sheet-tab-notes:checked~div.sheet-tab-notes,
+.charsheet input.sheet-tab-critical:checked~div.sheet-tab-critical,
 /* Vehicle Sheet Tab SubTabs */
-input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
-input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
-input.sheet-tab-older:checked~div.sheet-tab-older,
-input.sheet-tab-transport-space:checked~div.sheet-tab-transport-space,
-input.sheet-tab-transport-planetary:checked~div.sheet-tab-transport-planetary,
-input.sheet-tab-transport-beast:checked~div.sheet-tab-transport-beast,
-input.sheet-tab-transport-space-general:checked~div.sheet-tab-transport-space-general,
-input.sheet-tab-transport-space-critical:checked~div.sheet-tab-transport-space-critical,
-input.sheet-tab-transport-planetary-general:checked~div.sheet-tab-transport-planetary-general,
-input.sheet-tab-transport-planetary-critical:checked~div.sheet-tab-transport-planetary-critical,
-input.sheet-tab-transport-beast-general:checked~div.sheet-tab-transport-beast-general,
-input.sheet-tab-transport-beast-critical:checked~div.sheet-tab-transport-beast-critical,
+.charsheet input.sheet-tab-v-details:checked~div.sheet-tab-v-details,
+.charsheet input.sheet-tab-v-weapons:checked~div.sheet-tab-v-weapons,
+.charsheet input.sheet-tab-older:checked~div.sheet-tab-older,
+.charsheet input.sheet-tab-transport-space:checked~div.sheet-tab-transport-space,
+.charsheet input.sheet-tab-transport-planetary:checked~div.sheet-tab-transport-planetary,
+.charsheet input.sheet-tab-transport-beast:checked~div.sheet-tab-transport-beast,
+.charsheet input.sheet-tab-transport-space-general:checked~div.sheet-tab-transport-space-general,
+.charsheet input.sheet-tab-transport-space-critical:checked~div.sheet-tab-transport-space-critical,
+.charsheet input.sheet-tab-transport-planetary-general:checked~div.sheet-tab-transport-planetary-general,
+.charsheet input.sheet-tab-transport-planetary-critical:checked~div.sheet-tab-transport-planetary-critical,
+.charsheet input.sheet-tab-transport-beast-general:checked~div.sheet-tab-transport-beast-general,
+.charsheet input.sheet-tab-transport-beast-critical:checked~div.sheet-tab-transport-beast-critical,
 /* Group Sheet Tab*/
-input.sheet-tab-base-details:checked~div.sheet-tab-base-details,
-input.sheet-tab-base-shared:checked~div.sheet-tab-base-shared,
+.charsheet input.sheet-tab-base-details:checked~div.sheet-tab-base-details,
+.charsheet input.sheet-tab-base-shared:checked~div.sheet-tab-base-shared,
 /* Group Sheet Tab SubTabs */
-input.sheet-tab-groupshared:checked~div.sheet-tab-groupshared,
+.charsheet input.sheet-tab-groupshared:checked~div.sheet-tab-groupshared,
 /* Group Sheet Tab Radio Buttons */
-input.sheet-opt-rebel:checked~div.sheet-opt-rebel,
-input.sheet-opt-business:checked~div.sheet-opt-business,
-input.sheet-opt-homestead:checked~div.sheet-opt-homestead,
+.charsheet input.sheet-opt-rebel:checked~div.sheet-opt-rebel,
+.charsheet input.sheet-opt-business:checked~div.sheet-opt-business,
+.charsheet input.sheet-opt-homestead:checked~div.sheet-opt-homestead,
 /* Companion Sub Tabs */
-input.sheet-tab-companion-info:checked~div.sheet-tab-companion-info,
-input.sheet-tab-companion-combat:checked~div.sheet-tab-companion-combat,
-input.sheet-tab-companion-critical:checked~div.sheet-tab-companion-critical,
-input.sheet-tab-companion-inventory:checked~div.sheet-tab-companion-inventory,
+.charsheet input.sheet-tab-companion-info:checked~div.sheet-tab-companion-info,
+.charsheet input.sheet-tab-companion-combat:checked~div.sheet-tab-companion-combat,
+.charsheet input.sheet-tab-companion-critical:checked~div.sheet-tab-companion-critical,
+.charsheet input.sheet-tab-companion-inventory:checked~div.sheet-tab-companion-inventory,
 /* Companion Sub Tabs */
-input.sheet-tab-npc-info:checked~div.sheet-tab-npc-info,
-input.sheet-tab-npc-combat:checked~div.sheet-tab-npc-combat,
-input.sheet-tab-npc-critical:checked~div.sheet-tab-npc-critical,
-input.sheet-tab-npc-inventory:checked~div.sheet-tab-npc-inventory,
+.charsheet input.sheet-tab-npc-info:checked~div.sheet-tab-npc-info,
+.charsheet input.sheet-tab-npc-combat:checked~div.sheet-tab-npc-combat,
+.charsheet input.sheet-tab-npc-critical:checked~div.sheet-tab-npc-critical,
+.charsheet input.sheet-tab-npc-inventory:checked~div.sheet-tab-npc-inventory,
 /* Cheat Sheet Tabs */
-input.sheet-tab-cheat1:checked~div.sheet-tab-cheat1,
-input.sheet-tab-cheat2:checked~div.sheet-tab-cheat2,
-input.sheet-tab-cheat3:checked~div.sheet-tab-cheat3,
-input.sheet-tab-cheat4:checked~div.sheet-tab-cheat4,
-input.sheet-tab-cheat5:checked~div.sheet-tab-cheat5,
+.charsheet input.sheet-tab-cheat1:checked~div.sheet-tab-cheat1,
+.charsheet input.sheet-tab-cheat2:checked~div.sheet-tab-cheat2,
+.charsheet input.sheet-tab-cheat3:checked~div.sheet-tab-cheat3,
+.charsheet input.sheet-tab-cheat4:checked~div.sheet-tab-cheat4,
+.charsheet input.sheet-tab-cheat5:checked~div.sheet-tab-cheat5,
 /* Spell Sheet Tabs */
-input.sheet-tab-spellgeneral-sheet:checked~div.sheet-tab-spellgeneral-sheet,
-input.sheet-tab-targetspell-sheet:checked~div.sheet-tab-targetspell-sheet,
-input.sheet-tab-areaspell-sheet:checked~div.sheet-tab-areaspell-sheet,
-input.sheet-tab-conjurespell-sheet:checked~div.sheet-tab-conjurespell-sheet,
-input.sheet-tab-counterspell-sheet:checked~div.sheet-tab-counterspell-sheet,
-input.sheet-tab-utilityspell-sheet:checked~div.sheet-tab-utilityspell-sheet,
-input.sheet-tab-crafting-sheet:checked~div.sheet-tab-crafting-sheet,
+.charsheet input.sheet-tab-spellgeneral-sheet:checked~div.sheet-tab-spellgeneral-sheet,
+.charsheet input.sheet-tab-targetspell-sheet:checked~div.sheet-tab-targetspell-sheet,
+.charsheet input.sheet-tab-areaspell-sheet:checked~div.sheet-tab-areaspell-sheet,
+.charsheet input.sheet-tab-conjurespell-sheet:checked~div.sheet-tab-conjurespell-sheet,
+.charsheet input.sheet-tab-counterspell-sheet:checked~div.sheet-tab-counterspell-sheet,
+.charsheet input.sheet-tab-utilityspell-sheet:checked~div.sheet-tab-utilityspell-sheet,
+.charsheet input.sheet-tab-crafting-sheet:checked~div.sheet-tab-crafting-sheet,
 /* gmdice Sheet Tab SubTabs */
-input.sheet-tab-gm-combat:checked~div.sheet-tab-gm-combat,
-input.sheet-tab-gm-settings:checked~div.sheet-tab-gm-settings,
-input.sheet-tab-gm-weapons:checked~div.sheet-tab-gm-weapons,
+.charsheet input.sheet-tab-gm-combat:checked~div.sheet-tab-gm-combat,
+.charsheet input.sheet-tab-gm-settings:checked~div.sheet-tab-gm-settings,
+.charsheet input.sheet-tab-gm-weapons:checked~div.sheet-tab-gm-weapons,
 /* Currently used for Group Mechanics sheet */
-input.sheet-tab-group-base-details:checked~div.sheet-tab-group-base-details,
+.charsheet input.sheet-tab-group-base-details:checked~div.sheet-tab-group-base-details,
 /* Group Base of Operations Copy*/
-input.sheet-tab-group-shared:checked~div.sheet-tab-group-shared,
+.charsheet input.sheet-tab-group-shared:checked~div.sheet-tab-group-shared,
 /* Group Shared Resources Copy*/
-input.sheet-tab-settinginfo:checked~div.sheet-tab-settinginfo,
+.charsheet input.sheet-tab-settinginfo:checked~div.sheet-tab-settinginfo,
 /* Game Setting Worksheet */
-input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
+.charsheet input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
 
 /* Currently used for Campaign Details sheet */
     {
@@ -585,7 +646,7 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
 
 /* Roll Template Formatting - Critical */
 
-.sheet-rolltemplate-critical table {
+.charsheet .sheet-rolltemplate-critical table {
     width: 100%;
     border: 1px solid;
     color: black;
@@ -593,7 +654,7 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.sheet-rolltemplate-critical th {
+.charsheet .sheet-rolltemplate-critical th {
     border-radius: 3px;
     background-image: -webkit-linear-gradient(top, #ff0505, #000000);
     background-image: -moz-linear-gradient(top, #ff0505, #000000);
@@ -607,12 +668,12 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
     font-size: 1.2em;
 }
 
-.sheet-rolltemplate-critical .sheet-subheader {
+.charsheet .sheet-rolltemplate-critical .sheet-subheader {
     font-size: 0.8em;
     padding: 2px;
 }
 
-.sheet-rolltemplate-critical .sheet-tcat-header {
+.charsheet .sheet-rolltemplate-critical .sheet-tcat-header {
     background-image: -webkit-linear-gradient(top, #ff0505, #000000);
     background-image: -moz-linear-gradient(top, #ff0505, #000000);
     background-image: -o-linear-gradient(top, #ff0505, #000000);
@@ -625,26 +686,26 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
     font-size: 0.8em;
 }
 
-.sheet-rolltemplate-critical td {
+.charsheet .sheet-rolltemplate-critical td {
     padding: 2px;
 }
 
-.sheet-rolltemplate-critical .sheet-tcat {
+.charsheet .sheet-rolltemplate-critical .sheet-tcat {
     font-weight: bold;
     padding: 2px;
 }
 
-.sheet-rolltemplate-critical .sheet-flavor {
+.charsheet .sheet-rolltemplate-critical .sheet-flavor {
     font-style: italic;
     padding: 2px;
 }
 
-.sheet-rolltemplate-critical tr:nth-child(odd) {
+.charsheet .sheet-rolltemplate-critical tr:nth-child(odd) {
     background-color: rgba(217, 217, 214, 1);
     padding: 2px;
 }
 
-.sheet-rolltemplate-critical tr:nth-child(even) {
+.charsheet .sheet-rolltemplate-critical tr:nth-child(even) {
     background-color: rgba(233, 233, 233, 1);
     padding: 2px;
 }
@@ -653,8 +714,8 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
 
 /* Roll Template Formatting */
 
-.sheet-rolltemplate-base table,
-.sheet-rolltemplate-suggestion table {
+.charsheet .sheet-rolltemplate-base table,
+.charsheet .sheet-rolltemplate-suggestion table {
     width: 100%;
     border: 1px solid;
     color: black;
@@ -662,8 +723,8 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.sheet-rolltemplate-base th,
-.sheet-rolltemplate-suggestion th {
+.charsheet .sheet-rolltemplate-base th,
+.charsheet .sheet-rolltemplate-suggestion th {
     border-radius: 3px;
     background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
     background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
@@ -677,14 +738,14 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
     font-size: 1.2em;
 }
 
-.sheet-rolltemplate-base .sheet-subheader,
-.sheet-rolltemplate-suggestion .sheet-subheader {
+.charsheet .sheet-rolltemplate-base .sheet-subheader,
+.charsheet .sheet-rolltemplate-suggestion .sheet-subheader {
     font-size: 0.8em;
     padding: 2px;
 }
 
-.sheet-rolltemplate-base .sheet-tcat-header,
-.sheet-rolltemplate-suggestion .sheet-tcat-header {
+.charsheet .sheet-rolltemplate-base .sheet-tcat-header,
+.charsheet .sheet-rolltemplate-suggestion .sheet-tcat-header {
     background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
     background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
     background-image: -o-linear-gradient(top, #485a6d, #2c3947);
@@ -697,35 +758,35 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
     font-size: 0.8em;
 }
 
-.sheet-rolltemplate-base td,
-.sheet-rolltemplate-suggestion td {
+.charsheet .sheet-rolltemplate-base td,
+.charsheet .sheet-rolltemplate-suggestion td {
     padding: 2px;
 }
 
-.sheet-rolltemplate-suggestion td {
+.charsheet .sheet-rolltemplate-suggestion td {
     width: 71px;
 }
 
-.sheet-rolltemplate-base .sheet-tcat,
-.sheet-rolltemplate-suggestion .sheet-tcat {
+.charsheet .sheet-rolltemplate-base .sheet-tcat,
+.charsheet .sheet-rolltemplate-suggestion .sheet-tcat {
     font-weight: bold;
     padding: 2px;
 }
 
-.sheet-rolltemplate-base .sheet-flavor,
-.sheet-rolltemplate-suggestion .sheet-flavor {
+.charsheet .sheet-rolltemplate-base .sheet-flavor,
+.charsheet .sheet-rolltemplate-suggestion .sheet-flavor {
     font-style: italic;
     padding: 2px;
 }
 
-.sheet-rolltemplate-base tr:nth-child(odd),
-.sheet-rolltemplate-suggestion tr:nth-child(odd) {
+.charsheet .sheet-rolltemplate-base tr:nth-child(odd),
+.charsheet .sheet-rolltemplate-suggestion tr:nth-child(odd) {
     background-color: rgba(217, 217, 214, 1);
     padding: 2px;
 }
 
-.sheet-rolltemplate-base tr:nth-child(even),
-.sheet-rolltemplate-suggestion tr:nth-child(even) {
+.charsheet .sheet-rolltemplate-base tr:nth-child(even),
+.charsheet .sheet-rolltemplate-suggestion tr:nth-child(even) {
     background-color: rgba(233, 233, 233, 1);
     padding: 2px;
 }
@@ -734,26 +795,26 @@ input.sheet-tab-gm-adversaries:checked~div.sheet-tab-gm-adversaries
 
 /* Custom Show Hide
  * ------------------------------------ */
-.sheet-player-dice,
-.sheet-player-sheet,
-.sheet-gm-sheet {
+.charsheet .sheet-player-dice,
+.charsheet .sheet-player-sheet,
+.charsheet .sheet-gm-sheet {
     display: none;
 }
 
-input.sheet-player:checked~.sheet-player-sheet,
-input.sheet-gm:checked~.sheet-gm-sheet {
+.charsheet input.sheet-player:checked~.sheet-player-sheet,
+.charsheet input.sheet-gm:checked~.sheet-gm-sheet {
     display: inline-block;
 }
 
-input.sheet-player:checked~.sheet-player-dice {
+.charsheet input.sheet-player:checked~.sheet-player-dice {
     display: block;
 }
 
-input.sheet-gm:checked~div.sheet-tab-content {
+.charsheet input.sheet-gm:checked~div.sheet-tab-content {
     display: none;
 }
 
-input.sheet-gm:checked~div.sheet-tab-gm-dice {
+.charsheet input.sheet-gm:checked~div.sheet-tab-gm-dice {
     display: block;
 }
 
@@ -769,7 +830,7 @@ input.sheet-gm:checked~div.sheet-tab-gm-dice {
     cursor: pointer;
 }
 
-input[type=number].sheet-characteristic {
+.charsheet input[type=number].sheet-characteristic {
     background-color: transparent;
     border-color: transparent;
     font-size: 16pt;
@@ -803,15 +864,13 @@ input[type=number].sheet-characteristic {
 
 .charsheet label {
     font-size: 11px;
-    color: #444;
+    /*color: var(--label-color) !important;*/
     margin: 0px;
     padding: 0px;
 }
 
 .charsheet table {
     width: 100%;
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/grey.jpg');
-    /* Grey Background */
     background-position: center center;
     background-repeat: repeat;
 }
@@ -819,7 +878,6 @@ input[type=number].sheet-characteristic {
 .charsheet table tr th {
     text-align: left;
     background: #444;
-    color: #f3f3f3;
     padding: 3px 5px;
 }
 
@@ -841,7 +899,7 @@ input[type=number].sheet-characteristic {
     /*background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/grey.jpg');*/
 }
 
-.sheet-bg-gray label {
+.charsheet .sheet-bg-gray label {
     color: #eee
 }
 
@@ -853,19 +911,20 @@ input[type=number].sheet-characteristic {
     color: #eee;*/
 }
 
-.sheet-bg-blue label {
+.charsheet .sheet-bg-blue label {
     color: #fff
 }
 
-.sheet-bg-blue td,
-.sheet-bg-blue:hover td,
+/*
+.charsheet .sheet-bg-blue td,
+.charsheet .sheet-bg-blue:hover td,
 .charsheet .sheet-sub-header,
 .charsheet .sheet-sub-header:hover {
     /*background: #78728f;
-    color: #fff;*/
-}
+    color: #fff;
+}*/
 
-.charsheet table tr td.sheet-div-right {
+*/ .charsheet table tr td.sheet-div-right {
     border-right: 1px solid #ccc
 }
 
@@ -889,79 +948,79 @@ input[type=number].sheet-characteristic {
 
 /* ------------------------------------------------- Dice Pool */
 
-.sheet-section-1 {
+.charsheet .sheet-section-1 {
     padding-bottom: 10px;
 }
 
-.sheet-section-1 .sheet-column {
+.charsheet .sheet-section-1 .sheet-column {
     margin-bottom: 0px;
     margin: 0 0;
     width: 100%
 }
 
-.sheet-dice-pool {
+.charsheet .sheet-dice-pool {
     border-bottom: 1px solid #444;
 }
 
-.sheet-dice-pool img {
+.charsheet .sheet-dice-pool img {
     width: 20px;
     margin: 4px 0 0 -10px;
     padding: 0px;
     position: absolute;
 }
 
-.sheet-dice-pool .sheet-note {
+.charsheet .sheet-dice-pool .sheet-note {
     font-size: 10px;
     font-weight: normal;
     color: #c1c9c2;
 }
 
-.sheet-dice-pool td,
-.sheet-dice-pool tr:hover td {
+.charsheet .sheet-dice-pool td,
+.charsheet .sheet-dice-pool tr:hover td {
     background: #444;
 }
 
-.sheet-dice-pool td.sheet-light,
-.sheet-dice-pool td.sheet-dark,
-.sheet-dice-pool td.sheet-force {
+.charsheet .sheet-dice-pool td.sheet-light,
+.charsheet .sheet-dice-pool td.sheet-dark,
+.charsheet .sheet-dice-pool td.sheet-force {
     text-align: center;
 }
 
-.sheet-dice-pool td.sheet-light:nth-child(1),
-.sheet-dice-pool td.sheet-dark:nth-child(5) {
+.charsheet .sheet-dice-pool td.sheet-light:nth-child(1),
+.charsheet .sheet-dice-pool td.sheet-dark:nth-child(5) {
     text-align: right;
 }
 
-.sheet-dice-pool td.sheet-light:nth-child(3),
-.sheet-dice-pool td.sheet-dark:nth-child(7) {
+.charsheet .sheet-dice-pool td.sheet-light:nth-child(3),
+.charsheet .sheet-dice-pool td.sheet-dark:nth-child(7) {
     text-align: left;
 }
 
-.sheet-dice-pool td.sheet-force {
+.charsheet .sheet-dice-pool td.sheet-force {
     border-left: 1px solid #d1cbcb;
     border-right: 1px solid #d1cbcb;
 }
 
-.sheet-dice-pool td.sheet-force {
+.charsheet .sheet-dice-pool td.sheet-force {
     border-bottom: none
 }
 
-.sheet-dice-pool td.sheet-light {}
+.charsheet .sheet-dice-pool td.sheet-light {}
 
-.sheet-dice-pool td.sheet-dark {}
+.charsheet .sheet-dice-pool td.sheet-dark {}
 
-.sheet-dice-pool td.sheet-light:nth-child(1) {
+.charsheet .sheet-dice-pool td.sheet-light:nth-child(1) {
     border-left: 1px solid #999;
 }
 
-.sheet-dice-pool td.sheet-upgrade,
-.sheet-dice-pool td.sheet-downgrade {
+.charsheet .sheet-dice-pool td.sheet-upgrade,
+.charsheet .sheet-dice-pool td.sheet-downgrade {
     text-align: center !important;
     border-bottom: 1px solid #d1cbcb;
     border-top: 1px solid #d1cbcb;
 }
 
-.sheet-dice-pool [type=number] {
+.charsheet .sheet-dice-pool [type=number] {
     background: #f3f3f3;
     width: 50px !important;
     height: 40px;
@@ -969,12 +1028,12 @@ input[type=number].sheet-characteristic {
     font-weight: bold;
 }
 
-.sheet-dice-pool [type=number]:focus {
+.charsheet .sheet-dice-pool [type=number]:focus {
     background: #fff;
 }
 
-.sheet-upgrade label,
-.sheet-downgrade label {
+.charsheet .sheet-upgrade label,
+.charsheet .sheet-downgrade label {
     display: inline-block;
     width: auto;
     text-align: center;
@@ -983,34 +1042,34 @@ input[type=number].sheet-characteristic {
 
 /* ------------------------------------------------- Soak, Wounds... */
 
-.sheet-swsd {
-    background: url('https://github.com/Roll20/roll20-character-sheets/blob/master/Genesys-RPG/assets/background/border/character.png') center -2px no-repeat;
+.charsheet .sheet-swsd {
+    background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/character.png') center -2px no-repeat;
     /* Character Sheet Stat connecting sword title - Border */
 }
 
-.sheet-swsd tr:hover td {
+.charsheet .sheet-swsd tr:hover td {
     background-color: transparent;
 }
 
-.sheet-swsd tr td {
+.charsheet .sheet-swsd tr td {
     border: none;
 }
 
-.sheet-swsd th {
+.charsheet .sheet-swsd th {
     font-size: 10px;
     font-weight: normal;
 }
 
-.sheet-swsd td {
+.charsheet .sheet-swsd td {
     text-align: center;
     vertical-align: top;
 }
 
-.sheet-swsd td:nth-child(1),
-.sheet-swsd td:nth-child(2),
-.sheet-swsd td:nth-child(3),
-.sheet-swsd td:nth-child(4),
-.sheet-swsd td:nth-child(5) {
+.charsheet .sheet-swsd td:nth-child(1),
+.charsheet .sheet-swsd td:nth-child(2),
+.charsheet .sheet-swsd td:nth-child(3),
+.charsheet .sheet-swsd td:nth-child(4),
+.charsheet .sheet-swsd td:nth-child(5) {
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold_current.png');
     background-position: center top;
     background-repeat: no-repeat;
@@ -1018,15 +1077,15 @@ input[type=number].sheet-characteristic {
     height: 87px;
 }
 
-.sheet-swsd td:nth-child(3),
-.sheet-swsd td:nth-child(4),
-.sheet-swsd td:nth-child(5) {
+.charsheet .sheet-swsd td:nth-child(3),
+.charsheet .sheet-swsd td:nth-child(4),
+.charsheet .sheet-swsd td:nth-child(5) {
     background-position: center center;
     vertical-align: middle;
 }
 
-.sheet-swsd tr:nth-child(2) td:nth-child(1),
-.sheet-beast tr:first-child td:nth-child(5) {
+.charsheet .sheet-swsd tr:nth-child(2) td:nth-child(1),
+.charsheet .sheet-beast tr:first-child td:nth-child(5) {
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
     background-position: center top;
@@ -1036,18 +1095,18 @@ input[type=number].sheet-characteristic {
     vertical-align: top;
 }
 
-.sheet-beast tr:first-child td:nth-child(5) {
+.charsheet .sheet-beast tr:first-child td:nth-child(5) {
     vertical-align: middle;
     background-position: center 60px;
 }
 
-.sheet-swsd tr:nth-child(2) td:nth-child(2) {
+.charsheet .sheet-swsd tr:nth-child(2) td:nth-child(2) {
     background: none;
     width: auto;
     height: auto;
 }
 
-.sheet-swsd tr:nth-child(2) td:nth-child(1) label.sheet-label-title {
+.charsheet .sheet-swsd tr:nth-child(2) td:nth-child(1) label.sheet-label-title {
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -1057,12 +1116,12 @@ input[type=number].sheet-characteristic {
     display: block;
 }
 
-.sheet-beast tr:first-child td:nth-child(5) label.sheet-label-title {
+.charsheet .sheet-beast tr:first-child td:nth-child(5) label.sheet-label-title {
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
 
-label.sheet-label-title {
+.charsheet label.sheet-label-title {
     text-align: center;
     vertical-align: middle;
     color: #fff;
@@ -1071,11 +1130,11 @@ label.sheet-label-title {
     padding-bottom: 6px;
 }
 
-label.sheet-label-committed,
-label.sheet-label-threshold,
-label.sheet-label-current,
-label.sheet-label-range,
-label.sheet-label-melee {
+.charsheet label.sheet-label-committed,
+.charsheet label.sheet-label-threshold,
+.charsheet label.sheet-label-current,
+.charsheet label.sheet-label-range,
+.charsheet label.sheet-label-melee {
     color: #fff;
     font-size: 9px;
     font-weight: normal;
@@ -1084,8 +1143,8 @@ label.sheet-label-melee {
     padding: 0 5px;
 }
 
-label.sheet-label-current-speed,
-label.sheet-label-threshold-speed {
+.charsheet label.sheet-label-current-speed,
+.charsheet label.sheet-label-threshold-speed {
     color: #fff;
     font-size: 9px;
     font-weight: normal;
@@ -1094,7 +1153,7 @@ label.sheet-label-threshold-speed {
     padding: 0 10px;
 }
 
-label.sheet-label-current {
+.charsheet label.sheet-label-current {
     padding-right: 16px;
 }
 
@@ -1105,7 +1164,7 @@ label.sheet-label-current {
     width: 50px !important;
 }
 
-.sheet-destiny td:nth-child(12) {
+.charsheet .sheet-destiny td:nth-child(12) {
     margin-left: auto;
     margin-right: auto;
     width: 200px;
@@ -1113,7 +1172,7 @@ label.sheet-label-current {
     vertical-align: top;
 }
 
-.sheet-destiny td:nth-child(2) {
+.charsheet .sheet-destiny td:nth-child(2) {
     width: 100px;
     height: 66px;
     vertical-align: bottom;
@@ -1121,7 +1180,7 @@ label.sheet-label-current {
 
 }
 
-.sheet-destiny td:nth-child(1) {
+.charsheet .sheet-destiny td:nth-child(1) {
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
@@ -1137,7 +1196,7 @@ label.sheet-label-current {
 
 }
 
-.sheet-destiny td:nth-child(3) {
+.charsheet .sheet-destiny td:nth-child(3) {
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
@@ -1151,21 +1210,21 @@ label.sheet-label-current {
     right: 20%;
 }
 
-.sheet-destiny {
+.charsheet .sheet-destiny {
     background-image: none;
     text-align: center;
 }
 
-.sheet-destiny tr td {
+.charsheet .sheet-destiny tr td {
     border: none;
     text-align: center;
 }
 
-.sheet-destiny tr:hover td {
+.charsheet .sheet-destiny tr:hover td {
     background-color: transparent;
 }
 
-.sheet-destiny label {
+.charsheet .sheet-destiny label {
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -1175,20 +1234,20 @@ label.sheet-label-current {
     display: block;
 }
 
-.sheet-destiny [type=number] {
+.charsheet .sheet-destiny [type=number] {
     font-size: 14px;
     font-weight: bold;
 }
 
 /* ------------------------------------------------- Characteristics */
 
-.sheet-characteristics td:nth-child(1),
-.sheet-characteristics td:nth-child(3),
-.sheet-characteristics td:nth-child(5),
-.sheet-characteristics td:nth-child(7),
-.sheet-characteristics td:nth-child(9),
-.sheet-characteristics td:nth-child(11),
-.sheet-characteristics td:nth-child(13) {
+.charsheet .sheet-characteristics td:nth-child(1),
+.charsheet .sheet-characteristics td:nth-child(3),
+.charsheet .sheet-characteristics td:nth-child(5),
+.charsheet .sheet-characteristics td:nth-child(7),
+.charsheet .sheet-characteristics td:nth-child(9),
+.charsheet .sheet-characteristics td:nth-child(11),
+.charsheet .sheet-characteristics td:nth-child(13) {
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /* Single Digit - Border */
@@ -1199,19 +1258,19 @@ label.sheet-label-current {
     vertical-align: top;
 }
 
-.sheet-characteristics {
+.charsheet .sheet-characteristics {
     background-image: none;
 }
 
-.sheet-characteristics tr td {
+.charsheet .sheet-characteristics tr td {
     border: none;
 }
 
-.sheet-characteristics tr:hover td {
+.charsheet .sheet-characteristics tr:hover td {
     background-color: transparent;
 }
 
-.sheet-characteristics label {
+.charsheet .sheet-characteristics label {
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -1221,41 +1280,41 @@ label.sheet-label-current {
     display: block;
 }
 
-.sheet-characteristics [type=number] {
+.charsheet .sheet-characteristics [type=number] {
     font-size: 14px;
     font-weight: bold;
 }
 
 /* Critical */
 
-.sheet-critical tr td {
+.charsheet .sheet-critical tr td {
     border-bottom: none;
 }
 
-.sheet-critical {
+.charsheet .sheet-critical {
     border-bottom: 1px dotted #999;
 }
 
-.sheet-critical:hover {
+.charsheet .sheet-critical:hover {
     background: #f1f1f1;
 }
 
-.sheet-roll-critical,
-.sheet-roll-critical tr td,
-.sheet-roll-critical tr:hover td {
+.charsheet .sheet-roll-critical,
+.charsheet .sheet-roll-critical tr td,
+.charsheet .sheet-roll-critical tr:hover td {
     /*background-color: #444;*/
     border: none;
     color: #ccc
 }
 
-.sheet-crit-dice-bg {
+.charsheet .sheet-crit-dice-bg {
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/4.png');
     /* Four Boxes - Dice Border */
     background-position: center center;
     background-repeat: no-repeat;
 }
 
-.sheet-roll-critical label {
+.charsheet .sheet-roll-critical label {
     color: #ccc;
 }
 
@@ -1266,44 +1325,44 @@ label.sheet-label-current {
     background: #ccc;
 }
 
-.sheet-critical {
+.charsheet .sheet-critical {
     /*display: none;*/
 }
 
-.sheet-checkbox-criton {
+.charsheet .sheet-checkbox-criton {
     display: none;
 }
 
-.sheet-checkbox-criton:checked+.sheet-critical {
+.charsheet .sheet-checkbox-criton:checked+.sheet-critical {
     display: block;
 }
 
-button.sheet-btn-lightSide[type=roll]::before {
+.charsheet button.sheet-btn-lightSide[type=roll]::before {
     content: '';
 }
 
-button.sheet-btn-lightSide[type=roll] {
+.charsheet button.sheet-btn-lightSide[type=roll] {
     white-space: nowrap;
     font-size: 15px;
     margin: 0;
 }
 
-button.sheet-btn-heal-crit[type=roll]::before,
-button.sheet-btn-roll-crit[type=roll]::before,
-button.sheet-btn-add-crit[type=roll]::before {
+.charsheet button.sheet-btn-heal-crit[type=roll]::before,
+.charsheet button.sheet-btn-roll-crit[type=roll]::before,
+.charsheet button.sheet-btn-add-crit[type=roll]::before {
     content: '';
 }
 
-button.sheet-btn-heal-crit[type=roll],
-button.sheet-btn-add-crit[type=roll],
-button.sheet-btn-roll-crit[type=roll] {
+.charsheet button.sheet-btn-heal-crit[type=roll],
+.charsheet button.sheet-btn-add-crit[type=roll],
+.charsheet button.sheet-btn-roll-crit[type=roll] {
     white-space: nowrap;
     font-size: 12px;
     width: 100%;
     margin: 0;
 }
 
-button.sheet-btn-roll-crit[type=roll] {
+.charsheet button.sheet-btn-roll-crit[type=roll] {
     color: #fff;
     font-size: 16px;
     line-height: 30px;
@@ -1322,18 +1381,18 @@ button.sheet-btn-roll-crit[type=roll] {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
-button.sheet-btn-roll-crit[type=roll]::before {
+.charsheet button.sheet-btn-roll-crit[type=roll]::before {
     content: 't ';
     font-size: 18px;
     color: #fff;
 }
 
-button.sheet-btn-roll-crit[type=roll]:focus {
+.charsheet button.sheet-btn-roll-crit[type=roll]:focus {
     outline: none;
     border: none;
 }
 
-button.sheet-btn-roll-crit[type=roll]:active {
+.charsheet button.sheet-btn-roll-crit[type=roll]:active {
     background-image: -webkit-linear-gradient(top, #2c3947, #485a6d);
     background-image: -moz-linear-gradient(top, #2c3947, #485a6d);
     background-image: -o-linear-gradient(top, #2c3947, #485a6d);
@@ -1342,15 +1401,15 @@ button.sheet-btn-roll-crit[type=roll]:active {
 
 /* ------------------------------------------------- Skills */
 
-.sheet-skills td:nth-child(2),
-.sheet-skills td:nth-child(3),
-.sheet-skills td:nth-child(6) {
+.charsheet .sheet-skills td:nth-child(2),
+.charsheet .sheet-skills td:nth-child(3),
+.charsheet .sheet-skills td:nth-child(6) {
     width: 50px;
 }
 
-.sheet-init td:nth-child(2),
-.sheet-init td:nth-child(5),
-.sheet-skills td:nth-child(4) {
+.charsheet .sheet-init td:nth-child(2),
+.charsheet .sheet-init td:nth-child(5),
+.charsheet .sheet-skills td:nth-child(4) {
     width: 124px;
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/7.png');
     /* Seven Boxes - Dice Border */
@@ -1358,39 +1417,39 @@ button.sheet-btn-roll-crit[type=roll]:active {
     background-position: 3px center;
 }
 
-.sheet-skills td:nth-child(5) {
+.charsheet .sheet-skills td:nth-child(5) {
     width: 124px;
 }
 
-.sheet-custome-skills th:nth-child(1),
-.sheet-custome-skills td:nth-child(1) {
+.charsheet .sheet-custome-skills th:nth-child(1),
+.charsheet .sheet-custome-skills td:nth-child(1) {
     width: 270px;
 }
 
-.sheet-custome-skills td:nth-child(2),
-.sheet-custome-skills th:nth-child(2) {
+.charsheet .sheet-custome-skills td:nth-child(2),
+.charsheet .sheet-custome-skills th:nth-child(2) {
     width: 100px;
 }
 
-.sheet-custome-skills th:nth-child(4) {
+.charsheet .sheet-custome-skills th:nth-child(4) {
     width: 20px;
 }
 
-.sheet-custome-skills td:nth-child(3),
-.sheet-custome-skills td:nth-child(4),
-.sheet-custome-skills td:nth-child(7),
-.sheet-custome-skills th:nth-child(3),
-.sheet-custome-skills th:nth-child(7) {
+.charsheet .sheet-custome-skills td:nth-child(3),
+.charsheet .sheet-custome-skills td:nth-child(4),
+.charsheet .sheet-custome-skills td:nth-child(7),
+.charsheet .sheet-custome-skills th:nth-child(3),
+.charsheet .sheet-custome-skills th:nth-child(7) {
     width: 50px;
     background-image: none;
 }
 
-.sheet-custome-skills td:nth-child(6),
-.sheet-custome-skills th:nth-child(6) {
+.charsheet .sheet-custome-skills td:nth-child(6),
+.charsheet .sheet-custome-skills th:nth-child(6) {
     width: 124px;
 }
 
-.sheet-custome-skills td:nth-child(5) {
+.charsheet .sheet-custome-skills td:nth-child(5) {
     width: 124px;
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/7.png');
     /* Seven Boxes - Dice Border */
@@ -1398,110 +1457,110 @@ button.sheet-btn-roll-crit[type=roll]:active {
     background-position: 4px center;
 }
 
-.sheet-skills th:nth-child(2),
-.sheet-skills td:nth-child(2),
-.sheet-custome-skills th:nth-child(3),
-.sheet-custome-skills td:nth-child(3) {
+.charsheet .sheet-skills th:nth-child(2),
+.charsheet .sheet-skills td:nth-child(2),
+.charsheet .sheet-custome-skills th:nth-child(3),
+.charsheet .sheet-custome-skills td:nth-child(3) {
     text-align: center;
 }
 
 /* TIP HELP */
 
 /* Success - Symbol */
-.sheet-icon-S {
+.charsheet .sheet-icon-S {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/symbols/success.png') center center no-repeat;
 }
 
 /* Failure - Symbol */
-.sheet-icon-F {
+.charsheet .sheet-icon-F {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/symbols/failure.png') center center no-repeat;
 }
 
 /* Advantage - Symbol */
-.sheet-icon-A {
+.charsheet .sheet-icon-A {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/advantage.png') center center no-repeat;
 }
 
 /* Triumph - Symbol */
-.sheet-icon-Tri {
+.charsheet .sheet-icon-Tri {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/triumph.png') center center no-repeat;
 }
 
 /* Threat - Symbol */
-.sheet-icon-T {
+.charsheet .sheet-icon-T {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/threat.png') center center no-repeat;
 }
 
 /* Despair - Symbol */
-.sheet-icon-Des {
+.charsheet .sheet-icon-Des {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/despair.png') center center no-repeat;
 }
 
-.sheet-icon-B {
+.charsheet .sheet-icon-B {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/blue/blank.png') center center no-repeat;
 }
 
-.sheet-icon-G {
+.charsheet .sheet-icon-G {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/green/blank.png') center center no-repeat;
 }
 
-.sheet-icon-Y {
+.charsheet .sheet-icon-Y {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/yellow/blank.png') center center no-repeat;
 }
 
-.sheet-icon-P {
+.charsheet .sheet-icon-P {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/purple/blank.png') center center no-repeat;
 }
 
-.sheet-icon-R {
+.charsheet .sheet-icon-R {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/red/blank.png') center center no-repeat;
 }
 
-.sheet-icon-BLK {
+.charsheet .sheet-icon-BLK {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/dice/black/blank.png') center center no-repeat;
 }
 
-.sheet-icon-S,
-.sheet-icon-F,
-.sheet-icon-A,
-.sheet-icon-Tri,
-.sheet-icon-T,
-.sheet-icon-Des,
-.sheet-icon-B,
-.sheet-icon-G,
-.sheet-icon-Y,
-.sheet-icon-P,
-.sheet-icon-R,
-.sheet-icon-BLK {
+.charsheet .sheet-icon-S,
+.charsheet .sheet-icon-F,
+.charsheet .sheet-icon-A,
+.charsheet .sheet-icon-Tri,
+.charsheet .sheet-icon-T,
+.charsheet .sheet-icon-Des,
+.charsheet .sheet-icon-B,
+.charsheet .sheet-icon-G,
+.charsheet .sheet-icon-Y,
+.charsheet .sheet-icon-P,
+.charsheet .sheet-icon-R,
+.charsheet .sheet-icon-BLK {
     background-size: 15px 15px;
     display: inline-block;
     width: 15px;
     height: 15px;
 }
 
-.sheet-skills label {
+.charsheet .sheet-skills label {
     float: left;
     width: auto;
 }
 
-.sheet-tips {
+.charsheet .sheet-tips {
     float: left;
     margin-left: 5px;
 }
 
-.sheet-help {
+.charsheet .sheet-help {
     display: none;
 }
 
-.sheet-help-def {
+.charsheet .sheet-help-def {
     display: block
 }
 
-.sheet-tips:hover .sheet-help {
+.charsheet .sheet-tips:hover .sheet-help {
     display: block
 }
 
-.sheet-icon-question {
+.charsheet .sheet-icon-question {
     width: 14px;
     margin: auto;
     line-height: 14px;
@@ -1514,12 +1573,12 @@ button.sheet-btn-roll-crit[type=roll]:active {
     border-radius: 7px;
 }
 
-th .sheet-icon-question {
+.charsheet th .sheet-icon-question {
     color: #444;
     background: #fff;
 }
 
-.sheet-help .sheet-icon {
+.charsheet .sheet-help .sheet-icon {
     position: absolute;
     width: 21px;
     height: 16px;
@@ -1529,35 +1588,35 @@ th .sheet-icon-question {
     cursor: pointer;
 }
 
-.sheet-help-def .sheet-icon {
+.charsheet .sheet-help-def .sheet-icon {
     margin-left: 0px
 }
 
-.sheet-help-success .sheet-icon {
+.charsheet .sheet-help-success .sheet-icon {
     margin-left: 25px
 }
 
-.sheet-help-advantage .sheet-icon {
+.charsheet .sheet-help-advantage .sheet-icon {
     margin-left: 50px
 }
 
-.sheet-help-triumph .sheet-icon {
+.charsheet .sheet-help-triumph .sheet-icon {
     margin-left: 75px
 }
 
-.sheet-help-threat .sheet-icon {
+.charsheet .sheet-help-threat .sheet-icon {
     margin-left: 100px
 }
 
-.sheet-help-despair .sheet-icon {
+.charsheet .sheet-help-despair .sheet-icon {
     margin-left: 125px
 }
 
-.sheet-help-failure .sheet-icon {
+.charsheet .sheet-help-failure .sheet-icon {
     margin-left: 150px
 }
 
-.sheet-help-content {
+.charsheet .sheet-help-content {
     position: absolute;
     background: #fff;
     border: 1px solid #ccc;
@@ -1574,21 +1633,21 @@ th .sheet-icon-question {
     box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.75);
 }
 
-th .sheet-help-content {
+.charsheet th .sheet-help-content {
     color: #444;
     font-weight: normal;
 }
 
-.sheet-helper {
+.charsheet .sheet-helper {
     cursor: help;
 }
 
-.sheet-icon:hover~.sheet-help-content {
+.charsheet .sheet-icon:hover~.sheet-help-content {
     display: block;
     z-index: 10
 }
 
-.sheet-icon:hover {
+.charsheet .sheet-icon:hover {
     background: #fff;
     border: 1px solid #ccc;
     border-bottom: 1px solid #fff;
@@ -1598,53 +1657,53 @@ th .sheet-help-content {
     border-radius: 3px 3px 0px 0px;
 }
 
-.sheet-help-content h5 {
+.charsheet .sheet-help-content h5 {
     padding-bottom: 8px;
 }
 
-.sheet-help-content ul li {
+.charsheet .sheet-help-content ul li {
     line-height: 14px;
     padding-bottom: 8px;
 }
 
-.sheet-force-rating label input {
+.charsheet .sheet-force-rating label input {
     text-align: center;
 }
 
 /* -------------------------------------------------- Talents */
 
-.sheet-talents th:last-child {
+.charsheet .sheet-talents th:last-child {
     background-image: none;
     text-align: center;
 }
 
-.sheet-talent tr td {
+.charsheet .sheet-talent tr td {
     border-bottom: none;
 }
 
-.sheet-talent {
+.charsheet .sheet-talent {
     border-bottom: 1px dotted #999;
 }
 
-.sheet-talent:hover {
+.charsheet .sheet-talent:hover {
     /*background: #f1f1f1;*/
 }
 
-[name=attr_talentname] {
+.charsheet [name=attr_talentname] {
     font-weight: bold;
 }
 
 /* ------------------------------------------------- Weapons */
 
-.sheet-weapons td:nth-child(1),
-.sheet-weapons td:nth-child(9) {
+.charsheet .sheet-weapons td:nth-child(1),
+.charsheet .sheet-weapons td:nth-child(9) {
     width: 20%;
 }
 
-.sheet-weapons td:nth-child(2),
-.sheet-weapons td:nth-child(4),
-.sheet-weapons td:nth-child(6),
-.sheet-weapons td:nth-child(8) {
+.charsheet .sheet-weapons td:nth-child(2),
+.charsheet .sheet-weapons td:nth-child(4),
+.charsheet .sheet-weapons td:nth-child(6),
+.charsheet .sheet-weapons td:nth-child(8) {
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
@@ -1655,20 +1714,20 @@ th .sheet-help-content {
     vertical-align: top;
 }
 
-.sheet-weapons {
+.charsheet .sheet-weapons {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/title_double_line.png') center 45px repeat-x;
     /* Title Double Line */
 }
 
-.sheet-weapons tr td {
+.charsheet .sheet-weapons tr td {
     border: none;
 }
 
-.sheet-weapons tr:hover td {
+.charsheet .sheet-weapons tr:hover td {
     /*background-color: transparent;*/
 }
 
-.sheet-weapons label {
+.charsheet .sheet-weapons label {
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -1678,71 +1737,71 @@ th .sheet-help-content {
     display: block;
 }
 
-.sheet-weapons [type=text] {
+.charsheet .sheet-weapons [type=text] {
     font-size: 14px;
     font-weight: bold;
     width: 50px;
     text-align: center
 }
 
-.sheet-weapons [type=roll] {
+.charsheet .sheet-weapons [type=roll] {
     font-size: 28px !important;
     line-height: 30px !important;
     width: auto !important;
 }
 
-.sheet-attachments-wrapper {
+.charsheet .sheet-attachments-wrapper {
     position: relative;
     padding-top: 5px;
 }
 
-.sheet-view-attachments {
+.charsheet .sheet-view-attachments {
     float: left;
     margin-left: 10px;
     padding-bottom: 15px;
     position: relative;
 }
 
-input.sheet-view-attachments {
+.charsheet input.sheet-view-attachments {
     margin-top: -28px;
 }
 
-label.sheet-view-attachments {
+.charsheet label.sheet-view-attachments {
     width: 150px;
     margin-top: -31px;
     margin-left: 30px;
 }
 
-.sheet-attachments {
+.charsheet .sheet-attachments {
     display: none;
 }
 
-input.sheet-view-attachments:checked~.sheet-attachments {
+.charsheet input.sheet-view-attachments:checked~.sheet-attachments {
     display: table;
 }
 
-.sheet-attachments th:last-child {
+.charsheet .sheet-attachments th:last-child {
     background: #444;
 }
 
 /* ---------------------------------------------------------- Ship */
 
-.sheet-ship {
+.charsheet .sheet-ship {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/vehicle.png') center center no-repeat;
     /* Vehicle Sheet Stat connecting sword title - Border */
     background-color: transparent;
 }
 
-table.sheet-ship tr td {
+.charsheet table.sheet-ship tr td {
     border: none;
     background-color: transparent;
 }
 
-table.sheet-ship tr:hover td {
+.charsheet table.sheet-ship tr:hover td {
     /*background-color: transparent;*/
 }
 
-.sheet-ship-defense {
+.charsheet .sheet-ship-defense {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/ship/star_four_zones.png') center center no-repeat;
     /* Starship Four Zones - Border */
     width: 302px;
@@ -1751,7 +1810,7 @@ table.sheet-ship tr:hover td {
     vertical-align: top;
 }
 
-.sheet-planetary-vehicle-defense {
+.charsheet .sheet-planetary-vehicle-defense {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/ship/speed_four_zones.png') center center no-repeat;
     /* Speeder Four Zones - Border */
     width: 302px;
@@ -1760,7 +1819,7 @@ table.sheet-ship tr:hover td {
     vertical-align: top;
 }
 
-.sheet-ship-char-thre-bg {
+.charsheet .sheet-ship-char-thre-bg {
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold-current.png');
     background-position: center 0px;
     background-repeat: no-repeat;
@@ -1771,7 +1830,7 @@ table.sheet-ship tr:hover td {
     text-align: center;
 }
 
-.sheet-ship-char-thre-bg-speed {
+.charsheet .sheet-ship-char-thre-bg-speed {
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold-current.png');
     background-position: center 25px;
     background-repeat: no-repeat;
@@ -1783,7 +1842,7 @@ table.sheet-ship tr:hover td {
     padding-top: 28px;
 }
 
-.sheet-ship-char-bg {
+.charsheet .sheet-ship-char-bg {
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
     /*Single Digit - Border*/
@@ -1795,7 +1854,7 @@ table.sheet-ship tr:hover td {
     padding-top: 40px;
 }
 
-.sheet-ship-char-bg label {
+.charsheet .sheet-ship-char-bg label {
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -1805,34 +1864,34 @@ table.sheet-ship tr:hover td {
     display: block;
 }
 
-.sheet-ship-char-bg.sheet-armor {
+.charsheet .sheet-ship-char-bg.sheet-armor {
     width: 26%;
     padding-top: 3px;
     background-position: center 0;
 }
 
-.sheet-ship [type=number] {
+.charsheet .sheet-ship [type=number] {
     font-size: 16px;
     font-weight: bold;
     text-align: right;
     width: 50px !important;
 }
 
-.sheet-ship-char-bg [type=number] {
+.charsheet .sheet-ship-char-bg [type=number] {
     font-size: 14px;
 }
 
-.sheet-ship-defense label {
+.charsheet .sheet-ship-defense label {
     color: #fff;
     text-align: center
 }
 
-.sheet-planetary-vehicle-defense label {
+.charsheet .sheet-planetary-vehicle-defense label {
     color: #fff;
     text-align: center
 }
 
-.sheet-def-label {
+.charsheet .sheet-def-label {
     position: absolute;
     width: 50px;
     margin-left: 220px;
@@ -1840,75 +1899,75 @@ table.sheet-ship tr:hover td {
     font-size: 14px
 }
 
-.sheet-fore,
-.sheet-starboard,
-.sheet-aft,
-.sheet-port {
+.charsheet .sheet-fore,
+.charsheet .sheet-starboard,
+.charsheet .sheet-aft,
+.charsheet .sheet-port {
     width: 99px;
     height: 66px;
     position: absolute;
 }
 
-.sheet-fore {
+.charsheet .sheet-fore {
     margin-left: 99px;
     margin-top: 2px;
 }
 
-.sheet-starboard {
+.charsheet .sheet-starboard {
     margin-left: 203px;
     margin-top: 91px;
 }
 
-.sheet-aft {
+.charsheet .sheet-aft {
     margin-left: 99px;
     margin-top: 172px;
 }
 
-.sheet-port {
+.charsheet .sheet-port {
     margin-left: 0px;
     margin-top: 91px;
 }
 
-.sheet-firearc-field {
+.charsheet .sheet-firearc-field {
     width: 32px;
     height: 32px;
     padding: 1px 0 0 0;
     vertical-align: top
 }
 
-.sheet-fireArcFore,
-.sheet-fireArcStarboard,
-.sheet-fireArcAft,
-.sheet-fireArcPort {
+.charsheet .sheet-fireArcFore,
+.charsheet .sheet-fireArcStarboard,
+.charsheet .sheet-fireArcAft,
+.charsheet .sheet-fireArcPort {
     position: absolute;
     z-index: 5;
     opacity: 0.0;
 }
 
-.sheet-fireArcFore {
+.charsheet .sheet-fireArcFore {
     margin-left: 10px;
     margin-top: 0px
 }
 
-.sheet-fireArcStarboard {
+.charsheet .sheet-fireArcStarboard {
     margin-left: 20px;
     margin-top: 10px
 }
 
-.sheet-fireArcAft {
+.charsheet .sheet-fireArcAft {
     margin-left: 10px;
     margin-top: 20px
 }
 
-.sheet-fireArcPort {
+.charsheet .sheet-fireArcPort {
     margin-left: 0px;
     margin-top: 10px
 }
 
-span.sheet-fireArcForeImg,
-span.sheet-fireArcStarboardImg,
-span.sheet-fireArcAftImg,
-span.sheet-fireArcPortImg {
+.charsheet span.sheet-fireArcForeImg,
+.charsheet span.sheet-fireArcStarboardImg,
+.charsheet span.sheet-fireArcAftImg,
+.charsheet span.sheet-fireArcPortImg {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/ship/fire_arc.png') left bottom no-repeat;
     /* Starship Weapon Firing Arcs */
     display: block;
@@ -1917,39 +1976,39 @@ span.sheet-fireArcPortImg {
     position: absolute;
 }
 
-span.sheet-fireArcForeImg {
+.charsheet span.sheet-fireArcForeImg {
     background-position: 0px bottom
 }
 
-span.sheet-fireArcStarboardImg {
+.charsheet span.sheet-fireArcStarboardImg {
     background-position: -32px bottom
 }
 
-span.sheet-fireArcAftImg {
+.charsheet span.sheet-fireArcAftImg {
     background-position: -64px bottom
 }
 
-span.sheet-fireArcPortImg {
+.charsheet span.sheet-fireArcPortImg {
     background-position: -96px bottom
 }
 
-.sheet-fireArcFore:checked~span.sheet-fireArcForeImg {
+.charsheet .sheet-fireArcFore:checked~span.sheet-fireArcForeImg {
     background-position: 0px top
 }
 
-.sheet-fireArcStarboard:checked~span.sheet-fireArcStarboardImg {
+.charsheet .sheet-fireArcStarboard:checked~span.sheet-fireArcStarboardImg {
     background-position: -32px top
 }
 
-.sheet-fireArcAft:checked~span.sheet-fireArcAftImg {
+.charsheet .sheet-fireArcAft:checked~span.sheet-fireArcAftImg {
     background-position: -64px top
 }
 
-.sheet-fireArcPort:checked~span.sheet-fireArcPortImg {
+.charsheet .sheet-fireArcPort:checked~span.sheet-fireArcPortImg {
     background-position: -96px top
 }
 
-div.sheet-footer {
+.charsheet div.sheet-footer {
     border: 2px solid black;
     padding: 10px;
     margin: 10px auto;
@@ -1957,28 +2016,28 @@ div.sheet-footer {
     width: 65%;
 }
 
-.sheet-npc-type {
+.charsheet .sheet-npc-type {
     display: inline;
     margin-right: 1em;
 }
 
-label.sheet-npc-type input[type="radio"] {
+.charsheet label.sheet-npc-type input[type="radio"] {
     margin-left: 5px;
 }
 
-label.sheet-npc-minion-group {
+.charsheet label.sheet-npc-minion-group {
     display: inline;
 }
 
-.sheet-npc-minion-title {
+.charsheet .sheet-npc-minion-title {
     cursor: help;
 }
 
-.sheet-spacer {
+.charsheet .sheet-spacer {
     padding: 1% 0%;
 }
 
-.sheet-textbox {
+.charsheet .sheet-textbox {
     height: 164px;
     width: 100%;
     box-sizing: border-box;
@@ -1987,12 +2046,12 @@ label.sheet-npc-minion-group {
 /************************
  * Sheet Toggle Section *
  ************************/
-div.sheet-section-spacer {
+.charsheet div.sheet-section-spacer {
     margin-bottom: 20px;
 }
 
 /* Hide actual checkbox */
-input[type="checkbox"].sheet-toggle {
+.charsheet input[type="checkbox"].sheet-toggle {
     opacity: 0;
     width: 16px;
     height: 16px;
@@ -2005,12 +2064,12 @@ input[type="checkbox"].sheet-toggle {
 }
 
 /* Fake checkbox */
-input[type="checkbox"].sheet-toggle+span::before {
+.charsheet input[type="checkbox"].sheet-toggle+span::before {
     content: "?";
     margin-left: .5em;
 }
 
-input[type="checkbox"].sheet-toggle:checked+span::before {
+.charsheet input[type="checkbox"].sheet-toggle:checked+span::before {
     margin-right: 4px;
     line-height: 14px;
     text-align: center;
@@ -2023,182 +2082,182 @@ input[type="checkbox"].sheet-toggle:checked+span::before {
 }
 
 /* Header section */
-input.sheet-header-section-toggle:checked~div.sheet-header-section,
-input.sheet-top-section-toggle:checked~div.sheet-top-section,
-input.sheet-stats-section-toggle:checked~div.sheet-stats-section,
-input.sheet-destiny-section-toggle:checked~div.sheet-destiny-section,
-input.sheet-dice-section-toggle:checked~div.sheet-dice-section,
-input.sheet-motivations-section-toggle:checked~div.sheet-motivations-section,
-input.sheet-obligation-section-toggle:checked~div.sheet-obligation-section,
-input.sheet-assignment-section-toggle:checked~div.sheet-assignment-section,
-input.sheet-setting-section-toggle:checked~div.sheet-setting-section,
-input.sheet-settingworksheet-section:checked~div.sheet-settingworksheet-section,
-input.sheet-duties-section-toggle:checked~div.sheet-duties-section,
-input.sheet-morality-section-toggle:checked~div.sheet-morality-section,
-input.sheet-details-section-toggle:checked~div.sheet-details-section,
-input.sheet-npc-section-toggle:checked~div.sheet-npc-section,
-input.sheet-upgrades-section-toggle:checked~div.sheet-upgrades-section,
-input.sheet-contacts-section-toggle:checked~div.sheet-contacts-section,
-input.sheet-tasks-section-toggle:checked~div.sheet-tasks-section,
-input.sheet-resources-section-toggle:checked~div.sheet-resources-section,
-input.sheet-possessions-section-toggle:checked~div.sheet-possessions-section,
-input.sheet-roles-section-toggle:checked~div.sheet-roles-section,
-input.sheet-attachments-section-toggle:checked~div.sheet-attachments-section,
-input.sheet-cargo-section-toggle:checked~div.sheet-cargo-section,
-input.sheet-passengers-section-toggle:checked~div.sheet-passengers-section,
-input.sheet-main-section-toggle:checked~div.sheet-main-section,
-input.sheet-mechanics-section-toggle:checked~div.sheet-mechanics-section,
-input.sheet-quickinfo-section-toggle:checked~div.sheet-quickinfo-section,
-input.sheet-weapon-section-toggle:checked~div.sheet-weapon-section,
-input.sheet-characteristic-section-toggle:checked~div.sheet-characteristic-section,
-input.sheet-skills-section-toggle:checked~div.sheet-skills-section,
-input.sheet-talents-section-toggle:checked~div.sheet-talents-section,
-input.sheet-force-section-toggle:checked~div.sheet-force-section,
-input.sheet-signature-section-toggle:checked~div.sheet-signature-section,
-input.sheet-combatskills-section-toggle:checked~div.sheet-combatskills-section,
-input.sheet-armor-section-toggle:checked~div.sheet-armor-section,
-input.sheet-cybernetics-section-toggle:checked~div.sheet-cybernetics-section,
-input.sheet-tools-section-toggle:checked~div.sheet-tools-section,
-input.sheet-other-gear-section-toggle:checked~div.sheet-other-gear-section,
-input.sheet-initiative-section-toggle:checked~div.sheet-initiative-section,
-input.sheet-stats-toggle-small:checked~div.sheet-stats-toggle-small,
-input.sheet-equipment-section-toggle:checked~div.sheet-equipment-section,
-input.sheet-character-toggle-small:checked~div.sheet-character-toggle-small,
-input.sheet-game-mechanics-toggle-small:checked~div.sheet-game-mechanics-toggle-small,
-input.sheet-career-toggle-small:checked~div.sheet-career-toggle-small,
-input.sheet-description-toggle-small:checked~div.sheet-description-toggle-small,
-input.sheet-motivation-toggle-small:checked~div.sheet-motivation-toggle-small,
-input.sheet-obligation-toggle-small:checked~div.sheet-obligation-toggle-small,
-input.sheet-duty-toggle-small:checked~div.sheet-duty-toggle-small,
-input.sheet-morality-toggle-small:checked~div.sheet-morality-toggle-small,
-input.sheet-armor-toggle-small:checked~div.sheet-armor-toggle-small,
-input.sheet-cybernetics-toggle-small:checked~div.sheet-cybernetics-toggle-small,
-input.sheet-tools-toggle-small:checked~div.sheet-tools-toggle-small,
-input.sheet-other-gear-toggle-small:checked~div.sheet-other-gear-toggle-small,
-input.sheet-initiative-toggle-small:checked~div.sheet-initiative-toggle-small,
-input.sheet-info-toggle-small:checked~div.sheet-info-toggle-small,
-input.sheet-weapons-toggle-small:checked~div.sheet-weapons-toggle-small,
-input.sheet-characteristic-toggle-small:checked~div.sheet-characteristic-toggle-small,
-input.sheet-skills-toggle-small:checked~div.sheet-skills-toggle-small,
-input.sheet-talents-toggle-small:checked~div.sheet-talents-toggle-small,
-input.sheet-equipment-toggle-small:checked~div.sheet-equipment-toggle-small,
-input.sheet-force-toggle-small:checked~div.sheet-force-toggle-small,
-input.sheet-toggle.sheet-initiative-toggle-small:checked~div.sheet-initiative-toggle-small,
+.charsheet input.sheet-header-section-toggle:checked~div.sheet-header-section,
+.charsheet input.sheet-top-section-toggle:checked~div.sheet-top-section,
+.charsheet input.sheet-stats-section-toggle:checked~div.sheet-stats-section,
+.charsheet input.sheet-destiny-section-toggle:checked~div.sheet-destiny-section,
+.charsheet input.sheet-dice-section-toggle:checked~div.sheet-dice-section,
+.charsheet input.sheet-motivations-section-toggle:checked~div.sheet-motivations-section,
+.charsheet input.sheet-obligation-section-toggle:checked~div.sheet-obligation-section,
+.charsheet input.sheet-assignment-section-toggle:checked~div.sheet-assignment-section,
+.charsheet input.sheet-setting-section-toggle:checked~div.sheet-setting-section,
+.charsheet input.sheet-settingworksheet-section:checked~div.sheet-settingworksheet-section,
+.charsheet input.sheet-duties-section-toggle:checked~div.sheet-duties-section,
+.charsheet input.sheet-morality-section-toggle:checked~div.sheet-morality-section,
+.charsheet input.sheet-details-section-toggle:checked~div.sheet-details-section,
+.charsheet input.sheet-npc-section-toggle:checked~div.sheet-npc-section,
+.charsheet input.sheet-upgrades-section-toggle:checked~div.sheet-upgrades-section,
+.charsheet input.sheet-contacts-section-toggle:checked~div.sheet-contacts-section,
+.charsheet input.sheet-tasks-section-toggle:checked~div.sheet-tasks-section,
+.charsheet input.sheet-resources-section-toggle:checked~div.sheet-resources-section,
+.charsheet input.sheet-possessions-section-toggle:checked~div.sheet-possessions-section,
+.charsheet input.sheet-roles-section-toggle:checked~div.sheet-roles-section,
+.charsheet input.sheet-attachments-section-toggle:checked~div.sheet-attachments-section,
+.charsheet input.sheet-cargo-section-toggle:checked~div.sheet-cargo-section,
+.charsheet input.sheet-passengers-section-toggle:checked~div.sheet-passengers-section,
+.charsheet input.sheet-main-section-toggle:checked~div.sheet-main-section,
+.charsheet input.sheet-mechanics-section-toggle:checked~div.sheet-mechanics-section,
+.charsheet input.sheet-quickinfo-section-toggle:checked~div.sheet-quickinfo-section,
+.charsheet input.sheet-weapon-section-toggle:checked~div.sheet-weapon-section,
+.charsheet input.sheet-characteristic-section-toggle:checked~div.sheet-characteristic-section,
+.charsheet input.sheet-skills-section-toggle:checked~div.sheet-skills-section,
+.charsheet input.sheet-talents-section-toggle:checked~div.sheet-talents-section,
+.charsheet input.sheet-force-section-toggle:checked~div.sheet-force-section,
+.charsheet input.sheet-signature-section-toggle:checked~div.sheet-signature-section,
+.charsheet input.sheet-combatskills-section-toggle:checked~div.sheet-combatskills-section,
+.charsheet input.sheet-armor-section-toggle:checked~div.sheet-armor-section,
+.charsheet input.sheet-cybernetics-section-toggle:checked~div.sheet-cybernetics-section,
+.charsheet input.sheet-tools-section-toggle:checked~div.sheet-tools-section,
+.charsheet input.sheet-other-gear-section-toggle:checked~div.sheet-other-gear-section,
+.charsheet input.sheet-initiative-section-toggle:checked~div.sheet-initiative-section,
+.charsheet input.sheet-stats-toggle-small:checked~div.sheet-stats-toggle-small,
+.charsheet input.sheet-equipment-section-toggle:checked~div.sheet-equipment-section,
+.charsheet input.sheet-character-toggle-small:checked~div.sheet-character-toggle-small,
+.charsheet input.sheet-game-mechanics-toggle-small:checked~div.sheet-game-mechanics-toggle-small,
+.charsheet input.sheet-career-toggle-small:checked~div.sheet-career-toggle-small,
+.charsheet input.sheet-description-toggle-small:checked~div.sheet-description-toggle-small,
+.charsheet input.sheet-motivation-toggle-small:checked~div.sheet-motivation-toggle-small,
+.charsheet input.sheet-obligation-toggle-small:checked~div.sheet-obligation-toggle-small,
+.charsheet input.sheet-duty-toggle-small:checked~div.sheet-duty-toggle-small,
+.charsheet input.sheet-morality-toggle-small:checked~div.sheet-morality-toggle-small,
+.charsheet input.sheet-armor-toggle-small:checked~div.sheet-armor-toggle-small,
+.charsheet input.sheet-cybernetics-toggle-small:checked~div.sheet-cybernetics-toggle-small,
+.charsheet input.sheet-tools-toggle-small:checked~div.sheet-tools-toggle-small,
+.charsheet input.sheet-other-gear-toggle-small:checked~div.sheet-other-gear-toggle-small,
+.charsheet input.sheet-initiative-toggle-small:checked~div.sheet-initiative-toggle-small,
+.charsheet input.sheet-info-toggle-small:checked~div.sheet-info-toggle-small,
+.charsheet input.sheet-weapons-toggle-small:checked~div.sheet-weapons-toggle-small,
+.charsheet input.sheet-characteristic-toggle-small:checked~div.sheet-characteristic-toggle-small,
+.charsheet input.sheet-skills-toggle-small:checked~div.sheet-skills-toggle-small,
+.charsheet input.sheet-talents-toggle-small:checked~div.sheet-talents-toggle-small,
+.charsheet input.sheet-equipment-toggle-small:checked~div.sheet-equipment-toggle-small,
+.charsheet input.sheet-force-toggle-small:checked~div.sheet-force-toggle-small,
+.charsheet input.sheet-toggle.sheet-initiative-toggle-small:checked~div.sheet-initiative-toggle-small,
 /* Repeating Section Toggles */
-input.sheet-assignment-toggle:checked~div.sheet-assignment,
-input.sheet-mission-toggle:checked~div.sheet-mission,
-input.sheet-geninfo-toggle:checked~div.sheet-geninfo,
-input.sheet-location-toggle:checked~div.sheet-location,
-input.sheet-rewards-toggle:checked~div.sheet-rewards,
-input.sheet-details-toggle:checked~div.sheet-details,
-input.sheet-list-toggle:checked~div.sheet-list,
-input.sheet-weapon-toggle:checked~div.sheet-weapon,
+.charsheet input.sheet-assignment-toggle:checked~div.sheet-assignment,
+.charsheet input.sheet-mission-toggle:checked~div.sheet-mission,
+.charsheet input.sheet-geninfo-toggle:checked~div.sheet-geninfo,
+.charsheet input.sheet-location-toggle:checked~div.sheet-location,
+.charsheet input.sheet-rewards-toggle:checked~div.sheet-rewards,
+.charsheet input.sheet-details-toggle:checked~div.sheet-details,
+.charsheet input.sheet-list-toggle:checked~div.sheet-list,
+.charsheet input.sheet-weapon-toggle:checked~div.sheet-weapon,
 /* footer */
-input.sheet-footer-toggle:checked~div.sheet-footer {
+.charsheet input.sheet-footer-toggle:checked~div.sheet-footer {
     display: block;
 }
 
 /* Header section */
-input.sheet-header-section-toggle~div.sheet-header-section,
-input.sheet-top-section-toggle~div.sheet-top-section,
+.charsheet input.sheet-header-section-toggle~div.sheet-header-section,
+.charsheet input.sheet-top-section-toggle~div.sheet-top-section,
 
-input.sheet-destiny-section-toggle~div.sheet-destiny-section,
-input.sheet-dice-section-toggle~div.sheet-dice-section,
-input.sheet-motivations-section-toggle~div.sheet-motivations-section,
-input.sheet-obligation-section-toggle~div.sheet-obligation-section,
-input.sheet-assignment-section-toggle~div.sheet-assignment-section,
-input.sheet-duties-section-toggle~div.sheet-duties-section,
-input.sheet-morality-section-toggle~div.sheet-morality-section,
+.charsheet input.sheet-destiny-section-toggle~div.sheet-destiny-section,
+.charsheet input.sheet-dice-section-toggle~div.sheet-dice-section,
+.charsheet input.sheet-motivations-section-toggle~div.sheet-motivations-section,
+.charsheet input.sheet-obligation-section-toggle~div.sheet-obligation-section,
+.charsheet input.sheet-assignment-section-toggle~div.sheet-assignment-section,
+.charsheet input.sheet-duties-section-toggle~div.sheet-duties-section,
+.charsheet input.sheet-morality-section-toggle~div.sheet-morality-section,
 
-input.sheet-details-section-toggle~div.sheet-details-section,
-input.sheet-npc-section-toggle~div.sheet-npc-section,
-input.sheet-upgrades-section-toggle~div.sheet-upgrades-section,
-input.sheet-contacts-section-toggle~div.sheet-contacts-section,
-input.sheet-tasks-section-toggle~div.sheet-tasks-section,
-input.sheet-resources-section-toggle~div.sheet-resources-section,
-input.sheet-possessions-section-toggle~div.sheet-possessions-section,
+.charsheet input.sheet-details-section-toggle~div.sheet-details-section,
+.charsheet input.sheet-npc-section-toggle~div.sheet-npc-section,
+.charsheet input.sheet-upgrades-section-toggle~div.sheet-upgrades-section,
+.charsheet input.sheet-contacts-section-toggle~div.sheet-contacts-section,
+.charsheet input.sheet-tasks-section-toggle~div.sheet-tasks-section,
+.charsheet input.sheet-resources-section-toggle~div.sheet-resources-section,
+.charsheet input.sheet-possessions-section-toggle~div.sheet-possessions-section,
 
-input.sheet-roles-section-toggle~div.sheet-roles-section,
-input.sheet-attachments-section-toggle~div.sheet-attachments-section,
-input.sheet-cargo-section-toggle~div.sheet-cargo-section,
-input.sheet-passengers-section-toggle~div.sheet-passengers-section,
+.charsheet input.sheet-roles-section-toggle~div.sheet-roles-section,
+.charsheet input.sheet-attachments-section-toggle~div.sheet-attachments-section,
+.charsheet input.sheet-cargo-section-toggle~div.sheet-cargo-section,
+.charsheet input.sheet-passengers-section-toggle~div.sheet-passengers-section,
 
-input.sheet-main-section-toggle~div.sheet-main-section,
-input.sheet-mechanics-section-toggle~div.sheet-mechanics-section,
+.charsheet input.sheet-main-section-toggle~div.sheet-main-section,
+.charsheet input.sheet-mechanics-section-toggle~div.sheet-mechanics-section,
 
-input.sheet-quickinfo-section-toggle~div.sheet-quickinfo-section,
-input.sheet-weapon-section-toggle~div.sheet-weapon-section,
-input.sheet-characteristic-section-toggle~div.sheet-characteristic-section,
-input.sheet-skills-section-toggle~div.sheet-skills-section,
-input.sheet-talents-section-toggle~div.sheet-talents-section,
-input.sheet-force-section-toggle~div.sheet-force-section,
-input.sheet-signature-section-toggle~div.sheet-signature-section,
-input.sheet-combatskills-section-toggle~div.sheet-combatskills-section,
+.charsheet input.sheet-quickinfo-section-toggle~div.sheet-quickinfo-section,
+.charsheet input.sheet-weapon-section-toggle~div.sheet-weapon-section,
+.charsheet input.sheet-characteristic-section-toggle~div.sheet-characteristic-section,
+.charsheet input.sheet-skills-section-toggle~div.sheet-skills-section,
+.charsheet input.sheet-talents-section-toggle~div.sheet-talents-section,
+.charsheet input.sheet-force-section-toggle~div.sheet-force-section,
+.charsheet input.sheet-signature-section-toggle~div.sheet-signature-section,
+.charsheet input.sheet-combatskills-section-toggle~div.sheet-combatskills-section,
 
-input.sheet-armor-section-toggle~div.sheet-armor-section,
-input.sheet-cybernetics-section-toggle~div.sheet-cybernetics-section,
-input.sheet-tools-section-toggle~div.sheet-tools-section,
-input.sheet-other-gear-section-toggle~div.sheet-other-gear-section,
-input.sheet-initiative-section-toggle~div.sheet-initiative-section,
+.charsheet input.sheet-armor-section-toggle~div.sheet-armor-section,
+.charsheet input.sheet-cybernetics-section-toggle~div.sheet-cybernetics-section,
+.charsheet input.sheet-tools-section-toggle~div.sheet-tools-section,
+.charsheet input.sheet-other-gear-section-toggle~div.sheet-other-gear-section,
+.charsheet input.sheet-initiative-section-toggle~div.sheet-initiative-section,
 
-input.sheet-equipment-section-toggle~div.sheet-equipment-section,
+.charsheet input.sheet-equipment-section-toggle~div.sheet-equipment-section,
 
-input.sheet-stats-toggle-small~div.sheet-stats-toggle-small,
+.charsheet input.sheet-stats-toggle-small~div.sheet-stats-toggle-small,
 
-input.sheet-character-toggle-small~div.sheet-character-toggle-small,
-input.sheet-game-mechanics-toggle-small~div.sheet-game-mechanics-toggle-small,
+.charsheet input.sheet-character-toggle-small~div.sheet-character-toggle-small,
+.charsheet input.sheet-game-mechanics-toggle-small~div.sheet-game-mechanics-toggle-small,
 
-input.sheet-career-toggle-small~div.sheet-career-toggle-small,
-input.sheet-description-toggle-small~div.sheet-description-toggle-small,
-input.sheet-motivation-toggle-small~div.sheet-motivation-toggle-small,
+.charsheet input.sheet-career-toggle-small~div.sheet-career-toggle-small,
+.charsheet input.sheet-description-toggle-small~div.sheet-description-toggle-small,
+.charsheet input.sheet-motivation-toggle-small~div.sheet-motivation-toggle-small,
 
-input.sheet-obligation-toggle-small~div.sheet-obligation-toggle-small,
-input.sheet-duty-toggle-small~div.sheet-duty-toggle-small,
-input.sheet-morality-toggle-small~div.sheet-morality-toggle-small,
+.charsheet input.sheet-obligation-toggle-small~div.sheet-obligation-toggle-small,
+.charsheet input.sheet-duty-toggle-small~div.sheet-duty-toggle-small,
+.charsheet input.sheet-morality-toggle-small~div.sheet-morality-toggle-small,
 
-input.sheet-armor-toggle-small~div.sheet-armor-toggle-small,
-input.sheet-cybernetics-toggle-small~div.sheet-cybernetics-toggle-small,
-input.sheet-tools-toggle-small~div.sheet-tools-toggle-small,
-input.sheet-other-gear-toggle-small~div.sheet-other-gear-toggle-small,
+.charsheet input.sheet-armor-toggle-small~div.sheet-armor-toggle-small,
+.charsheet input.sheet-cybernetics-toggle-small~div.sheet-cybernetics-toggle-small,
+.charsheet input.sheet-tools-toggle-small~div.sheet-tools-toggle-small,
+.charsheet input.sheet-other-gear-toggle-small~div.sheet-other-gear-toggle-small,
 
-input.sheet-initiative-toggle-small~div.sheet-initiative-toggle-small,
-input.sheet-info-toggle-small~div.sheet-info-toggle-small,
-input.sheet-weapons-toggle-small~div.sheet-weapons-toggle-small,
-input.sheet-characteristic-toggle-small~div.sheet-characteristic-toggle-small,
-input.sheet-skills-toggle-small~div.sheet-skills-toggle-small,
-input.sheet-talents-toggle-small~div.sheet-talents-toggle-small,
-input.sheet-equipment-toggle-small~div.sheet-equipment-toggle-small,
-input.sheet-force-toggle-small~div.sheet-force-toggle-small,
+.charsheet input.sheet-initiative-toggle-small~div.sheet-initiative-toggle-small,
+.charsheet input.sheet-info-toggle-small~div.sheet-info-toggle-small,
+.charsheet input.sheet-weapons-toggle-small~div.sheet-weapons-toggle-small,
+.charsheet input.sheet-characteristic-toggle-small~div.sheet-characteristic-toggle-small,
+.charsheet input.sheet-skills-toggle-small~div.sheet-skills-toggle-small,
+.charsheet input.sheet-talents-toggle-small~div.sheet-talents-toggle-small,
+.charsheet input.sheet-equipment-toggle-small~div.sheet-equipment-toggle-small,
+.charsheet input.sheet-force-toggle-small~div.sheet-force-toggle-small,
 
 /* Repeating Section Toggles */
-input.sheet-assignment-toggle~div.sheet-assignment,
-input.sheet-mission-toggle~div.sheet-mission,
-input.sheet-geninfo-toggle~div.sheet-geninfo,
-input.sheet-location-toggle~div.sheet-location,
-input.sheet-rewards-toggle~div.sheet-rewards,
-input.sheet-details-toggle~div.sheet-details,
-input.sheet-list-toggle~div.sheet-list,
-input.sheet-weapon-toggle~div.sheet-weapon,
+.charsheet input.sheet-assignment-toggle~div.sheet-assignment,
+.charsheet input.sheet-mission-toggle~div.sheet-mission,
+.charsheet input.sheet-geninfo-toggle~div.sheet-geninfo,
+.charsheet input.sheet-location-toggle~div.sheet-location,
+.charsheet input.sheet-rewards-toggle~div.sheet-rewards,
+.charsheet input.sheet-details-toggle~div.sheet-details,
+.charsheet input.sheet-list-toggle~div.sheet-list,
+.charsheet input.sheet-weapon-toggle~div.sheet-weapon,
 
 /* footer */
-input.sheet-footer-toggle~div.sheet-footer {
+.charsheet input.sheet-footer-toggle~div.sheet-footer {
     display: none;
 }
 
-.repcontrol_add,
-.repcontrol_edit,
-.repcontrol_del,
-.repcontrol_move {
+.charsheet .repcontrol_add,
+.charsheet .repcontrol_edit,
+.charsheet .repcontrol_del,
+.charsheet .repcontrol_move {
     background: #444;
     color: #f3f3f3;
 }
 
-.sheet-settings-container {
+.charsheet .sheet-settings-container {
     float: right;
     position: relative;
 }
 
-input.sheet-settings-checkbox {
+.charsheet input.sheet-settings-checkbox {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -2210,7 +2269,7 @@ input.sheet-settings-checkbox {
     opacity: 0;
 }
 
-input.sheet-settings-checkbox+span::before {
+.charsheet input.sheet-settings-checkbox+span::before {
     content: "y";
     font-family: pictos;
 
@@ -2228,15 +2287,15 @@ input.sheet-settings-checkbox+span::before {
     right: 4px;
 }
 
-input.sheet-settings-checkbox:checked+span::before {
+.charsheet input.sheet-settings-checkbox:checked+span::before {
     color: black;
 }
 
-div.sheet-settings {
+.charsheet div.sheet-settings {
     display: none;
 }
 
-input.sheet-settings-checkbox:checked~div.sheet-settings {
+.charsheet input.sheet-settings-checkbox:checked~div.sheet-settings {
     display: block;
     position: absolute;
     top: 15px;
@@ -2250,59 +2309,59 @@ input.sheet-settings-checkbox:checked~div.sheet-settings {
     padding: 2px;
 }
 
-.sheet-setting-check {
+.charsheet .sheet-setting-check {
     display: none;
 }
 
-.sheet-settings label {
+.charsheet .sheet-settings label {
     white-space: nowrap;
 }
 
-input.sheet-hideskills:not(:checked)~* .sheet-hideskills {
+.charsheet input.sheet-hideskills:not(:checked)~* .sheet-hideskills {
     display: none;
 }
 
-input.sheet-hide-alchemy:checked~* .sheet-hide-alchemy,
-input.sheet-hide-arcana:checked~* .sheet-hide-arcana,
-input.sheet-hide-astrogation:checked~* .sheet-hide-astrogation,
-input.sheet-hide-athletics:checked~* .sheet-hide-athletics,
-input.sheet-hide-brawl:checked~* .sheet-hide-brawl,
-input.sheet-hide-charm:checked~* .sheet-hide-charm,
-input.sheet-hide-coercion:checked~* .sheet-hide-coercion,
-input.sheet-hide-computers:checked~* .sheet-hide-computers,
-input.sheet-hide-cool:checked~* .sheet-hide-cool,
-input.sheet-hide-coordination:checked~* .sheet-hide-coordination,
-input.sheet-hide-deception:checked~* .sheet-hide-deception,
-input.sheet-hide-discipline:checked~* .sheet-hide-discipline,
-input.sheet-hide-divine:checked~* .sheet-hide-divine,
-input.sheet-hide-driving:checked~* .sheet-hide-driving,
-input.sheet-hide-gunnery:checked~* .sheet-hide-gunnery,
-input.sheet-hide-knowledge:checked~* .sheet-hide-knowledge,
-input.sheet-hide-leadership:checked~* .sheet-hide-leadership,
-input.sheet-hide-mechanics:checked~* .sheet-hide-mechanics,
-input.sheet-hide-medicine:checked~* .sheet-hide-medicine,
-input.sheet-hide-melee:checked~* .sheet-hide-melee,
-input.sheet-hide-meleeheavy:checked~* .sheet-hide-meleeheavy,
-input.sheet-hide-meleelight:checked~* .sheet-hide-meleelight,
-input.sheet-hide-negotiation:checked~* .sheet-hide-negotiation,
-input.sheet-hide-operating:checked~* .sheet-hide-operating,
-input.sheet-hide-perception:checked~* .sheet-hide-perception,
-input.sheet-hide-piloting:checked~* .sheet-hide-piloting,
-input.sheet-hide-primal:checked~* .sheet-hide-primal,
-input.sheet-hide-ranged:checked~* .sheet-hide-ranged,
-input.sheet-hide-rangedheavy:checked~* .sheet-hide-rangedheavy,
-input.sheet-hide-rangedlight:checked~* .sheet-hide-rangedlight,
-input.sheet-hide-resilience:checked~* .sheet-hide-resilience,
-input.sheet-hide-riding:checked~* .sheet-hide-riding,
-input.sheet-hide-skulduggery:checked~* .sheet-hide-skulduggery,
-input.sheet-hide-stealth:checked~* .sheet-hide-stealth,
-input.sheet-hide-streetwise:checked~* .sheet-hide-streetwise,
-input.sheet-hide-survival:checked~* .sheet-hide-survival,
-input.sheet-hide-vigilance:checked~* .sheet-hide-vigilance {
+.charsheet input.sheet-hide-alchemy:checked~* .sheet-hide-alchemy,
+.charsheet input.sheet-hide-arcana:checked~* .sheet-hide-arcana,
+.charsheet input.sheet-hide-astrogation:checked~* .sheet-hide-astrogation,
+.charsheet input.sheet-hide-athletics:checked~* .sheet-hide-athletics,
+.charsheet input.sheet-hide-brawl:checked~* .sheet-hide-brawl,
+.charsheet input.sheet-hide-charm:checked~* .sheet-hide-charm,
+.charsheet input.sheet-hide-coercion:checked~* .sheet-hide-coercion,
+.charsheet input.sheet-hide-computers:checked~* .sheet-hide-computers,
+.charsheet input.sheet-hide-cool:checked~* .sheet-hide-cool,
+.charsheet input.sheet-hide-coordination:checked~* .sheet-hide-coordination,
+.charsheet input.sheet-hide-deception:checked~* .sheet-hide-deception,
+.charsheet input.sheet-hide-discipline:checked~* .sheet-hide-discipline,
+.charsheet input.sheet-hide-divine:checked~* .sheet-hide-divine,
+.charsheet input.sheet-hide-driving:checked~* .sheet-hide-driving,
+.charsheet input.sheet-hide-gunnery:checked~* .sheet-hide-gunnery,
+.charsheet input.sheet-hide-knowledge:checked~* .sheet-hide-knowledge,
+.charsheet input.sheet-hide-leadership:checked~* .sheet-hide-leadership,
+.charsheet input.sheet-hide-mechanics:checked~* .sheet-hide-mechanics,
+.charsheet input.sheet-hide-medicine:checked~* .sheet-hide-medicine,
+.charsheet input.sheet-hide-melee:checked~* .sheet-hide-melee,
+.charsheet input.sheet-hide-meleeheavy:checked~* .sheet-hide-meleeheavy,
+.charsheet input.sheet-hide-meleelight:checked~* .sheet-hide-meleelight,
+.charsheet input.sheet-hide-negotiation:checked~* .sheet-hide-negotiation,
+.charsheet input.sheet-hide-operating:checked~* .sheet-hide-operating,
+.charsheet input.sheet-hide-perception:checked~* .sheet-hide-perception,
+.charsheet input.sheet-hide-piloting:checked~* .sheet-hide-piloting,
+.charsheet input.sheet-hide-primal:checked~* .sheet-hide-primal,
+.charsheet input.sheet-hide-ranged:checked~* .sheet-hide-ranged,
+.charsheet input.sheet-hide-rangedheavy:checked~* .sheet-hide-rangedheavy,
+.charsheet input.sheet-hide-rangedlight:checked~* .sheet-hide-rangedlight,
+.charsheet input.sheet-hide-resilience:checked~* .sheet-hide-resilience,
+.charsheet input.sheet-hide-riding:checked~* .sheet-hide-riding,
+.charsheet input.sheet-hide-skulduggery:checked~* .sheet-hide-skulduggery,
+.charsheet input.sheet-hide-stealth:checked~* .sheet-hide-stealth,
+.charsheet input.sheet-hide-streetwise:checked~* .sheet-hide-streetwise,
+.charsheet input.sheet-hide-survival:checked~* .sheet-hide-survival,
+.charsheet input.sheet-hide-vigilance:checked~* .sheet-hide-vigilance {
     display: none;
 }
 
 
-input.sheet-hideskills:checked~* .sheet-hide-skill-row {
+.charsheet input.sheet-hideskills:checked~* .sheet-hide-skill-row {
     display: table-row;
 }
