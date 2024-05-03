@@ -16,12 +16,6 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
     --default-dark: #00a895;
 }
 
-
-body.sheet-darkmode .charsheet {
-    background-color: rgb(71, 33, 33);
-    background-image: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
-}
-
 /* BRIGHT MODE CONFIG */
 .charsheet,
 .charsheet button,
@@ -40,7 +34,7 @@ body.sheet-darkmode .charsheet {
 }
 
 .charsheet table {
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg');
+    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright-darkened.jpg');
 }
 
 /* DARK MODE CONFIG */
@@ -56,8 +50,13 @@ body.sheet-darkmode table {
     color: var(--default-dark) !important;
 }
 
-.body.sheet-darkmode table {
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright.jpg');
+body.sheet-darkmode .charsheet {
+    background-color: rgb(71, 33, 33);
+    background-image: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
+}
+
+body.sheet-darkmode table {
+    background-image: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark-brightened.jpg");
 }
 
 body.sheet-darkmode .btn,
