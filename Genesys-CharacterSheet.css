@@ -10,13 +10,32 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
 /* Patching Dark Mode */
 
 :root {
-    /*brights*/
-    --default-bright: #05560a;
-    /*darks*/
-    --default-dark: #00a895;
+    /*default*/
+    --primary-text: #05560a;
+    --tab-color: white;
+    --tab-text-color: #51597f;
+    --tab-selected-color: #51597f;
+    --tab-selected-text-color: white;
+    --background-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright.jpg");
+    --table-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright-darkened.jpg');
+    --input-field-background: #e3e3e3;
+    --input-field-selected-background: #fff;
 }
 
-/* BRIGHT MODE CONFIG */
+/* DARK MODE CONFIG */
+body.sheet-darkmode {
+    --primary-text: #69f3e3;
+    --background-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
+    --table-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark-brightened.jpg');
+    --tab-color: rgb(0, 0, 0);
+    --tab-text-color: #7b86be;
+    --tab-selected-color: #7b86be;
+    --tab-selected-text-color: black;
+    --input-field-background: #3e3e3e;
+    --input-field-selected-background: black;
+}
+
+/* Default text override */
 .charsheet,
 .charsheet button,
 .charsheet input,
@@ -25,38 +44,15 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
 .charsheet textarea,
 .charsheet label,
 .charsheet table {
-    color: var(--default-bright) !important;
+    color: var(--primary-text) !important;
 }
 
 .charsheet {
-    background-color: rgb(71, 33, 33);
-    background-image: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright.jpg");
+    background-image: var(--background-url)
 }
 
 .charsheet table {
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright-darkened.jpg');
-}
-
-/* DARK MODE CONFIG */
-body.sheet-darkmode,
-body.sheet-darkmode button,
-body.sheet-darkmode input,
-body.sheet-darkmode optgroup,
-body.sheet-darkmode select,
-body.sheet-darkmode textarea,
-body.sheet-darkmode .charsheet,
-body.sheet-darkmode label,
-body.sheet-darkmode table {
-    color: var(--default-dark) !important;
-}
-
-body.sheet-darkmode .charsheet {
-    background-color: rgb(71, 33, 33);
-    background-image: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
-}
-
-body.sheet-darkmode table {
-    background-image: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark-brightened.jpg");
+    background-image: var(--table-url)
 }
 
 body.sheet-darkmode .btn,
@@ -75,7 +71,7 @@ body.sheet-darkmode .btn.btn-default {
     clear: both
 }
 
-/* "whitespace" that text goes in? */
+/* I haven't a clue what this does */
 .charsheet .sheet-divider {
     border-top: 1px solid #e3e3e3
 }
@@ -315,8 +311,7 @@ body.sheet-darkmode .btn.btn-default {
     margin: 0px auto;
     height: 27px;
     width: 120px;
-    background: rgba(200, 0, 0, 0.40);
-    /* background: rgba(0, 0, 0, 0.40); */
+    background: rgba(0, 0, 0, 0.40);
     border-radius: 3px;
     -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
@@ -350,7 +345,8 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-switch [type=radio]:focus {
     font-weight: normal;
     background: transparent;
-    color: #fff;
+    /* I'm not seeing what this does */
+    color: #ffffff;
 }
 
 .charsheet .sheet-switch-input-on:checked~.charsheet .sheet-switch-selection {
@@ -369,7 +365,7 @@ body.sheet-darkmode .btn.btn-default {
     left: 2px;
     width: 58px;
     height: 23px;
-    background: #65bd63;
+    background: #ffffff;
     border-radius: 3px;
     background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
     background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
@@ -519,9 +515,9 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet span.sheet-tab-new {
     border: 1px solid #51597f;
-    background-color: white;
+    background-color: var(--tab-color);
     border-radius: 4px;
-    color: #51597f;
+    color: var(--tab-text-color);
     cursor: pointer;
     font-size: 13px;
     font-weight: bold;
@@ -535,10 +531,10 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet input.sheet-tab-new:checked+span {
     background: #51597f none repeat scroll 0 0;
+    background-color: var(--tab-selected-color);
     border-radius: 4px;
     font-weight: bold;
-    color: white;
-    /*color: #692927;*/
+    color: var(--tab-selected-text-color);
 }
 
 .charsheet input.sheet-tab-new.sheet-tab-talents {
@@ -847,12 +843,12 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet input,
 .charsheet textarea {
-    background: #e3e3e3;
+    background: var(--input-field-background)
 }
 
 .charsheet input:focus,
 .charsheet textarea:focus {
-    background: #fff;
+    background: var(--input-field-selected-background)
 }
 
 .charsheet textarea {
@@ -863,7 +859,6 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet label {
     font-size: 11px;
-    /*color: var(--label-color) !important;*/
     margin: 0px;
     padding: 0px;
 }
@@ -893,35 +888,13 @@ body.sheet-darkmode .btn.btn-default {
     border-bottom: 1px dotted #ccc;
 }
 
-.charsheet table tr:hover td {
-    /*background-color: #f1f1f1;*/
-    /*background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/grey.jpg');*/
-}
-
 .charsheet .sheet-bg-gray label {
     color: #eee
-}
-
-.sheet-bg-gray td,
-.sheet-bg-gray:hover td,
-.charsheet .sheet-sub-header,
-.charsheet .sheet-sub-header:hover {
-    /*background: #D3D3D3;
-    color: #eee;*/
 }
 
 .charsheet .sheet-bg-blue label {
     color: #fff
 }
-
-/*
-.charsheet .sheet-bg-blue td,
-.charsheet .sheet-bg-blue:hover td,
-.charsheet .sheet-sub-header,
-.charsheet .sheet-sub-header:hover {
-    /*background: #78728f;
-    color: #fff;
-}*/
 
 */ .charsheet table tr td.sheet-div-right {
     border-right: 1px solid #ccc
@@ -936,7 +909,7 @@ body.sheet-darkmode .btn.btn-default {
     padding: 0;
     margin: 0;
     text-align: center;
-    color: #fff;
+    color: white
 }
 
 .charsheet .sheet-sub-header,
@@ -1020,7 +993,8 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 .charsheet .sheet-dice-pool [type=number] {
-    background: #f3f3f3;
+    /* background: #f3f3f3; */
+    background: var(--input-field-background);
     width: 50px !important;
     height: 40px;
     font-size: 20px;
@@ -1028,7 +1002,7 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 .charsheet .sheet-dice-pool [type=number]:focus {
-    background: #fff;
+    background: var(--input-field-selected-background);
 }
 
 .charsheet .sheet-upgrade label,
