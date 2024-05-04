@@ -11,28 +11,56 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
 
 :root {
     /*default*/
-    --primary-text: #05560a;
+    /*Light Mode*/
+    /*
+    --primary-text: #041136;
     --tab-color: white;
     --tab-text-color: #51597f;
     --tab-selected-color: #51597f;
     --tab-selected-text-color: white;
-    --background-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright.jpg");
-    --table-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright-darkened.jpg');
     --input-field-background: #e3e3e3;
     --input-field-selected-background: #fff;
-}
 
-/* DARK MODE CONFIG */
-body.sheet-darkmode {
-    --primary-text: #69f3e3;
-    --background-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
-    --table-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark-brightened.jpg');
+    --background-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright.jpg");
+    --table-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-bright-darkened.jpg');
+    --single-digit-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit_alt.png");
+    --threshold-current-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold_current_alt.png");*/
+
+    /*Dark Mode*/
+    --primary-text: #a0fff4;
     --tab-color: rgb(0, 0, 0);
     --tab-text-color: #7b86be;
     --tab-selected-color: #7b86be;
     --tab-selected-text-color: black;
     --input-field-background: #3e3e3e;
     --input-field-selected-background: black;
+
+    --background-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
+    --table-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark-brightened.jpg');
+    --single-digit-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit_alt_dark.png");
+    --threshold-current-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold_current_alt_dark.png");
+
+    --dice-7-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/7-dark.png');
+    --dice-5-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/5-dark.png');
+
+
+}
+
+/* DARK MODE CONFIG */
+body.sheet-darkmode {
+    --primary-text: #a0fff4;
+    --tab-color: rgb(0, 0, 0);
+    --tab-text-color: #7b86be;
+    --tab-selected-color: #7b86be;
+    --tab-selected-text-color: black;
+    --input-field-background: #3e3e3e;
+    --input-field-selected-background: black;
+
+    --background-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
+    --table-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark-brightened.jpg');
+    --single-digit-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit_alt_dark.png");
+    --threshold-current-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold_current_alt_dark.png");
+
 }
 
 /* Default text override */
@@ -53,6 +81,16 @@ body.sheet-darkmode {
 
 .charsheet table {
     background-image: var(--table-url)
+}
+
+.charsheet .btn,
+.charsheet .btn.btn-default {
+    color: #3b2b9a;
+    text-shadow: rgba(24, 26, 27, .75) 0px 1px 1px;
+    background-color: #1e2021;
+    background-image: linear-gradient(#181a1b, #26292b);
+    border-color: #3e4446 #3e4446 #43494c;
+    box-shadow: rgba(24, 26, 27, .2) 0px 1px 0px inset, rgba(0, 0, 0, .05) 0px 1px 2px
 }
 
 body.sheet-darkmode .btn,
@@ -843,7 +881,8 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet input,
 .charsheet textarea {
-    background: var(--input-field-background)
+    background: var(--input-field-background);
+    background-image: var(--background-url);
 }
 
 .charsheet input:focus,
@@ -949,7 +988,8 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-dice-pool td,
 .charsheet .sheet-dice-pool tr:hover td {
-    background: #444;
+    background: #ffffff;
+    background-image: var(--table-url);
 }
 
 .charsheet .sheet-dice-pool td.sheet-light,
@@ -995,6 +1035,7 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-dice-pool [type=number] {
     /* background: #f3f3f3; */
     background: var(--input-field-background);
+    background-image: var(--background-url);
     width: 50px !important;
     height: 40px;
     font-size: 20px;
@@ -1017,7 +1058,6 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-swsd {
     background: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/character.png') center -2px no-repeat;
-    /* Character Sheet Stat connecting sword title - Border */
 }
 
 .charsheet .sheet-swsd tr:hover td {
@@ -1043,7 +1083,7 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-swsd td:nth-child(3),
 .charsheet .sheet-swsd td:nth-child(4),
 .charsheet .sheet-swsd td:nth-child(5) {
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold_current.png');
+    background-image: var(--threshold-current-url);
     background-position: center top;
     background-repeat: no-repeat;
     width: 153px;
@@ -1059,7 +1099,7 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-swsd tr:nth-child(2) td:nth-child(1),
 .charsheet .sheet-beast tr:first-child td:nth-child(5) {
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
+    background-image: var(--single-digit-url);
     /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
@@ -1155,7 +1195,7 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-destiny td:nth-child(1) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
+    background-image: var(--single-digit-url);
     /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
@@ -1171,7 +1211,7 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-destiny td:nth-child(3) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
+    background-image: var(--single-digit-url);
     /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
@@ -1222,7 +1262,7 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-characteristics td:nth-child(11),
 .charsheet .sheet-characteristics td:nth-child(13) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
+    background-image: var(--single-digit-url);
     /* Single Digit - Border */
     background-position: center top;
     background-repeat: no-repeat;
@@ -1384,7 +1424,7 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-init td:nth-child(5),
 .charsheet .sheet-skills td:nth-child(4) {
     width: 124px;
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/7.png');
+    background-image: var(--dice-7-url);
     /* Seven Boxes - Dice Border */
     background-repeat: no-repeat;
     background-position: 3px center;
@@ -1424,7 +1464,7 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-custome-skills td:nth-child(5) {
     width: 124px;
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/7.png');
+    background-image: var(--dice-7-url);
     /* Seven Boxes - Dice Border */
     background-repeat: no-repeat;
     background-position: 4px center;
@@ -1678,7 +1718,7 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-weapons td:nth-child(6),
 .charsheet .sheet-weapons td:nth-child(8) {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
+    background-image: var(--single-digit-url);
     /*Single Digit - Border*/
     background-position: center top;
     background-repeat: no-repeat;
@@ -1793,7 +1833,7 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 .charsheet .sheet-ship-char-thre-bg {
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold-current.png');
+    background-image: var(--threshold-current-url);
     background-position: center 0px;
     background-repeat: no-repeat;
     vertical-align: top;
@@ -1804,7 +1844,7 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 .charsheet .sheet-ship-char-thre-bg-speed {
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold-current.png');
+    background-image: var(--threshold-current-url);
     background-position: center 25px;
     background-repeat: no-repeat;
     vertical-align: top;
@@ -1817,7 +1857,7 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-ship-char-bg {
     text-align: center;
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit.png');
+    background-image: var(--single-digit-url);
     /*Single Digit - Border*/
     background-position: center 37px;
     background-repeat: no-repeat;
