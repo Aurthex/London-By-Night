@@ -40,10 +40,18 @@ Asset root: https://raw.githubusercontent.com/Aurthex/London-By-Night/main/asset
     --single-digit-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/single_digit_alt_dark.png");
     --threshold-current-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/border/threshold_current_alt_dark.png");
 
-    --dice-7-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/7-dark.png');
-    --dice-5-url: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/5-dark.png');
+    --dice-7-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
+    --dice-4-url: url("https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/background-dark.jpg");
+}
 
-
+/* root doesn't affect roll templates so we setup colour configs here */
+.sheet-rolltemplate-base {
+    --rolltable-header-first: rgb(29, 26, 26);
+    --rolltable-header-second: rgb(75, 12, 12);
+    --rolltable-primary-text: white;
+    --rolltable-secondary-text: white;
+    --rolltable-even-back: black;
+    --rolltable-odd-back: rgb(65, 65, 65);
 }
 
 /* DARK MODE CONFIG */
@@ -82,6 +90,10 @@ body.sheet-darkmode {
 .charsheet table {
     background-image: var(--table-url)
 }
+
+/* .charsheet button {
+    background-color: black !important;
+} */
 
 .charsheet .btn,
 .charsheet .btn.btn-default {
@@ -212,7 +224,7 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 /* ------------------------------------ */
-/* Dice input span graphics
+/* Dice input span graphics (skills, crits, etc)
  *----------------------------------------- */
 
 .charsheet .sheet-yd+span {
@@ -679,7 +691,7 @@ body.sheet-darkmode .btn.btn-default {
 
 /* Roll Template Formatting - Critical */
 
-.charsheet .sheet-rolltemplate-critical table {
+.sheet-rolltemplate-critical table {
     width: 100%;
     border: 1px solid;
     color: black;
@@ -687,7 +699,7 @@ body.sheet-darkmode .btn.btn-default {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.charsheet .sheet-rolltemplate-critical th {
+.sheet-rolltemplate-critical th {
     border-radius: 3px;
     background-image: -webkit-linear-gradient(top, #ff0505, #000000);
     background-image: -moz-linear-gradient(top, #ff0505, #000000);
@@ -701,12 +713,12 @@ body.sheet-darkmode .btn.btn-default {
     font-size: 1.2em;
 }
 
-.charsheet .sheet-rolltemplate-critical .sheet-subheader {
+.sheet-rolltemplate-critical .sheet-subheader {
     font-size: 0.8em;
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-critical .sheet-tcat-header {
+.sheet-rolltemplate-critical .sheet-tcat-header {
     background-image: -webkit-linear-gradient(top, #ff0505, #000000);
     background-image: -moz-linear-gradient(top, #ff0505, #000000);
     background-image: -o-linear-gradient(top, #ff0505, #000000);
@@ -719,26 +731,26 @@ body.sheet-darkmode .btn.btn-default {
     font-size: 0.8em;
 }
 
-.charsheet .sheet-rolltemplate-critical td {
+.sheet-rolltemplate-critical td {
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-critical .sheet-tcat {
+.sheet-rolltemplate-critical .sheet-tcat {
     font-weight: bold;
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-critical .sheet-flavor {
+.sheet-rolltemplate-critical .sheet-flavor {
     font-style: italic;
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-critical tr:nth-child(odd) {
+.sheet-rolltemplate-critical tr:nth-child(odd) {
     background-color: rgba(217, 217, 214, 1);
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-critical tr:nth-child(even) {
+.sheet-rolltemplate-critical tr:nth-child(even) {
     background-color: rgba(233, 233, 233, 1);
     padding: 2px;
 }
@@ -747,38 +759,38 @@ body.sheet-darkmode .btn.btn-default {
 
 /* Roll Template Formatting */
 
-.charsheet .sheet-rolltemplate-base table,
-.charsheet .sheet-rolltemplate-suggestion table {
+.sheet-rolltemplate-base table,
+.sheet-rolltemplate-suggestion table {
     width: 100%;
     border: 1px solid;
-    color: black;
+    color: var(--rolltable-secondary-text);
     font-size: 1em;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.charsheet .sheet-rolltemplate-base th,
-.charsheet .sheet-rolltemplate-suggestion th {
+.sheet-rolltemplate-base th,
+.sheet-rolltemplate-suggestion th {
     border-radius: 3px;
-    background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
-    background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
-    background-image: -o-linear-gradient(top, #485a6d, #2c3947);
-    background-image: linear-gradient(to bottom, #485a6d, #2c3947);
+    background-image: -webkit-linear-gradient(top, var(--rolltable-header-first), var(--rolltable-header-second));
+    background-image: -moz-linear-gradient(top, var(--rolltable-header-first), var(--rolltable-header-second));
+    background-image: -o-linear-gradient(top, var(--rolltable-header-first), var(--rolltable-header-second));
+    background-image: linear-gradient(to bottom, var(--rolltable-header-first), var(--rolltable-header-second));
     -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
-    color: #ffffff;
+    color: var(--rolltable-primary-text);
     padding: 2px;
     line-height: 1.6em;
     font-size: 1.2em;
 }
 
-.charsheet .sheet-rolltemplate-base .sheet-subheader,
-.charsheet .sheet-rolltemplate-suggestion .sheet-subheader {
+.sheet-rolltemplate-base .sheet-subheader,
+.sheet-rolltemplate-suggestion .sheet-subheader {
     font-size: 0.8em;
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-base .sheet-tcat-header,
-.charsheet .sheet-rolltemplate-suggestion .sheet-tcat-header {
+.sheet-rolltemplate-base .sheet-tcat-header,
+.sheet-rolltemplate-suggestion .sheet-tcat-header {
     background-image: -webkit-linear-gradient(top, #485a6d, #2c3947);
     background-image: -moz-linear-gradient(top, #485a6d, #2c3947);
     background-image: -o-linear-gradient(top, #485a6d, #2c3947);
@@ -791,36 +803,38 @@ body.sheet-darkmode .btn.btn-default {
     font-size: 0.8em;
 }
 
-.charsheet .sheet-rolltemplate-base td,
-.charsheet .sheet-rolltemplate-suggestion td {
+.sheet-rolltemplate-base td,
+.sheet-rolltemplate-suggestion td {
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-suggestion td {
+.sheet-rolltemplate-suggestion td {
     width: 71px;
 }
 
-.charsheet .sheet-rolltemplate-base .sheet-tcat,
-.charsheet .sheet-rolltemplate-suggestion .sheet-tcat {
+.sheet-rolltemplate-base .sheet-tcat,
+.sheet-rolltemplate-suggestion .sheet-tcat {
     font-weight: bold;
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-base .sheet-flavor,
-.charsheet .sheet-rolltemplate-suggestion .sheet-flavor {
+.sheet-rolltemplate-base .sheet-flavor,
+.sheet-rolltemplate-suggestion .sheet-flavor {
     font-style: italic;
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-base tr:nth-child(odd),
-.charsheet .sheet-rolltemplate-suggestion tr:nth-child(odd) {
-    background-color: rgba(217, 217, 214, 1);
+.sheet-rolltemplate-base tr:nth-child(odd),
+.sheet-rolltemplate-suggestion tr:nth-child(odd) {
+    /* background-color: rgba(217, 217, 214, 1); */
+    background-color: var(--rolltable-odd-back);
     padding: 2px;
 }
 
-.charsheet .sheet-rolltemplate-base tr:nth-child(even),
-.charsheet .sheet-rolltemplate-suggestion tr:nth-child(even) {
-    background-color: rgba(233, 233, 233, 1);
+.sheet-rolltemplate-base tr:nth-child(even),
+.sheet-rolltemplate-suggestion tr:nth-child(even) {
+    /* background-color: rgba(233, 233, 233, 1); */
+    background-color: var(--rolltable-even-back);
     padding: 2px;
 }
 
@@ -830,7 +844,8 @@ body.sheet-darkmode .btn.btn-default {
  * ------------------------------------ */
 .charsheet .sheet-player-dice,
 .charsheet .sheet-player-sheet,
-.charsheet .sheet-gm-sheet {
+.charsheet .sheet-gm-sheet,
+.charsheet .sheet-tab-gm-content {
     display: none;
 }
 
@@ -848,6 +863,10 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 .charsheet input.sheet-gm:checked~div.sheet-tab-gm-dice {
+    display: block;
+}
+
+.charsheet input.sheet-gm:checked~div.sheet-tab-gm-content {
     display: block;
 }
 
@@ -980,6 +999,13 @@ body.sheet-darkmode .btn.btn-default {
     position: absolute;
 }
 
+.charsheet .sheet-tab-gm-dice .sheet-dice-pool img {
+    width: 20px;
+    margin: 4px 0 0 -10px;
+    padding: 0px;
+    position: absolute;
+}
+
 .charsheet .sheet-dice-pool .sheet-note {
     font-size: 10px;
     font-weight: normal;
@@ -1016,10 +1042,6 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-dice-pool td.sheet-force {
     border-bottom: none
 }
-
-.charsheet .sheet-dice-pool td.sheet-light {}
-
-.charsheet .sheet-dice-pool td.sheet-dark {}
 
 .charsheet .sheet-dice-pool td.sheet-light:nth-child(1) {
     border-left: 1px solid #999;
@@ -1308,10 +1330,6 @@ body.sheet-darkmode .btn.btn-default {
     border-bottom: 1px dotted #999;
 }
 
-.charsheet .sheet-critical:hover {
-    background: #f1f1f1;
-}
-
 .charsheet .sheet-roll-critical,
 .charsheet .sheet-roll-critical tr td,
 .charsheet .sheet-roll-critical tr:hover td {
@@ -1321,10 +1339,12 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 .charsheet .sheet-crit-dice-bg {
-    background-image: url('https://raw.githubusercontent.com/Aurthex/London-By-Night/main/assets/background/dice_border/4.png');
+    background-image: var(--dice-4-url);
     /* Four Boxes - Dice Border */
     background-position: center center;
     background-repeat: no-repeat;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
 }
 
 .charsheet .sheet-roll-critical label {
@@ -1425,13 +1445,21 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-skills td:nth-child(4) {
     width: 124px;
     background-image: var(--dice-7-url);
-    /* Seven Boxes - Dice Border */
     background-repeat: no-repeat;
     background-position: 3px center;
 }
 
 .charsheet .sheet-skills td:nth-child(5) {
     width: 124px;
+}
+
+.charsheet select {
+    background-color: black;
+}
+
+.charsheet option {
+    background-color: #000000;
+    /* color: red; */
 }
 
 .charsheet .sheet-custome-skills th:nth-child(1),
@@ -1465,7 +1493,6 @@ body.sheet-darkmode .btn.btn-default {
 .charsheet .sheet-custome-skills td:nth-child(5) {
     width: 124px;
     background-image: var(--dice-7-url);
-    /* Seven Boxes - Dice Border */
     background-repeat: no-repeat;
     background-position: 4px center;
 }
@@ -1557,8 +1584,9 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 .charsheet .sheet-tips {
+    background-color: black;
     float: left;
-    margin-left: 5px;
+    margin-left: 60px;
 }
 
 .charsheet .sheet-help {
@@ -1593,10 +1621,10 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-help .sheet-icon {
     position: absolute;
-    width: 21px;
+    width: 14px;
     height: 16px;
     padding: 4px 2px 2px 2px;
-    text-align: center;
+    text-align: left;
     margin-top: -2px;
     cursor: pointer;
 }
@@ -1631,7 +1659,8 @@ body.sheet-darkmode .btn.btn-default {
 
 .charsheet .sheet-help-content {
     position: absolute;
-    background: #fff;
+    background: #3c3c3c;
+    /* color: white; */
     border: 1px solid #ccc;
     display: none;
     width: 250px;
@@ -1647,7 +1676,7 @@ body.sheet-darkmode .btn.btn-default {
 }
 
 .charsheet th .sheet-help-content {
-    color: #444;
+    color: white;
     font-weight: normal;
 }
 
@@ -1660,7 +1689,7 @@ body.sheet-darkmode .btn.btn-default {
     z-index: 10
 }
 
-.charsheet .sheet-icon:hover {
+/* .charsheet .sheet-icon:hover {
     background: #fff;
     border: 1px solid #ccc;
     border-bottom: 1px solid #fff;
@@ -1668,9 +1697,10 @@ body.sheet-darkmode .btn.btn-default {
     z-index: 15;
     -webkit-border-radius: 3px 3px 0px 0px;
     border-radius: 3px 3px 0px 0px;
-}
+} */
 
 .charsheet .sheet-help-content h5 {
+    color: white;
     padding-bottom: 8px;
 }
 
